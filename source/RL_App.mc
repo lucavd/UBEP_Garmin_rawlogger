@@ -183,16 +183,17 @@ class RL_App extends App.AppBase {
     // Enable sensor events
     // Modifica nel metodo onStart
     var sensorTypes = [Sensor.SENSOR_BIKESPEED, Sensor.SENSOR_BIKECADENCE, Sensor.SENSOR_BIKEPOWER, Sensor.SENSOR_HEARTRATE, Sensor.SENSOR_TEMPERATURE] as Array<Sensor.SensorType>;
-    // Aggiungi il sensore giroscopio all'array se è supportato
-   try {
-    // Prova con SENSOR_GYRO invece di SENSOR_GYROSCOPE
-    if (Sensor has :SENSOR_GYRO) {
-        sensorTypes.add(Sensor.SENSOR_GYRO);
-        Sys.println("Added SENSOR_GYRO to enabled sensors");
+    // Aggiungi il sensore giroscopio all'array se è supportato e abilitato
+    if ($.RL_oSettings.bSensorGyroscope) {
+        try {
+            if (Sensor has :SENSOR_GYRO) {
+                sensorTypes.add(Sensor.SENSOR_GYRO);
+                Sys.println("Added SENSOR_GYRO to enabled sensors");
+            }
+        } catch (e) {
+            Sys.println("Note: Gyro sensor type not available: " + e.getErrorMessage());
+        }
     }
-} catch (e) {
-    Sys.println("Note: Gyro sensor type not available, attempting to use gyro data from general sensor events");
-}
 
 Sensor.setEnabledSensors(sensorTypes);
     Sensor.enableSensorEvents(method(:onSensorEvent));
@@ -551,18 +552,32 @@ Sensor.setEnabledSensors(sensorTypes);
     if($.RL_oData.iSensorAccelerationZ != null and $.RL_oFitField_SensorAccelerationZ != null) {
       ($.RL_oFitField_SensorAccelerationZ as Fit.Field).setData($.RL_oData.iSensorAccelerationZ as Object);
     }
-    // Nel metodo onSensorEvent
-    if($.RL_oData.iSensorGyroscopeX != null and $.RL_oFitField_SensorGyroscopeX != null) {
-    ($.RL_oFitField_SensorGyroscopeX as Fit.Field).setData($.RL_oData.iSensorGyroscopeX as Object);
-    Sys.println("Saved gyro X data to FIT: " + $.RL_oData.iSensorGyroscopeX);
-    }
-    if($.RL_oData.iSensorGyroscopeY != null and $.RL_oFitField_SensorGyroscopeY != null) {
-    ($.RL_oFitField_SensorGyroscopeY as Fit.Field).setData($.RL_oData.iSensorGyroscopeY as Object);
-    Sys.println("Saved gyro Y data to FIT: " + $.RL_oData.iSensorGyroscopeY);
-    }
-    if($.RL_oData.iSensorGyroscopeZ != null and $.RL_oFitField_SensorGyroscopeZ != null) {
-    ($.RL_oFitField_SensorGyroscopeZ as Fit.Field).setData($.RL_oData.iSensorGyroscopeZ as Object);
-    Sys.println("Saved gyro Z data to FIT: " + $.RL_oData.iSensorGyroscopeZ);
+    // Gyroscope data processing
+    if($.RL_oSettings.bSensorGyroscope) {
+      try {
+        if($.RL_oData.iSensorGyroscopeX != null and $.RL_oFitField_SensorGyroscopeX != null) {
+          ($.RL_oFitField_SensorGyroscopeX as Fit.Field).setData($.RL_oData.iSensorGyroscopeX as Object);
+          Sys.println("Saved gyro X data to FIT: " + $.RL_oData.iSensorGyroscopeX);
+        } else if($.RL_oFitField_SensorGyroscopeX == null) {
+          Sys.println("ERROR: GyroscopeX FIT field is null, gyroscope enabled but field not created");
+        }
+        
+        if($.RL_oData.iSensorGyroscopeY != null and $.RL_oFitField_SensorGyroscopeY != null) {
+          ($.RL_oFitField_SensorGyroscopeY as Fit.Field).setData($.RL_oData.iSensorGyroscopeY as Object);
+          Sys.println("Saved gyro Y data to FIT: " + $.RL_oData.iSensorGyroscopeY);
+        } else if($.RL_oFitField_SensorGyroscopeY == null) {
+          Sys.println("ERROR: GyroscopeY FIT field is null, gyroscope enabled but field not created");
+        }
+        
+        if($.RL_oData.iSensorGyroscopeZ != null and $.RL_oFitField_SensorGyroscopeZ != null) {
+          ($.RL_oFitField_SensorGyroscopeZ as Fit.Field).setData($.RL_oData.iSensorGyroscopeZ as Object);
+          Sys.println("Saved gyro Z data to FIT: " + $.RL_oData.iSensorGyroscopeZ);
+        } else if($.RL_oFitField_SensorGyroscopeZ == null) {
+          Sys.println("ERROR: GyroscopeZ FIT field is null, gyroscope enabled but field not created");
+        }
+      } catch(e) {
+        Sys.println("Error saving gyroscope data to FIT: " + e.getErrorMessage());
+      }
     }
     if($.RL_oData.iSensorMagnetometerX != null and $.RL_oFitField_SensorMagnetometerX != null) {
       ($.RL_oFitField_SensorMagnetometerX as Fit.Field).setData($.RL_oData.iSensorMagnetometerX as Object);
