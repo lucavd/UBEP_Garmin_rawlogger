@@ -230,9 +230,7 @@ class RL_App extends App.AppBase {
     if($.RL_oActivitySession == null) {
       // FIX: Use current sport constants instead of deprecated ones
       var oActivitySession = ActivityRecording.createSession({ 
-        :name => "RawLogger", 
-        :sport => ActivityRecording.SPORT_GENERIC, 
-        :subSport => ActivityRecording.SUB_SPORT_GENERIC 
+        :name => "RawLogger"
       });
 
       var iFitFields = 16;  // ... it would seem ConnectIQ allows only 16 contributed FIT fields (undocumented)
