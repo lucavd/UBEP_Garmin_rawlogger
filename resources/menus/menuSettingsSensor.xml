@@ -11,5 +11,6 @@
   <menu-item id="menuSettingsCadence" label="@Strings.labelCadence" />
   <menu-item id="menuSettingsPower" label="@Strings.labelPower" />
   <menu-item id="menuSettingsTemperature" label="@Strings.labelTemperature" />
+  <menu-item id="menuSettingsGyroscope" label="@Strings.labelGyroscope" />
 </menu>
 

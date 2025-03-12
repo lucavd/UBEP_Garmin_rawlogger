@@ -181,7 +181,20 @@ class RL_App extends App.AppBase {
     Position.enableLocationEvents(Position.LOCATION_CONTINUOUS, method(:onLocationEvent));
 
     // Enable sensor events
-    Sensor.setEnabledSensors([Sensor.SENSOR_BIKESPEED, Sensor.SENSOR_BIKECADENCE, Sensor.SENSOR_BIKEPOWER, Sensor.SENSOR_HEARTRATE, Sensor.SENSOR_TEMPERATURE] as Array<Sensor.SensorType>);
+    // Modifica nel metodo onStart
+    var sensorTypes = [Sensor.SENSOR_BIKESPEED, Sensor.SENSOR_BIKECADENCE, Sensor.SENSOR_BIKEPOWER, Sensor.SENSOR_HEARTRATE, Sensor.SENSOR_TEMPERATURE] as Array<Sensor.SensorType>;
+    // Aggiungi il sensore giroscopio all'array se è supportato
+   try {
+    // Prova con SENSOR_GYRO invece di SENSOR_GYROSCOPE
+    if (Sensor has :SENSOR_GYRO) {
+        sensorTypes.add(Sensor.SENSOR_GYRO);
+        Sys.println("Added SENSOR_GYRO to enabled sensors");
+    }
+} catch (e) {
+    Sys.println("Note: Gyro sensor type not available, attempting to use gyro data from general sensor events");
+}
+
+Sensor.setEnabledSensors(sensorTypes);
     Sensor.enableSensorEvents(method(:onSensorEvent));
 
     // Start UI update timer (every multiple of 5 seconds, to save energy)
@@ -321,11 +334,11 @@ class RL_App extends App.AppBase {
         bHighDefListener_Acceleration = true;
       }
       if($.RL_oSettings.bSensorGyroscope and iFitFields >= 3 and iFitBytes >= 6) {
-      $.RL_oFitField_SensorGyroscopeX = oActivitySession.createField("SensorGyroscopeX", RL_App.FITFIELD_SENSORGYROSCOPEX, Fit.DATA_TYPE_SINT16, { :mesgType => Fit.MESG_TYPE_RECORD as Number, :units => Ui.loadResource(Rez.Strings.unitGyroscope) as String });
-      $.RL_oFitField_SensorGyroscopeY = oActivitySession.createField("SensorGyroscopeY", RL_App.FITFIELD_SENSORGYROSCOPEY, Fit.DATA_TYPE_SINT16, { :mesgType => Fit.MESG_TYPE_RECORD as Number, :units => Ui.loadResource(Rez.Strings.unitGyroscope) as String });
-      $.RL_oFitField_SensorGyroscopeZ = oActivitySession.createField("SensorGyroscopeZ", RL_App.FITFIELD_SENSORGYROSCOPEZ, Fit.DATA_TYPE_SINT16, { :mesgType => Fit.MESG_TYPE_RECORD as Number, :units => Ui.loadResource(Rez.Strings.unitGyroscope) as String });
-      iFitFields -= 3;
-      iFitBytes -= 6;
+        $.RL_oFitField_SensorGyroscopeX = oActivitySession.createField("SensorGyroscopeX", RL_App.FITFIELD_SENSORGYROSCOPEX, Fit.DATA_TYPE_SINT16, { :mesgType => Fit.MESG_TYPE_RECORD as Number, :units => Ui.loadResource(Rez.Strings.unitGyroscope) as String });
+        $.RL_oFitField_SensorGyroscopeY = oActivitySession.createField("SensorGyroscopeY", RL_App.FITFIELD_SENSORGYROSCOPEY, Fit.DATA_TYPE_SINT16, { :mesgType => Fit.MESG_TYPE_RECORD as Number, :units => Ui.loadResource(Rez.Strings.unitGyroscope) as String });
+        $.RL_oFitField_SensorGyroscopeZ = oActivitySession.createField("SensorGyroscopeZ", RL_App.FITFIELD_SENSORGYROSCOPEZ, Fit.DATA_TYPE_SINT16, { :mesgType => Fit.MESG_TYPE_RECORD as Number, :units => Ui.loadResource(Rez.Strings.unitGyroscope) as String });
+        iFitFields -= 3;
+        iFitBytes -= 6;
       }
       if($.RL_oSettings.bSensorMagnetometer and iFitFields >= 3 and iFitBytes >= 6) {
         $.RL_oFitField_SensorMagnetometerX = oActivitySession.createField("SensorMagnetometerX", RL_App.FITFIELD_SENSORMAGNETOMETERX, Fit.DATA_TYPE_SINT16, { :mesgType => Fit.MESG_TYPE_RECORD as Number, :units => Ui.loadResource(Rez.Strings.unitSensorMagnetometer) as String });
@@ -538,14 +551,18 @@ class RL_App extends App.AppBase {
     if($.RL_oData.iSensorAccelerationZ != null and $.RL_oFitField_SensorAccelerationZ != null) {
       ($.RL_oFitField_SensorAccelerationZ as Fit.Field).setData($.RL_oData.iSensorAccelerationZ as Object);
     }
+    // Nel metodo onSensorEvent
     if($.RL_oData.iSensorGyroscopeX != null and $.RL_oFitField_SensorGyroscopeX != null) {
     ($.RL_oFitField_SensorGyroscopeX as Fit.Field).setData($.RL_oData.iSensorGyroscopeX as Object);
+    Sys.println("Saved gyro X data to FIT: " + $.RL_oData.iSensorGyroscopeX);
     }
     if($.RL_oData.iSensorGyroscopeY != null and $.RL_oFitField_SensorGyroscopeY != null) {
     ($.RL_oFitField_SensorGyroscopeY as Fit.Field).setData($.RL_oData.iSensorGyroscopeY as Object);
+    Sys.println("Saved gyro Y data to FIT: " + $.RL_oData.iSensorGyroscopeY);
     }
     if($.RL_oData.iSensorGyroscopeZ != null and $.RL_oFitField_SensorGyroscopeZ != null) {
     ($.RL_oFitField_SensorGyroscopeZ as Fit.Field).setData($.RL_oData.iSensorGyroscopeZ as Object);
+    Sys.println("Saved gyro Z data to FIT: " + $.RL_oData.iSensorGyroscopeZ);
     }
     if($.RL_oData.iSensorMagnetometerX != null and $.RL_oFitField_SensorMagnetometerX != null) {
       ($.RL_oFitField_SensorMagnetometerX as Fit.Field).setData($.RL_oData.iSensorMagnetometerX as Object);

@@ -190,16 +190,18 @@ class RL_Data {
       self.iSensorAccelerationZ = null;
     }
     // ... giroscopio
-if(_oInfo has :gyro and _oInfo.gyro != null) {
-  self.iSensorGyroscopeX = (_oInfo.gyro as Array<Number>)[0];
-  self.iSensorGyroscopeY = (_oInfo.gyro as Array<Number>)[1];
-  self.iSensorGyroscopeZ = (_oInfo.gyro as Array<Number>)[2];
-}
-else {
-  self.iSensorGyroscopeX = null;
-  self.iSensorGyroscopeY = null;
-  self.iSensorGyroscopeZ = null;
-}
+    if(_oInfo has :gyro and _oInfo.gyro != null) {
+      self.iSensorGyroscopeX = (_oInfo.gyro as Array<Number>)[0];
+      self.iSensorGyroscopeY = (_oInfo.gyro as Array<Number>)[1];
+      self.iSensorGyroscopeZ = (_oInfo.gyro as Array<Number>)[2];
+    // Debug Log
+      Sys.println("Gyro values: X=" + self.iSensorGyroscopeX + ", Y=" + self.iSensorGyroscopeY + ", Z=" + self.iSensorGyroscopeZ);
+    }
+    else {
+    self.iSensorGyroscopeX = null;
+    self.iSensorGyroscopeY = null;
+      self.iSensorGyroscopeZ = null;
+    }
     // ... magnetometer
     if(_oInfo has :mag and _oInfo.mag != null) {
       self.iSensorMagnetometerX = (_oInfo.mag as Array<Number>)[0];

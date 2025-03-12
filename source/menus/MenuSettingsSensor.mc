@@ -77,11 +77,10 @@ class MenuDelegateSettingsSensor extends Ui.MenuInputDelegate {
       //Sys.println("DEBUG: MenuDelegateSettings.onMenuItem(:menuSettingsTemperature)");
       Ui.pushView(new PickerGenericOnOff("userSensorTemperature", Ui.loadResource(Rez.Strings.labelTemperature) as String), new PickerDelegateGenericOnOff("userSensorTemperature"), Ui.SLIDE_IMMEDIATE);
     }
-    // Aggiungi nel metodo onMenuItem
+    // Nella funzione onMenuItem nel file MenuSettingsSensor.mc
     else if (item == :menuSettingsGyroscope) {
-    //Sys.println("DEBUG: MenuDelegateSettings.onMenuItem(:menuSettingsGyroscope)");
-    Ui.pushView(new PickerGenericOnOff("userSensorGyroscope", Ui.loadResource(Rez.Strings.labelGyroscope) as String), new PickerDelegateGenericOnOff("userSensorGyroscope"), Ui.SLIDE_IMMEDIATE);
-    }
+      Ui.pushView(new PickerGenericOnOff("userSensorGyroscope", Ui.loadResource(Rez.Strings.labelGyroscope) as String), new PickerDelegateGenericOnOff("userSensorGyroscope"), Ui.SLIDE_IMMEDIATE);
+    }   
   }
 
 }
