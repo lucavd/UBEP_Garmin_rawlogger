@@ -51,6 +51,7 @@ class RL_Settings {
   public var bSensorCadence as Boolean = false;
   public var bSensorPower as Boolean = false;
   public var bSensorTemperature as Boolean = false;
+  public var bSensorGyroscope as Boolean = false;
   // ... activity
   public var bActivityLocation as Boolean = false;
   public var bActivityAltitude as Boolean = false;
@@ -90,6 +91,7 @@ class RL_Settings {
     self.bSensorCadence = App.Properties.getValue("userSensorCadence") as Boolean;
     self.bSensorPower = App.Properties.getValue("userSensorPower") as Boolean;
     self.bSensorTemperature = App.Properties.getValue("userSensorTemperature") as Boolean;
+    self.bSensorGyroscope = App.Properties.getValue("userSensorGyroscope") as Boolean;
     // ... activity
     self.bActivityLocation = App.Properties.getValue("userActivityLocation") as Boolean;
     self.bActivityAltitude = App.Properties.getValue("userActivityAltitude") as Boolean;

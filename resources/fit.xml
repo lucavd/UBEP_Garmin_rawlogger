@@ -188,6 +188,31 @@
             dataLabel="@Strings.labelSensorTemperature"
             unitLabel="@Strings.unitSensorTemperature"
             fillColor="#AAAAAA" />
+  <!-- Aggiungi dopo i campi accelerometro e prima dei campi magnetometro -->
+<fitField id="115"
+          displayInChart="true"
+          sortOrder="115"
+          precision="0"
+          chartTitle="@Strings.labelGyroscopeX"
+          dataLabel="@Strings.labelGyroscopeX"
+          unitLabel="@Strings.unitGyroscope"
+          fillColor="#AAAAAA" />
+<fitField id="116"
+          displayInChart="true"
+          sortOrder="116"
+          precision="0"
+          chartTitle="@Strings.labelGyroscopeY"
+          dataLabel="@Strings.labelGyroscopeY"
+          unitLabel="@Strings.unitGyroscope"
+          fillColor="#AAAAAA" />
+<fitField id="117"
+          displayInChart="true"
+          sortOrder="117"
+          precision="0"
+          chartTitle="@Strings.labelGyroscopeZ"
+          dataLabel="@Strings.labelGyroscopeZ"
+          unitLabel="@Strings.unitGyroscope"
+          fillColor="#AAAAAA" />
 
   <!-- ... sensor inputs (high-definition) -->
   <fitField id="131"

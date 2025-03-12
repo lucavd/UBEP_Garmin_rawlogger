@@ -62,6 +62,9 @@ class RL_Data {
   public var iSensorCadence as Number?;
   public var iSensorPower as Number?;
   public var fSensorTemperature as Float?;
+  public var iSensorGyroscopeX as Number?;
+  public var iSensorGyroscopeY as Number?;
+  public var iSensorGyroscopeZ as Number?;
   // ... activity
   public var dActivityLatitude as Double?;
   public var dActivityLongitude as Double?;
@@ -185,6 +188,38 @@ class RL_Data {
       self.iSensorAccelerationX = null;
       self.iSensorAccelerationY = null;
       self.iSensorAccelerationZ = null;
+    }
+    // ... giroscopio
+    if(_oInfo has :gyro and _oInfo.gyro != null) {
+      try {
+        var gyroData = _oInfo.gyro as Array<Number>;
+        if(gyroData.size() >= 3) {
+          self.iSensorGyroscopeX = gyroData[0];
+          self.iSensorGyroscopeY = gyroData[1];
+          self.iSensorGyroscopeZ = gyroData[2];
+          // Debug Log
+          Sys.println("Gyro values received: X=" + self.iSensorGyroscopeX + ", Y=" + self.iSensorGyroscopeY + ", Z=" + self.iSensorGyroscopeZ);
+        } else {
+          Sys.println("Warning: Gyro data array has insufficient elements: " + gyroData.size());
+          self.iSensorGyroscopeX = null;
+          self.iSensorGyroscopeY = null;
+          self.iSensorGyroscopeZ = null;
+        }
+      } catch(e) {
+        Sys.println("Error processing gyro data: " + e.getErrorMessage());
+        self.iSensorGyroscopeX = null;
+        self.iSensorGyroscopeY = null;
+        self.iSensorGyroscopeZ = null;
+      }
+    }
+    else {
+      // Only log when gyroscope is expected but not present
+      if($.RL_oSettings.bSensorGyroscope) {
+        Sys.println("No gyro data in sensor info");
+      }
+      self.iSensorGyroscopeX = null;
+      self.iSensorGyroscopeY = null;
+      self.iSensorGyroscopeZ = null;
     }
     // ... magnetometer
     if(_oInfo has :mag and _oInfo.mag != null) {

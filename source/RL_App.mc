@@ -68,6 +68,9 @@ var RL_oFitField_SensorHeartrate as Fit.Field? = null;
 var RL_oFitField_SensorCadence as Fit.Field? = null;
 var RL_oFitField_SensorPower as Fit.Field? = null;
 var RL_oFitField_SensorTemperature as Fit.Field? = null;
+var RL_oFitField_SensorGyroscopeX as Fit.Field? = null;
+var RL_oFitField_SensorGyroscopeY as Fit.Field? = null;
+var RL_oFitField_SensorGyroscopeZ as Fit.Field? = null;
 // ... activity inputs
 var RL_oFitField_ActivityLatitude as Fit.Field? = null;
 var RL_oFitField_ActivityLongitude as Fit.Field? = null;
@@ -123,6 +126,9 @@ class RL_App extends App.AppBase {
   public const FITFIELD_SENSORCADENCE = 112;
   public const FITFIELD_SENSORPOWER = 113;
   public const FITFIELD_SENSORTEMPERATURE = 114;
+  public const FITFIELD_SENSORGYROSCOPEX = 115;
+  public const FITFIELD_SENSORGYROSCOPEY = 116;
+  public const FITFIELD_SENSORGYROSCOPEZ = 117;
   // ... sensor inputs (high-definition)
   public const FITFIELD_SENSORACCELERATIONX_HD = 131;
   public const FITFIELD_SENSORACCELERATIONY_HD = 132;
@@ -175,7 +181,21 @@ class RL_App extends App.AppBase {
     Position.enableLocationEvents(Position.LOCATION_CONTINUOUS, method(:onLocationEvent));
 
     // Enable sensor events
-    Sensor.setEnabledSensors([Sensor.SENSOR_BIKESPEED, Sensor.SENSOR_BIKECADENCE, Sensor.SENSOR_BIKEPOWER, Sensor.SENSOR_HEARTRATE, Sensor.SENSOR_TEMPERATURE] as Array<Sensor.SensorType>);
+    // Modifica nel metodo onStart
+    var sensorTypes = [Sensor.SENSOR_BIKESPEED, Sensor.SENSOR_BIKECADENCE, Sensor.SENSOR_BIKEPOWER, Sensor.SENSOR_HEARTRATE, Sensor.SENSOR_TEMPERATURE] as Array<Sensor.SensorType>;
+    // Aggiungi il sensore giroscopio all'array se è supportato e abilitato
+    if ($.RL_oSettings.bSensorGyroscope) {
+        try {
+            if (Sensor has :SENSOR_GYRO) {
+                sensorTypes.add(Sensor.SENSOR_GYRO);
+                Sys.println("Added SENSOR_GYRO to enabled sensors");
+            }
+        } catch (e) {
+            Sys.println("Note: Gyro sensor type not available: " + e.getErrorMessage());
+        }
+    }
+
+Sensor.setEnabledSensors(sensorTypes);
     Sensor.enableSensorEvents(method(:onSensorEvent));
 
     // Start UI update timer (every multiple of 5 seconds, to save energy)
@@ -211,7 +231,8 @@ class RL_App extends App.AppBase {
   function getInitialView() {
     //Sys.println("DEBUG: RL_App.getInitialView()");
 
-    return [new RL_View(), new RL_ViewDelegate()] as Array<Ui.Views or Ui.InputDelegates>;
+    // FIX: Return the view and delegate as separate items instead of in an array
+    return [new RL_View(), new RL_ViewDelegate()];
   }
 
   function onSettingsChanged() {
@@ -227,7 +248,11 @@ class RL_App extends App.AppBase {
 
   function initActivity() as Void {
     if($.RL_oActivitySession == null) {
-      var oActivitySession = ActivityRecording.createSession({ :name => "RawLogger", :sport => ActivityRecording.SPORT_GENERIC, :subSport => ActivityRecording.SUB_SPORT_GENERIC });
+      // FIX: Use current sport constants instead of deprecated ones
+      var oActivitySession = ActivityRecording.createSession({ 
+        :name => "RawLogger"
+      });
+
       var iFitFields = 16;  // ... it would seem ConnectIQ allows only 16 contributed FIT fields (undocumented)
       var iFitBytes = 256;  // ... FIT message can be no longer than 256 bytes
       var bHighDefListener_Acceleration = false;
@@ -308,6 +333,13 @@ class RL_App extends App.AppBase {
         iFitFields -= 3;
         iFitBytes -= 6*RL_App.SAMPLERATE_ACCELERATION_HD;
         bHighDefListener_Acceleration = true;
+      }
+      if($.RL_oSettings.bSensorGyroscope and iFitFields >= 3 and iFitBytes >= 6) {
+        $.RL_oFitField_SensorGyroscopeX = oActivitySession.createField("SensorGyroscopeX", RL_App.FITFIELD_SENSORGYROSCOPEX, Fit.DATA_TYPE_SINT16, { :mesgType => Fit.MESG_TYPE_RECORD as Number, :units => Ui.loadResource(Rez.Strings.unitGyroscope) as String });
+        $.RL_oFitField_SensorGyroscopeY = oActivitySession.createField("SensorGyroscopeY", RL_App.FITFIELD_SENSORGYROSCOPEY, Fit.DATA_TYPE_SINT16, { :mesgType => Fit.MESG_TYPE_RECORD as Number, :units => Ui.loadResource(Rez.Strings.unitGyroscope) as String });
+        $.RL_oFitField_SensorGyroscopeZ = oActivitySession.createField("SensorGyroscopeZ", RL_App.FITFIELD_SENSORGYROSCOPEZ, Fit.DATA_TYPE_SINT16, { :mesgType => Fit.MESG_TYPE_RECORD as Number, :units => Ui.loadResource(Rez.Strings.unitGyroscope) as String });
+        iFitFields -= 3;
+        iFitBytes -= 6;
       }
       if($.RL_oSettings.bSensorMagnetometer and iFitFields >= 3 and iFitBytes >= 6) {
         $.RL_oFitField_SensorMagnetometerX = oActivitySession.createField("SensorMagnetometerX", RL_App.FITFIELD_SENSORMAGNETOMETERX, Fit.DATA_TYPE_SINT16, { :mesgType => Fit.MESG_TYPE_RECORD as Number, :units => Ui.loadResource(Rez.Strings.unitSensorMagnetometer) as String });
@@ -427,6 +459,9 @@ class RL_App extends App.AppBase {
     $.RL_oFitField_SensorAccelerationX_HD = null;
     $.RL_oFitField_SensorAccelerationY_HD = null;
     $.RL_oFitField_SensorAccelerationZ_HD = null;
+    $.RL_oFitField_SensorGyroscopeX = null;
+    $.RL_oFitField_SensorGyroscopeY = null;
+    $.RL_oFitField_SensorGyroscopeZ = null;
     $.RL_oFitField_SensorMagnetometerX = null;
     $.RL_oFitField_SensorMagnetometerY = null;
     $.RL_oFitField_SensorMagnetometerZ = null;
@@ -516,6 +551,33 @@ class RL_App extends App.AppBase {
     }
     if($.RL_oData.iSensorAccelerationZ != null and $.RL_oFitField_SensorAccelerationZ != null) {
       ($.RL_oFitField_SensorAccelerationZ as Fit.Field).setData($.RL_oData.iSensorAccelerationZ as Object);
+    }
+    // Gyroscope data processing
+    if($.RL_oSettings.bSensorGyroscope) {
+      try {
+        if($.RL_oData.iSensorGyroscopeX != null and $.RL_oFitField_SensorGyroscopeX != null) {
+          ($.RL_oFitField_SensorGyroscopeX as Fit.Field).setData($.RL_oData.iSensorGyroscopeX as Object);
+          Sys.println("Saved gyro X data to FIT: " + $.RL_oData.iSensorGyroscopeX);
+        } else if($.RL_oFitField_SensorGyroscopeX == null) {
+          Sys.println("ERROR: GyroscopeX FIT field is null, gyroscope enabled but field not created");
+        }
+        
+        if($.RL_oData.iSensorGyroscopeY != null and $.RL_oFitField_SensorGyroscopeY != null) {
+          ($.RL_oFitField_SensorGyroscopeY as Fit.Field).setData($.RL_oData.iSensorGyroscopeY as Object);
+          Sys.println("Saved gyro Y data to FIT: " + $.RL_oData.iSensorGyroscopeY);
+        } else if($.RL_oFitField_SensorGyroscopeY == null) {
+          Sys.println("ERROR: GyroscopeY FIT field is null, gyroscope enabled but field not created");
+        }
+        
+        if($.RL_oData.iSensorGyroscopeZ != null and $.RL_oFitField_SensorGyroscopeZ != null) {
+          ($.RL_oFitField_SensorGyroscopeZ as Fit.Field).setData($.RL_oData.iSensorGyroscopeZ as Object);
+          Sys.println("Saved gyro Z data to FIT: " + $.RL_oData.iSensorGyroscopeZ);
+        } else if($.RL_oFitField_SensorGyroscopeZ == null) {
+          Sys.println("ERROR: GyroscopeZ FIT field is null, gyroscope enabled but field not created");
+        }
+      } catch(e) {
+        Sys.println("Error saving gyroscope data to FIT: " + e.getErrorMessage());
+      }
     }
     if($.RL_oData.iSensorMagnetometerX != null and $.RL_oFitField_SensorMagnetometerX != null) {
       ($.RL_oFitField_SensorMagnetometerX as Fit.Field).setData($.RL_oData.iSensorMagnetometerX as Object);

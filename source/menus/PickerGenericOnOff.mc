@@ -60,7 +60,8 @@ class PickerDelegateGenericOnOff extends Ui.PickerDelegate {
     self.sPropertyId = _sPropertyId;
   }
 
-  function onAccept(_amValues as Array<App.PropertyValueType>) {
+  // FIX: Updated parameter type to match the new SDK signature
+  function onAccept(_amValues) {
     // Set property and exit
     App.Properties.setValue(self.sPropertyId, _amValues[0]);
     $.RL_oSettings.load();
