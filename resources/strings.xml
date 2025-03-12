@@ -36,6 +36,7 @@
   <string id="labelTemperature">Temperature</string>
   <string id="labelTime">Time</string>
   <string id="unitTime">LT</string>
+  
 
   <!-- ... system inputs -->
   <string id="labelSystemBattery">Sys.Battery</string>
@@ -85,6 +86,12 @@
   <string id="unitSensorPower">W</string>
   <string id="labelSensorTemperature">Sens.Temperature</string>
   <string id="unitSensorTemperature">°C</string>
+  <!-- Nel gruppo di stringhe sensor inputs -->
+<string id="labelGyroscope">Giroscopio</string>
+<string id="labelGyroscopeX">Sens.Giroscopio (X)</string>
+<string id="labelGyroscopeY">Sens.Giroscopio (Y)</string>
+<string id="labelGyroscopeZ">Sens.Giroscopio (Z)</string>
+<string id="unitGyroscope">deg/s</string>
 
   <!-- ... activity inputs -->
   <string id="labelActivityLocation">Act.Location</string>

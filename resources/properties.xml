@@ -22,6 +22,8 @@
   <property id="userSensorCadence" type="boolean">false</property>
   <property id="userSensorPower" type="boolean">false</property>
   <property id="userSensorTemperature" type="boolean">false</property>
+  <!-- Nelle proprietà sensor inputs -->
+<property id="userSensorGyroscope" type="boolean">false</property>
   <!-- ... activity inputs -->
   <property id="userActivityLocation" type="boolean">false</property>
   <property id="userActivityAltitude" type="boolean">false</property>

@@ -375,6 +375,26 @@ class RL_View extends Ui.View {
       sValue = $.RL_oData.aiSensorAccelerationZ_HD != null ? ($.RL_oData.aiSensorAccelerationZ_HD as Array<Number>)[($.RL_oData.aiSensorAccelerationZ_HD as Array<Number>).size()-1].format("%d") : self.NOVALUE_LEN3;
       _oDC.drawText(self.iCenterX, self.iValue3Y, Gfx.FONT_SMALL, sValue, Gfx.TEXT_JUSTIFY_CENTER|Gfx.TEXT_JUSTIFY_VCENTER);
     }
+    else if($.RL_iViewIndex == 28) {  // ... sensor: giroscopio
+  // ... label
+  _oDC.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_TRANSPARENT);
+  if($.RL_sViewLabel1 == null) {
+    $.RL_sViewLabel1 = Ui.loadResource(Rez.Strings.labelSensor) as String;
+  }
+  if($.RL_sViewLabel2 == null) {
+    $.RL_sViewLabel2 = Lang.format("$1$ [$2$]", [Ui.loadResource(Rez.Strings.labelGyroscope), Ui.loadResource(Rez.Strings.unitGyroscope)]);
+  }
+  _oDC.drawText(self.iCenterX, self.iLabel1Y, Gfx.FONT_SMALL, $.RL_sViewLabel1 as String, Gfx.TEXT_JUSTIFY_CENTER|Gfx.TEXT_JUSTIFY_VCENTER);
+  _oDC.drawText(self.iCenterX, self.iLabel2Y, Gfx.FONT_SMALL, $.RL_sViewLabel2 as String, Gfx.TEXT_JUSTIFY_CENTER|Gfx.TEXT_JUSTIFY_VCENTER);
+  // ... value(s)
+  _oDC.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
+  sValue = $.RL_oData.iSensorGyroscopeX != null ? ($.RL_oData.iSensorGyroscopeX as Number).format("%d") : self.NOVALUE_LEN3;
+  _oDC.drawText(self.iCenterX, self.iValue1Y, Gfx.FONT_SMALL, sValue, Gfx.TEXT_JUSTIFY_CENTER|Gfx.TEXT_JUSTIFY_VCENTER);
+  sValue = $.RL_oData.iSensorGyroscopeY != null ? ($.RL_oData.iSensorGyroscopeY as Number).format("%d") : self.NOVALUE_LEN3;
+  _oDC.drawText(self.iCenterX, self.iValue2Y, Gfx.FONT_SMALL, sValue, Gfx.TEXT_JUSTIFY_CENTER|Gfx.TEXT_JUSTIFY_VCENTER);
+  sValue = $.RL_oData.iSensorGyroscopeZ != null ? ($.RL_oData.iSensorGyroscopeZ as Number).format("%d") : self.NOVALUE_LEN3;
+  _oDC.drawText(self.iCenterX, self.iValue3Y, Gfx.FONT_SMALL, sValue, Gfx.TEXT_JUSTIFY_CENTER|Gfx.TEXT_JUSTIFY_VCENTER);
+}
     else if($.RL_iViewIndex == 14) {  // ... sensor: magnetometer
       // ... label
       _oDC.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_TRANSPARENT);
@@ -693,10 +713,10 @@ class RL_ViewDelegate extends Ui.BehaviorDelegate {
     while(true) {
       iViewIndex_next += _iOffset;
       while(iViewIndex_next < 0) {
-        iViewIndex_next += 28;
+        iViewIndex_next += 29;
       }
-      while(iViewIndex_next >= 28) {
-        iViewIndex_next -= 28;
+      while(iViewIndex_next >= 29) {
+        iViewIndex_next -= 29;
       }
 
       // ... time
@@ -738,6 +758,7 @@ class RL_ViewDelegate extends Ui.BehaviorDelegate {
       else if(iViewIndex_next == 25 and $.RL_oSettings.bActivityHeartrate) { break; }
       else if(iViewIndex_next == 26 and $.RL_oSettings.bActivityCadence) { break; }
       else if(iViewIndex_next == 27 and $.RL_oSettings.bActivityPower) { break; }
+      else if(iViewIndex_next == 28 and $.RL_oSettings.bSensorGyroscope) { break; }
     }
     if(iViewIndex_next != $.RL_iViewIndex) {
       $.RL_iViewIndex = iViewIndex_next;

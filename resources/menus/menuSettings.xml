@@ -5,5 +5,7 @@
   <menu-item id="menuSettingsSensor" label="@Strings.labelSensor" />
   <menu-item id="menuSettingsActivity" label="@Strings.labelActivity" />
   <menu-item id="menuSettingsAbout" label="@Strings.menuSettingsAbout" />
+  <!-- Aggiungi dopo il menu Accelerazione e prima del menu Magnetometro -->
+<menu-item id="menuSettingsGyroscope" label="@Strings.labelGyroscope" />
 </menu>
 
