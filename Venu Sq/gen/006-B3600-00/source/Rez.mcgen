@@ -1,0 +1,186 @@
+import Toybox.Lang;
+using Toybox.WatchUi;
+using Toybox.WatchUi as Ui;
+using Toybox.Graphics;
+using Toybox.Graphics as Gfx;
+
+module Rez {
+    module Drawables {
+        (:initialized) var AppIcon as ResourceId;
+    } // Drawables
+
+    module Menus {
+        class menuSettingsPosition extends WatchUi.Menu {
+            function initialize() {
+                Menu.initialize();
+                Menu.setTitle((WatchUi.loadResource($.Rez.Strings.labelPosition) as String));
+                addItem((WatchUi.loadResource($.Rez.Strings.labelLocation) as String), :menuSettingsLocation);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelAltitude) as String), :menuSettingsAltitude);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelSpeed) as String), :menuSettingsSpeed);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelHeading) as String), :menuSettingsHeading);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelAccuracy) as String), :menuSettingsAccuracy);
+            }
+        }
+
+        class menuSettings extends WatchUi.Menu {
+            function initialize() {
+                Menu.initialize();
+                Menu.setTitle((WatchUi.loadResource($.Rez.Strings.menuSettings) as String));
+                addItem((WatchUi.loadResource($.Rez.Strings.labelSystem) as String), :menuSettingsSystem);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelPosition) as String), :menuSettingsPosition);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelSensor) as String), :menuSettingsSensor);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelActivity) as String), :menuSettingsActivity);
+                addItem((WatchUi.loadResource($.Rez.Strings.menuSettingsAbout) as String), :menuSettingsAbout);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelGyroscope) as String), :menuSettingsGyroscope);
+            }
+        }
+
+        class menuSettingsSystem extends WatchUi.Menu {
+            function initialize() {
+                Menu.initialize();
+                Menu.setTitle((WatchUi.loadResource($.Rez.Strings.labelSystem) as String));
+                addItem((WatchUi.loadResource($.Rez.Strings.labelBattery) as String), :menuSettingsBattery);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelMemory) as String), :menuSettingsMemory);
+            }
+        }
+
+        class menuSettingsSensor extends WatchUi.Menu {
+            function initialize() {
+                Menu.initialize();
+                Menu.setTitle((WatchUi.loadResource($.Rez.Strings.labelSensor) as String));
+                addItem((WatchUi.loadResource($.Rez.Strings.labelAltitude) as String), :menuSettingsAltitude);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelSpeed) as String), :menuSettingsSpeed);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelHeading) as String), :menuSettingsHeading);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelPressure) as String), :menuSettingsPressure);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelAcceleration) as String), :menuSettingsAcceleration);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelAcceleration_HD) as String), :menuSettingsAcceleration_HD);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelMagnetometer) as String), :menuSettingsMagnetometer);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelHeartrate) as String), :menuSettingsHeartrate);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelCadence) as String), :menuSettingsCadence);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelPower) as String), :menuSettingsPower);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelTemperature) as String), :menuSettingsTemperature);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelGyroscope) as String), :menuSettingsGyroscope);
+            }
+        }
+
+        class menuSettingsActivity extends WatchUi.Menu {
+            function initialize() {
+                Menu.initialize();
+                Menu.setTitle((WatchUi.loadResource($.Rez.Strings.labelActivity) as String));
+                addItem((WatchUi.loadResource($.Rez.Strings.labelLocation) as String), :menuSettingsLocation);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelAltitude) as String), :menuSettingsAltitude);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelSpeed) as String), :menuSettingsSpeed);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelHeading) as String), :menuSettingsHeading);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelAccuracy) as String), :menuSettingsAccuracy);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelPressure) as String), :menuSettingsPressure);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelHeartrate) as String), :menuSettingsHeartrate);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelCadence) as String), :menuSettingsCadence);
+                addItem((WatchUi.loadResource($.Rez.Strings.labelPower) as String), :menuSettingsPower);
+            }
+        }
+    } // Menus
+
+    module Strings {
+        (:initialized) var labelGyroscopeZ as ResourceId;
+        (:initialized) var labelGyroscopeY as ResourceId;
+        (:initialized) var labelActivity as ResourceId;
+        (:initialized) var unitSensorAltitude as ResourceId;
+        (:initialized) var labelAcceleration as ResourceId;
+        (:initialized) var unitSensorHeartrate as ResourceId;
+        (:initialized) var labelPositionLocation as ResourceId;
+        (:initialized) var labelSensorPower as ResourceId;
+        (:initialized) var labelActivityPressure as ResourceId;
+        (:initialized) var labelGyroscopeX as ResourceId;
+        (:initialized) var labelAcceleration_HD as ResourceId;
+        (:initialized) var labelSensor as ResourceId;
+        (:initialized) var labelSensorSpeed as ResourceId;
+        (:initialized) var labelSensorHeading as ResourceId;
+        (:initialized) var titleVersion as ResourceId;
+        (:initialized) var labelSensorAltitude as ResourceId;
+        (:initialized) var labelActivityLocation as ResourceId;
+        (:initialized) var unitActivityLocation as ResourceId;
+        (:initialized) var labelActivityAltitude as ResourceId;
+        (:initialized) var labelSensorMagnetometerY as ResourceId;
+        (:initialized) var labelSensorMagnetometerX as ResourceId;
+        (:initialized) var labelSensorPressure as ResourceId;
+        (:initialized) var unitActivityCadence as ResourceId;
+        (:initialized) var labelTime as ResourceId;
+        (:initialized) var unitSystemBattery as ResourceId;
+        (:initialized) var unitSensorSpeed as ResourceId;
+        (:initialized) var titleAuthor as ResourceId;
+        (:initialized) var unitActivityPressure as ResourceId;
+        (:initialized) var labelTemperature as ResourceId;
+        (:initialized) var labelSensorMagnetometerZ as ResourceId;
+        (:initialized) var unitSensorPower as ResourceId;
+        (:initialized) var unitPositionSpeed as ResourceId;
+        (:initialized) var labelActivityPressureMean as ResourceId;
+        (:initialized) var labelHeading as ResourceId;
+        (:initialized) var labelGyroscope as ResourceId;
+        (:initialized) var labelPositionLatitude as ResourceId;
+        (:initialized) var labelActivityPower as ResourceId;
+        (:initialized) var unitSystemMemory as ResourceId;
+        (:initialized) var unitSensorTemperature as ResourceId;
+        (:initialized) var labelActivityHeartrate as ResourceId;
+        (:initialized) var unitPositionAltitude as ResourceId;
+        (:initialized) var labelPosition as ResourceId;
+        (:initialized) var labelBattery as ResourceId;
+        (:initialized) var unitSensorCadence as ResourceId;
+        (:initialized) var labelActivityPressureAmbient as ResourceId;
+        (:initialized) var labelPositionSpeed as ResourceId;
+        (:initialized) var unitPositionLocation as ResourceId;
+        (:initialized) var unitSensorPressure as ResourceId;
+        (:initialized) var unitActivityHeading as ResourceId;
+        (:initialized) var labelSystemMemoryFree as ResourceId;
+        (:initialized) var labelActivityLatitude as ResourceId;
+        (:initialized) var labelHeartrate as ResourceId;
+        (:initialized) var labelPositionLongitude as ResourceId;
+        (:initialized) var menuSettingsAbout as ResourceId;
+        (:initialized) var labelPositionHeading as ResourceId;
+        (:initialized) var labelActivityPressureRaw as ResourceId;
+        (:initialized) var labelActivityCadence as ResourceId;
+        (:initialized) var unitPositionAccuracy as ResourceId;
+        (:initialized) var labelActivityLongitude as ResourceId;
+        (:initialized) var labelAltitude as ResourceId;
+        (:initialized) var labelSensorMagnetometer as ResourceId;
+        (:initialized) var labelSensorAccelerationY as ResourceId;
+        (:initialized) var labelSensorAccelerationX as ResourceId;
+        (:initialized) var labelPressure as ResourceId;
+        (:initialized) var labelSensorAccelerationZ as ResourceId;
+        (:initialized) var unitSensorAcceleration as ResourceId;
+        (:initialized) var labelPower as ResourceId;
+        (:initialized) var unitActivitySpeed as ResourceId;
+        (:initialized) var unitSensorMagnetometer as ResourceId;
+        (:initialized) var labelSpeed as ResourceId;
+        (:initialized) var menuSettings as ResourceId;
+        (:initialized) var labelSensorHeartrate as ResourceId;
+        (:initialized) var labelMemory as ResourceId;
+        (:initialized) var labelSystem as ResourceId;
+        (:initialized) var labelActivityAccuracy as ResourceId;
+        (:initialized) var titleLicense as ResourceId;
+        (:initialized) var labelSensorAcceleration as ResourceId;
+        (:initialized) var unitActivityPower as ResourceId;
+        (:initialized) var unitGyroscope as ResourceId;
+        (:initialized) var labelAccuracy as ResourceId;
+        (:initialized) var valueOff as ResourceId;
+        (:initialized) var AppName as ResourceId;
+        (:initialized) var AppVersion as ResourceId;
+        (:initialized) var labelCadence as ResourceId;
+        (:initialized) var labelActivityHeading as ResourceId;
+        (:initialized) var labelPositionAltitude as ResourceId;
+        (:initialized) var unitActivityHeartrate as ResourceId;
+        (:initialized) var unitActivityAltitude as ResourceId;
+        (:initialized) var unitPositionHeading as ResourceId;
+        (:initialized) var labelSensorTemperature as ResourceId;
+        (:initialized) var labelSystemMemoryUsed as ResourceId;
+        (:initialized) var labelLocation as ResourceId;
+        (:initialized) var labelPositionAccuracy as ResourceId;
+        (:initialized) var unitSensorHeading as ResourceId;
+        (:initialized) var labelActivitySpeed as ResourceId;
+        (:initialized) var labelMagnetometer as ResourceId;
+        (:initialized) var unitActivityAccuracy as ResourceId;
+        (:initialized) var labelSystemBattery as ResourceId;
+        (:initialized) var labelSensorCadence as ResourceId;
+        (:initialized) var valueOn as ResourceId;
+        (:initialized) var unitTime as ResourceId;
+    } // Strings
+} // Rez

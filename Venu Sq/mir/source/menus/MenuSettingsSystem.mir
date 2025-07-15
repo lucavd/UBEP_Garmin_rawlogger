@@ -1,0 +1,124 @@
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsSystem.mc"; @line = 19; @symbol_importdef<0> = [Toybox,19,7,13]; @symbol_importdef<1> = [Lang,19,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsSystem.mc"; @line = 20; @symbol_usingdef<0> = [Toybox,20,6,12]; @symbol_usingdef<1> = [System,20,13,19]; @symbol_usingAlias = [Sys,20,23,26]; ]
+using Toybox.System as :Sys;
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsSystem.mc"; @line = 21; @symbol_usingdef<0> = [Toybox,21,6,12]; @symbol_usingdef<1> = [WatchUi,21,13,20]; @symbol_usingAlias = [Ui,21,24,26]; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsSystem.mc"; @line = 25; @symbol_classdef = [MenuDelegateSettingsSystem,25,6,32]; @symbol_extends<0> = [Ui,25,41,43]; @symbol_extends<1> = [MenuInputDelegate,25,44,61]; ]
+class MenuDelegateSettingsSystem extends Ui.MenuInputDelegate {
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsSystem.mc"; @line = 25; ]
+    <init> {
+    }
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsSystem.mc"; @line = 25; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsSystem.mc"; @line = 31; @symbol_functiondef = [initialize,31,11,21]; ]
+    function initialize() as Void {
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSystem_mc_31_24_33_2_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsSystem.mc" 32 4 ]
+        symbol [ MenuInputDelegate %tmp.2 32 4 21 ];
+        %tmp.2 = getv ? :MenuInputDelegate;
+        symbol [ initialize %tmp.3 32 22 32 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSystem_mc_31_24_33_2_stop:
+    }
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsSystem.mc"; @line = 35; @symbol_functiondef = [onMenuItem,35,11,21]; @symbol_param<0> = [item,35,22,26]; ]
+    function onMenuItem(item) {
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSystem_mc_35_28_44_2_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsSystem.mc" 36 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSystem_mc_36_4_43_4_if_stmt:
+        %tmp.1 = lgetv %item;
+        symbol [ item %tmp.1 36 8 12 ];
+        %tmp.3 = const :menuSettingsBattery;
+        symbol [ menuSettingsBattery %tmp.3 36 17 36 const ];
+        %tmp.4 = eq %tmp.1 %tmp.3;
+        bf %tmp.4 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSystem_mc_36_4_43_4_if_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSystem_mc_36_4_43_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSystem_mc_36_38_39_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsSystem.mc" 38 6 ]
+        symbol [ Ui %tmp.5 38 6 8 ];
+        %tmp.5 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.6 38 9 17 ];
+        %tmp.6 = getv function %tmp.5 :pushView;
+        symbol [ PickerGenericOnOff %tmp.10 38 22 40 ];
+        %tmp.10 = getv ? :PickerGenericOnOff;
+        %tmp.11 = "userSystemBattery";
+        symbol [ Ui %tmp.12 38 62 64 ];
+        %tmp.12 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.13 38 65 77 ];
+        %tmp.13 = getv function %tmp.12 :loadResource;
+        symbol [ Rez %tmp.15 38 78 81 ];
+        %tmp.15 = getv ? :Rez;
+        symbol [ Strings %tmp.16 38 82 89 ];
+        %tmp.16 = getv %tmp.15 :Strings;
+        symbol [ labelBattery %tmp.17 38 90 102 ];
+        %tmp.17 = getv %tmp.16 :labelBattery;
+        %tmp.18 = invoke %tmp.12 %tmp.13(%tmp.17);
+        %tmp.19 = as %tmp.18 String;
+        symbol [ String %tmp.19 38 107 113 ];
+        %tmp.7 = newc %tmp.10 (%tmp.11, %tmp.19);
+        symbol [ PickerDelegateGenericOnOff %tmp.23 38 120 146 ];
+        %tmp.23 = getv ? :PickerDelegateGenericOnOff;
+        %tmp.24 = "userSystemBattery";
+        %tmp.20 = newc %tmp.23 (%tmp.24);
+        symbol [ Ui %tmp.25 38 169 171 ];
+        %tmp.25 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.26 38 172 187 ];
+        %tmp.26 = getv %tmp.25 :SLIDE_IMMEDIATE;
+        invoke %tmp.5 %tmp.6(%tmp.7, %tmp.20, %tmp.26);
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSystem_mc_36_38_39_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSystem_mc_36_4_43_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSystem_mc_36_4_43_4_if_false:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsSystem.mc" 40 9 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSystem_mc_40_9_43_4_if_stmt:
+        %tmp.27 = lgetv %item;
+        symbol [ item %tmp.27 40 13 17 ];
+        %tmp.29 = const :menuSettingsMemory;
+        symbol [ menuSettingsMemory %tmp.29 40 22 40 const ];
+        %tmp.30 = eq %tmp.27 %tmp.29;
+        bf %tmp.30 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSystem_mc_40_9_43_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSystem_mc_40_9_43_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSystem_mc_40_42_43_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsSystem.mc" 42 6 ]
+        symbol [ Ui %tmp.31 42 6 8 ];
+        %tmp.31 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.32 42 9 17 ];
+        %tmp.32 = getv function %tmp.31 :pushView;
+        symbol [ PickerGenericOnOff %tmp.36 42 22 40 ];
+        %tmp.36 = getv ? :PickerGenericOnOff;
+        %tmp.37 = "userSystemMemory";
+        symbol [ Ui %tmp.38 42 61 63 ];
+        %tmp.38 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.39 42 64 76 ];
+        %tmp.39 = getv function %tmp.38 :loadResource;
+        symbol [ Rez %tmp.41 42 77 80 ];
+        %tmp.41 = getv ? :Rez;
+        symbol [ Strings %tmp.42 42 81 88 ];
+        %tmp.42 = getv %tmp.41 :Strings;
+        symbol [ labelMemory %tmp.43 42 89 100 ];
+        %tmp.43 = getv %tmp.42 :labelMemory;
+        %tmp.44 = invoke %tmp.38 %tmp.39(%tmp.43);
+        %tmp.45 = as %tmp.44 String;
+        symbol [ String %tmp.45 42 105 111 ];
+        %tmp.33 = newc %tmp.36 (%tmp.37, %tmp.45);
+        symbol [ PickerDelegateGenericOnOff %tmp.49 42 118 144 ];
+        %tmp.49 = getv ? :PickerDelegateGenericOnOff;
+        %tmp.50 = "userSystemMemory";
+        %tmp.46 = newc %tmp.49 (%tmp.50);
+        symbol [ Ui %tmp.51 42 166 168 ];
+        %tmp.51 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.52 42 169 184 ];
+        %tmp.52 = getv %tmp.51 :SLIDE_IMMEDIATE;
+        invoke %tmp.31 %tmp.32(%tmp.33, %tmp.46, %tmp.52);
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSystem_mc_40_42_43_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSystem_mc_40_9_43_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSystem_mc_40_9_43_4_if_end:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSystem_mc_36_4_43_4_if_end:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSystem_mc_35_28_44_2_stop:
+    }
+}
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsSystem.mc"; @line = 19; ]
+<init> {
+}

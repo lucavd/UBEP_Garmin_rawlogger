@@ -1,0 +1,1881 @@
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 19; @symbol_importdef<0> = [Toybox,19,7,13]; @symbol_importdef<1> = [Lang,19,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 20; @symbol_usingdef<0> = [Toybox,20,6,12]; @symbol_usingdef<1> = [Activity,20,13,21]; ]
+using Toybox.Activity;
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 21; @symbol_usingdef<0> = [Toybox,21,6,12]; @symbol_usingdef<1> = [Position,21,13,21]; ]
+using Toybox.Position;
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 22; @symbol_usingdef<0> = [Toybox,22,6,12]; @symbol_usingdef<1> = [Sensor,22,13,19]; ]
+using Toybox.Sensor;
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 23; @symbol_usingdef<0> = [Toybox,23,6,12]; @symbol_usingdef<1> = [System,23,13,19]; @symbol_usingAlias = [Sys,23,23,26]; ]
+using Toybox.System as :Sys;
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 29; @symbol_classdef = [RL_Data,29,6,13]; ]
+class RL_Data {
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 29; ]
+    <init> {
+    }
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 29; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 37; @position = 13; @symbol_vardef = [fSystemBattery,37,13,27]; @symbol_type<0> = [Float,37,31,36]; ]
+    public
+    var fSystemBattery as Float or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 38; @position = 13; @symbol_vardef = [iSystemMemoryUsed,38,13,30]; @symbol_type<0> = [Number,38,34,40]; ]
+    public
+    var iSystemMemoryUsed as Number or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 39; @position = 13; @symbol_vardef = [iSystemMemoryFree,39,13,30]; @symbol_type<0> = [Number,39,34,40]; ]
+    public
+    var iSystemMemoryFree as Number or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 41; @position = 13; @symbol_vardef = [dPositionLatitude,41,13,30]; @symbol_type<0> = [Double,41,34,40]; ]
+    public
+    var dPositionLatitude as Double or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 42; @position = 13; @symbol_vardef = [dPositionLongitude,42,13,31]; @symbol_type<0> = [Double,42,35,41]; ]
+    public
+    var dPositionLongitude as Double or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 43; @position = 13; @symbol_vardef = [fPositionAltitude,43,13,30]; @symbol_type<0> = [Float,43,34,39]; ]
+    public
+    var fPositionAltitude as Float or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 44; @position = 13; @symbol_vardef = [fPositionSpeed,44,13,27]; @symbol_type<0> = [Float,44,31,36]; ]
+    public
+    var fPositionSpeed as Float or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 45; @position = 13; @symbol_vardef = [fPositionHeading,45,13,29]; @symbol_type<0> = [Float,45,33,38]; ]
+    public
+    var fPositionHeading as Float or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 46; @position = 13; @symbol_vardef = [ePositionAccuracy,46,13,30]; @symbol_type<0> = [Position,46,34,42]; @symbol_type<1> = [Quality,46,43,50]; ]
+    public
+    var ePositionAccuracy as Position.Quality or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 48; @position = 13; @symbol_vardef = [fSensorAltitude,48,13,28]; @symbol_type<0> = [Float,48,32,37]; ]
+    public
+    var fSensorAltitude as Float or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 49; @position = 13; @symbol_vardef = [fSensorSpeed,49,13,25]; @symbol_type<0> = [Float,49,29,34]; ]
+    public
+    var fSensorSpeed as Float or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 50; @position = 13; @symbol_vardef = [fSensorHeading,50,13,27]; @symbol_type<0> = [Float,50,31,36]; ]
+    public
+    var fSensorHeading as Float or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 51; @position = 13; @symbol_vardef = [fSensorPressure,51,13,28]; @symbol_type<0> = [Float,51,32,37]; ]
+    public
+    var fSensorPressure as Float or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 52; @position = 13; @symbol_vardef = [iSensorAccelerationX,52,13,33]; @symbol_type<0> = [Number,52,37,43]; ]
+    public
+    var iSensorAccelerationX as Number or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 53; @position = 13; @symbol_vardef = [iSensorAccelerationY,53,13,33]; @symbol_type<0> = [Number,53,37,43]; ]
+    public
+    var iSensorAccelerationY as Number or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 54; @position = 13; @symbol_vardef = [iSensorAccelerationZ,54,13,33]; @symbol_type<0> = [Number,54,37,43]; ]
+    public
+    var iSensorAccelerationZ as Number or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 55; @position = 13; @symbol_vardef = [aiSensorAccelerationX_HD,55,13,37]; @symbol_type<0> = [Array,55,41,46]; @symbol_type<1> = [Number,55,47,53]; ]
+    public
+    var aiSensorAccelerationX_HD as Array<Number> or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 56; @position = 13; @symbol_vardef = [aiSensorAccelerationY_HD,56,13,37]; @symbol_type<0> = [Array,56,41,46]; @symbol_type<1> = [Number,56,47,53]; ]
+    public
+    var aiSensorAccelerationY_HD as Array<Number> or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 57; @position = 13; @symbol_vardef = [aiSensorAccelerationZ_HD,57,13,37]; @symbol_type<0> = [Array,57,41,46]; @symbol_type<1> = [Number,57,47,53]; ]
+    public
+    var aiSensorAccelerationZ_HD as Array<Number> or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 58; @position = 13; @symbol_vardef = [iSensorMagnetometerX,58,13,33]; @symbol_type<0> = [Number,58,37,43]; ]
+    public
+    var iSensorMagnetometerX as Number or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 59; @position = 13; @symbol_vardef = [iSensorMagnetometerY,59,13,33]; @symbol_type<0> = [Number,59,37,43]; ]
+    public
+    var iSensorMagnetometerY as Number or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 60; @position = 13; @symbol_vardef = [iSensorMagnetometerZ,60,13,33]; @symbol_type<0> = [Number,60,37,43]; ]
+    public
+    var iSensorMagnetometerZ as Number or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 61; @position = 13; @symbol_vardef = [iSensorHeartrate,61,13,29]; @symbol_type<0> = [Number,61,33,39]; ]
+    public
+    var iSensorHeartrate as Number or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 62; @position = 13; @symbol_vardef = [iSensorCadence,62,13,27]; @symbol_type<0> = [Number,62,31,37]; ]
+    public
+    var iSensorCadence as Number or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 63; @position = 13; @symbol_vardef = [iSensorPower,63,13,25]; @symbol_type<0> = [Number,63,29,35]; ]
+    public
+    var iSensorPower as Number or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 64; @position = 13; @symbol_vardef = [fSensorTemperature,64,13,31]; @symbol_type<0> = [Float,64,35,40]; ]
+    public
+    var fSensorTemperature as Float or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 65; @position = 13; @symbol_vardef = [iSensorGyroscopeX,65,13,30]; @symbol_type<0> = [Number,65,34,40]; ]
+    public
+    var iSensorGyroscopeX as Number or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 66; @position = 13; @symbol_vardef = [iSensorGyroscopeY,66,13,30]; @symbol_type<0> = [Number,66,34,40]; ]
+    public
+    var iSensorGyroscopeY as Number or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 67; @position = 13; @symbol_vardef = [iSensorGyroscopeZ,67,13,30]; @symbol_type<0> = [Number,67,34,40]; ]
+    public
+    var iSensorGyroscopeZ as Number or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 69; @position = 13; @symbol_vardef = [dActivityLatitude,69,13,30]; @symbol_type<0> = [Double,69,34,40]; ]
+    public
+    var dActivityLatitude as Double or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 70; @position = 13; @symbol_vardef = [dActivityLongitude,70,13,31]; @symbol_type<0> = [Double,70,35,41]; ]
+    public
+    var dActivityLongitude as Double or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 71; @position = 13; @symbol_vardef = [fActivityAltitude,71,13,30]; @symbol_type<0> = [Float,71,34,39]; ]
+    public
+    var fActivityAltitude as Float or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 72; @position = 13; @symbol_vardef = [fActivitySpeed,72,13,27]; @symbol_type<0> = [Float,72,31,36]; ]
+    public
+    var fActivitySpeed as Float or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 73; @position = 13; @symbol_vardef = [fActivityHeading,73,13,29]; @symbol_type<0> = [Float,73,33,38]; ]
+    public
+    var fActivityHeading as Float or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 74; @position = 13; @symbol_vardef = [eActivityAccuracy,74,13,30]; @symbol_type<0> = [Position,74,34,42]; @symbol_type<1> = [Quality,74,43,50]; ]
+    public
+    var eActivityAccuracy as Position.Quality or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 75; @position = 13; @symbol_vardef = [fActivityPressureRaw,75,13,33]; @symbol_type<0> = [Float,75,37,42]; ]
+    public
+    var fActivityPressureRaw as Float or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 76; @position = 13; @symbol_vardef = [fActivityPressureAmbient,76,13,37]; @symbol_type<0> = [Float,76,41,46]; ]
+    public
+    var fActivityPressureAmbient as Float or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 77; @position = 13; @symbol_vardef = [fActivityPressureMean,77,13,34]; @symbol_type<0> = [Float,77,38,43]; ]
+    public
+    var fActivityPressureMean as Float or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 78; @position = 13; @symbol_vardef = [iActivityHeartrate,78,13,31]; @symbol_type<0> = [Number,78,35,41]; ]
+    public
+    var iActivityHeartrate as Number or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 79; @position = 13; @symbol_vardef = [iActivityCadence,79,13,29]; @symbol_type<0> = [Number,79,33,39]; ]
+    public
+    var iActivityCadence as Number or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 80; @position = 13; @symbol_vardef = [iActivityPower,80,13,27]; @symbol_type<0> = [Number,80,31,37]; ]
+    public
+    var iActivityPower as Number or Null;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 87; @symbol_functiondef = [storeSystemStats,87,11,27]; @symbol_param<0> = [_oStats,87,28,35]; @symbol_param<0>_type<0> = [Sys,87,39,42]; @symbol_param<0>_type<1> = [Stats,87,43,48]; ]
+    function storeSystemStats(_oStats as Sys.Stats) as Void {
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_87_58_109_2_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 89 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_89_4_94_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_89_7_89_51_begin:
+        %tmp.1 = lgetv %_oStats;
+        symbol [ _oStats %tmp.1 89 7 14 ];
+        %tmp.3 = const :battery;
+        symbol [ battery %tmp.3 89 20 27 const ];
+        %tmp.4 = canhazplz %tmp.1 %tmp.3;
+        bf %tmp.4 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_89_4_94_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_89_32_89_51_true:
+        %tmp.5 = lgetv %_oStats;
+        symbol [ _oStats %tmp.5 89 32 39 ];
+        %tmp.6 = as %tmp.5 { (interface { var battery; }) };
+        symbol [ battery %tmp.7 89 40 47 ];
+        %tmp.7 = getv %tmp.6 :battery;
+        %tmp.8 = null;
+        %tmp.9 = ne %tmp.7 %tmp.8;
+        push %tmp.9;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_89_32_89_51_end:
+        %tmp.10 = phi [%tmp.4 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_89_7_89_51_begin] [%tmp.9 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_89_32_89_51_true] [%tmp.10 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_89_32_89_51_end];
+        bf %tmp.10 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_89_4_94_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_89_4_94_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_89_57_91_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 90 6 ]
+        symbol [ self %self 90 6 10 ];
+        %tmp.11 = lgetv %_oStats;
+        symbol [ _oStats %tmp.11 90 28 35 ];
+        %tmp.12 = as %tmp.11 { (interface { var battery; }) };
+        symbol [ battery %tmp.13 90 36 43 ];
+        %tmp.13 = getv %tmp.12 :battery;
+        symbol [ fSystemBattery ? 90 11 25 ];
+        putv self :fSystemBattery %tmp.13;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_89_57_91_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_89_4_94_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_89_4_94_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_92_9_94_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 93 6 ]
+        symbol [ self %self 93 6 10 ];
+        %tmp.14 = null;
+        symbol [ fSystemBattery ? 93 11 25 ];
+        putv self :fSystemBattery %tmp.14;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_92_9_94_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_89_4_94_4_if_end:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 96 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_96_4_101_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_96_7_96_57_begin:
+        %tmp.15 = lgetv %_oStats;
+        symbol [ _oStats %tmp.15 96 7 14 ];
+        %tmp.17 = const :usedMemory;
+        symbol [ usedMemory %tmp.17 96 20 30 const ];
+        %tmp.18 = canhazplz %tmp.15 %tmp.17;
+        bf %tmp.18 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_96_4_101_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_96_35_96_57_true:
+        %tmp.19 = lgetv %_oStats;
+        symbol [ _oStats %tmp.19 96 35 42 ];
+        %tmp.20 = as %tmp.19 { (interface { var usedMemory; }) };
+        symbol [ usedMemory %tmp.21 96 43 53 ];
+        %tmp.21 = getv %tmp.20 :usedMemory;
+        %tmp.22 = null;
+        %tmp.23 = ne %tmp.21 %tmp.22;
+        push %tmp.23;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_96_35_96_57_end:
+        %tmp.24 = phi [%tmp.18 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_96_7_96_57_begin] [%tmp.23 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_96_35_96_57_true] [%tmp.24 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_96_35_96_57_end];
+        bf %tmp.24 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_96_4_101_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_96_4_101_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_96_63_98_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 97 6 ]
+        symbol [ self %self 97 6 10 ];
+        %tmp.25 = lgetv %_oStats;
+        symbol [ _oStats %tmp.25 97 31 38 ];
+        %tmp.26 = as %tmp.25 { (interface { var usedMemory; }) };
+        symbol [ usedMemory %tmp.27 97 39 49 ];
+        %tmp.27 = getv %tmp.26 :usedMemory;
+        symbol [ iSystemMemoryUsed ? 97 11 28 ];
+        putv self :iSystemMemoryUsed %tmp.27;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_96_63_98_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_96_4_101_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_96_4_101_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_99_9_101_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 100 6 ]
+        symbol [ self %self 100 6 10 ];
+        %tmp.28 = null;
+        symbol [ iSystemMemoryUsed ? 100 11 28 ];
+        putv self :iSystemMemoryUsed %tmp.28;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_99_9_101_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_96_4_101_4_if_end:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 103 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_103_4_108_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_103_7_103_57_begin:
+        %tmp.29 = lgetv %_oStats;
+        symbol [ _oStats %tmp.29 103 7 14 ];
+        %tmp.31 = const :freeMemory;
+        symbol [ freeMemory %tmp.31 103 20 30 const ];
+        %tmp.32 = canhazplz %tmp.29 %tmp.31;
+        bf %tmp.32 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_103_4_108_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_103_35_103_57_true:
+        %tmp.33 = lgetv %_oStats;
+        symbol [ _oStats %tmp.33 103 35 42 ];
+        %tmp.34 = as %tmp.33 { (interface { var freeMemory; }) };
+        symbol [ freeMemory %tmp.35 103 43 53 ];
+        %tmp.35 = getv %tmp.34 :freeMemory;
+        %tmp.36 = null;
+        %tmp.37 = ne %tmp.35 %tmp.36;
+        push %tmp.37;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_103_35_103_57_end:
+        %tmp.38 = phi [%tmp.32 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_103_7_103_57_begin] [%tmp.37 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_103_35_103_57_true] [%tmp.38 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_103_35_103_57_end];
+        bf %tmp.38 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_103_4_108_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_103_4_108_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_103_63_105_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 104 6 ]
+        symbol [ self %self 104 6 10 ];
+        %tmp.39 = lgetv %_oStats;
+        symbol [ _oStats %tmp.39 104 31 38 ];
+        %tmp.40 = as %tmp.39 { (interface { var freeMemory; }) };
+        symbol [ freeMemory %tmp.41 104 39 49 ];
+        %tmp.41 = getv %tmp.40 :freeMemory;
+        symbol [ iSystemMemoryFree ? 104 11 28 ];
+        putv self :iSystemMemoryFree %tmp.41;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_103_63_105_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_103_4_108_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_103_4_108_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_106_9_108_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 107 6 ]
+        symbol [ self %self 107 6 10 ];
+        %tmp.42 = null;
+        symbol [ iSystemMemoryFree ? 107 11 28 ];
+        putv self :iSystemMemoryFree %tmp.42;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_106_9_108_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_103_4_108_4_if_end:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_87_58_109_2_stop:
+    }
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 111; @symbol_functiondef = [storePositionInfo,111,11,28]; @symbol_param<0> = [_oInfo,111,29,35]; @symbol_param<0>_type<0> = [Position,111,39,47]; @symbol_param<0>_type<1> = [Info,111,48,52]; ]
+    function storePositionInfo(_oInfo as Position.Info) as Void {
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_111_62_150_2_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 113 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_113_4_121_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_113_7_113_51_begin:
+        %tmp.1 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.1 113 7 13 ];
+        %tmp.3 = const :position;
+        symbol [ position %tmp.3 113 19 27 const ];
+        %tmp.4 = canhazplz %tmp.1 %tmp.3;
+        bf %tmp.4 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_113_4_121_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_113_32_113_51_true:
+        %tmp.5 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.5 113 32 38 ];
+        %tmp.6 = as %tmp.5 { (interface { var position; }) };
+        symbol [ position %tmp.7 113 39 47 ];
+        %tmp.7 = getv %tmp.6 :position;
+        %tmp.8 = null;
+        %tmp.9 = ne %tmp.7 %tmp.8;
+        push %tmp.9;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_113_32_113_51_end:
+        %tmp.10 = phi [%tmp.4 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_113_7_113_51_begin] [%tmp.9 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_113_32_113_51_true] [%tmp.10 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_113_32_113_51_end];
+        bf %tmp.10 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_113_4_121_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_113_4_121_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_113_57_117_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 114 6 ]
+        [ "_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_113_57_117_4_start" "_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_113_57_117_4_stop" ]
+        %afLocation.1 = local;
+        symbol [ afLocation %afLocation.1 114 10 20 ];
+        %tmp.11 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.11 114 24 30 ];
+        %tmp.12 = as %tmp.11 { (interface { var position; }) };
+        symbol [ position %tmp.13 114 31 39 ];
+        %tmp.13 = getv %tmp.12 :position;
+        %tmp.14 = as %tmp.13 Position.Location;
+        symbol [ Position %tmp.14 114 43 51 ];
+        symbol [ Location %tmp.14 114 52 60 ];
+        symbol [ toDegrees %tmp.15 114 62 71 ];
+        %tmp.15 = getv function %tmp.14 :toDegrees;
+        %tmp.16 = invoke %tmp.14 %tmp.15();
+        lputv %afLocation.1 %tmp.16;
+        symbol [ afLocation %afLocation.1 114 10 20 ];
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 115 6 ]
+        symbol [ self %self 115 6 10 ];
+        %tmp.17 = lgetv %afLocation.1;
+        symbol [ afLocation %tmp.17 115 31 41 ];
+        %tmp.18 = 0;
+        %tmp.19 = agetv %tmp.17 %tmp.18;
+        symbol [ dPositionLatitude ? 115 11 28 ];
+        putv self :dPositionLatitude %tmp.19;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 116 6 ]
+        symbol [ self %self 116 6 10 ];
+        %tmp.20 = lgetv %afLocation.1;
+        symbol [ afLocation %tmp.20 116 32 42 ];
+        %tmp.21 = 1;
+        %tmp.22 = agetv %tmp.20 %tmp.21;
+        symbol [ dPositionLongitude ? 116 11 29 ];
+        putv self :dPositionLongitude %tmp.22;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_113_57_117_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_113_4_121_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_113_4_121_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_118_9_121_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 119 6 ]
+        symbol [ self %self 119 6 10 ];
+        %tmp.23 = null;
+        symbol [ dPositionLatitude ? 119 11 28 ];
+        putv self :dPositionLatitude %tmp.23;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 120 6 ]
+        symbol [ self %self 120 6 10 ];
+        %tmp.24 = null;
+        symbol [ dPositionLongitude ? 120 11 29 ];
+        putv self :dPositionLongitude %tmp.24;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_118_9_121_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_113_4_121_4_if_end:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 123 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_123_4_128_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_123_7_123_51_begin:
+        %tmp.25 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.25 123 7 13 ];
+        %tmp.27 = const :altitude;
+        symbol [ altitude %tmp.27 123 19 27 const ];
+        %tmp.28 = canhazplz %tmp.25 %tmp.27;
+        bf %tmp.28 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_123_4_128_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_123_32_123_51_true:
+        %tmp.29 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.29 123 32 38 ];
+        %tmp.30 = as %tmp.29 { (interface { var altitude; }) };
+        symbol [ altitude %tmp.31 123 39 47 ];
+        %tmp.31 = getv %tmp.30 :altitude;
+        %tmp.32 = null;
+        %tmp.33 = ne %tmp.31 %tmp.32;
+        push %tmp.33;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_123_32_123_51_end:
+        %tmp.34 = phi [%tmp.28 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_123_7_123_51_begin] [%tmp.33 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_123_32_123_51_true] [%tmp.34 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_123_32_123_51_end];
+        bf %tmp.34 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_123_4_128_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_123_4_128_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_123_57_125_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 124 6 ]
+        symbol [ self %self 124 6 10 ];
+        %tmp.35 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.35 124 31 37 ];
+        %tmp.36 = as %tmp.35 { (interface { var altitude; }) };
+        symbol [ altitude %tmp.37 124 38 46 ];
+        %tmp.37 = getv %tmp.36 :altitude;
+        symbol [ fPositionAltitude ? 124 11 28 ];
+        putv self :fPositionAltitude %tmp.37;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_123_57_125_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_123_4_128_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_123_4_128_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_126_9_128_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 127 6 ]
+        symbol [ self %self 127 6 10 ];
+        %tmp.38 = null;
+        symbol [ fPositionAltitude ? 127 11 28 ];
+        putv self :fPositionAltitude %tmp.38;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_126_9_128_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_123_4_128_4_if_end:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 130 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_130_4_135_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_130_7_130_45_begin:
+        %tmp.39 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.39 130 7 13 ];
+        %tmp.41 = const :speed;
+        symbol [ speed %tmp.41 130 19 24 const ];
+        %tmp.42 = canhazplz %tmp.39 %tmp.41;
+        bf %tmp.42 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_130_4_135_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_130_29_130_45_true:
+        %tmp.43 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.43 130 29 35 ];
+        %tmp.44 = as %tmp.43 { (interface { var speed; }) };
+        symbol [ speed %tmp.45 130 36 41 ];
+        %tmp.45 = getv %tmp.44 :speed;
+        %tmp.46 = null;
+        %tmp.47 = ne %tmp.45 %tmp.46;
+        push %tmp.47;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_130_29_130_45_end:
+        %tmp.48 = phi [%tmp.42 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_130_7_130_45_begin] [%tmp.47 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_130_29_130_45_true] [%tmp.48 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_130_29_130_45_end];
+        bf %tmp.48 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_130_4_135_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_130_4_135_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_130_51_132_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 131 6 ]
+        symbol [ self %self 131 6 10 ];
+        %tmp.49 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.49 131 28 34 ];
+        %tmp.50 = as %tmp.49 { (interface { var speed; }) };
+        symbol [ speed %tmp.51 131 35 40 ];
+        %tmp.51 = getv %tmp.50 :speed;
+        symbol [ fPositionSpeed ? 131 11 25 ];
+        putv self :fPositionSpeed %tmp.51;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_130_51_132_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_130_4_135_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_130_4_135_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_133_9_135_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 134 6 ]
+        symbol [ self %self 134 6 10 ];
+        %tmp.52 = null;
+        symbol [ fPositionSpeed ? 134 11 25 ];
+        putv self :fPositionSpeed %tmp.52;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_133_9_135_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_130_4_135_4_if_end:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 137 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_137_4_142_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_137_7_137_49_begin:
+        %tmp.53 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.53 137 7 13 ];
+        %tmp.55 = const :heading;
+        symbol [ heading %tmp.55 137 19 26 const ];
+        %tmp.56 = canhazplz %tmp.53 %tmp.55;
+        bf %tmp.56 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_137_4_142_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_137_31_137_49_true:
+        %tmp.57 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.57 137 31 37 ];
+        %tmp.58 = as %tmp.57 { (interface { var heading; }) };
+        symbol [ heading %tmp.59 137 38 45 ];
+        %tmp.59 = getv %tmp.58 :heading;
+        %tmp.60 = null;
+        %tmp.61 = ne %tmp.59 %tmp.60;
+        push %tmp.61;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_137_31_137_49_end:
+        %tmp.62 = phi [%tmp.56 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_137_7_137_49_begin] [%tmp.61 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_137_31_137_49_true] [%tmp.62 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_137_31_137_49_end];
+        bf %tmp.62 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_137_4_142_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_137_4_142_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_137_55_139_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 138 6 ]
+        symbol [ self %self 138 6 10 ];
+        %tmp.63 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.63 138 30 36 ];
+        %tmp.64 = as %tmp.63 { (interface { var heading; }) };
+        symbol [ heading %tmp.65 138 37 44 ];
+        %tmp.65 = getv %tmp.64 :heading;
+        symbol [ fPositionHeading ? 138 11 27 ];
+        putv self :fPositionHeading %tmp.65;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_137_55_139_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_137_4_142_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_137_4_142_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_140_9_142_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 141 6 ]
+        symbol [ self %self 141 6 10 ];
+        %tmp.66 = null;
+        symbol [ fPositionHeading ? 141 11 27 ];
+        putv self :fPositionHeading %tmp.66;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_140_9_142_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_137_4_142_4_if_end:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 144 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_144_4_149_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_144_7_144_51_begin:
+        %tmp.67 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.67 144 7 13 ];
+        %tmp.69 = const :accuracy;
+        symbol [ accuracy %tmp.69 144 19 27 const ];
+        %tmp.70 = canhazplz %tmp.67 %tmp.69;
+        bf %tmp.70 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_144_4_149_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_144_32_144_51_true:
+        %tmp.71 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.71 144 32 38 ];
+        %tmp.72 = as %tmp.71 { (interface { var accuracy; }) };
+        symbol [ accuracy %tmp.73 144 39 47 ];
+        %tmp.73 = getv %tmp.72 :accuracy;
+        %tmp.74 = null;
+        %tmp.75 = ne %tmp.73 %tmp.74;
+        push %tmp.75;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_144_32_144_51_end:
+        %tmp.76 = phi [%tmp.70 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_144_7_144_51_begin] [%tmp.75 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_144_32_144_51_true] [%tmp.76 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_144_32_144_51_end];
+        bf %tmp.76 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_144_4_149_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_144_4_149_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_144_57_146_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 145 6 ]
+        symbol [ self %self 145 6 10 ];
+        %tmp.77 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.77 145 31 37 ];
+        %tmp.78 = as %tmp.77 { (interface { var accuracy; }) };
+        symbol [ accuracy %tmp.79 145 38 46 ];
+        %tmp.79 = getv %tmp.78 :accuracy;
+        symbol [ ePositionAccuracy ? 145 11 28 ];
+        putv self :ePositionAccuracy %tmp.79;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_144_57_146_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_144_4_149_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_144_4_149_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_147_9_149_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 148 6 ]
+        symbol [ self %self 148 6 10 ];
+        %tmp.80 = null;
+        symbol [ ePositionAccuracy ? 148 11 28 ];
+        putv self :ePositionAccuracy %tmp.80;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_147_9_149_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_144_4_149_4_if_end:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_111_62_150_2_stop:
+    }
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 152; @symbol_functiondef = [storeSensorInfo,152,11,26]; @symbol_param<0> = [_oInfo,152,27,33]; @symbol_param<0>_type<0> = [Sensor,152,37,43]; @symbol_param<0>_type<1> = [Info,152,44,48]; ]
+    function storeSensorInfo(_oInfo as Sensor.Info) as Void {
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_152_58_263_2_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 154 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_154_4_159_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_154_7_154_51_begin:
+        %tmp.1 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.1 154 7 13 ];
+        %tmp.3 = const :altitude;
+        symbol [ altitude %tmp.3 154 19 27 const ];
+        %tmp.4 = canhazplz %tmp.1 %tmp.3;
+        bf %tmp.4 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_154_4_159_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_154_32_154_51_true:
+        %tmp.5 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.5 154 32 38 ];
+        %tmp.6 = as %tmp.5 { (interface { var altitude; }) };
+        symbol [ altitude %tmp.7 154 39 47 ];
+        %tmp.7 = getv %tmp.6 :altitude;
+        %tmp.8 = null;
+        %tmp.9 = ne %tmp.7 %tmp.8;
+        push %tmp.9;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_154_32_154_51_end:
+        %tmp.10 = phi [%tmp.4 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_154_7_154_51_begin] [%tmp.9 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_154_32_154_51_true] [%tmp.10 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_154_32_154_51_end];
+        bf %tmp.10 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_154_4_159_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_154_4_159_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_154_57_156_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 155 6 ]
+        symbol [ self %self 155 6 10 ];
+        %tmp.11 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.11 155 29 35 ];
+        %tmp.12 = as %tmp.11 { (interface { var altitude; }) };
+        symbol [ altitude %tmp.13 155 36 44 ];
+        %tmp.13 = getv %tmp.12 :altitude;
+        symbol [ fSensorAltitude ? 155 11 26 ];
+        putv self :fSensorAltitude %tmp.13;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_154_57_156_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_154_4_159_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_154_4_159_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_157_9_159_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 158 6 ]
+        symbol [ self %self 158 6 10 ];
+        %tmp.14 = null;
+        symbol [ fSensorAltitude ? 158 11 26 ];
+        putv self :fSensorAltitude %tmp.14;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_157_9_159_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_154_4_159_4_if_end:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 161 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_161_4_166_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_161_7_161_45_begin:
+        %tmp.15 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.15 161 7 13 ];
+        %tmp.17 = const :speed;
+        symbol [ speed %tmp.17 161 19 24 const ];
+        %tmp.18 = canhazplz %tmp.15 %tmp.17;
+        bf %tmp.18 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_161_4_166_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_161_29_161_45_true:
+        %tmp.19 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.19 161 29 35 ];
+        %tmp.20 = as %tmp.19 { (interface { var speed; }) };
+        symbol [ speed %tmp.21 161 36 41 ];
+        %tmp.21 = getv %tmp.20 :speed;
+        %tmp.22 = null;
+        %tmp.23 = ne %tmp.21 %tmp.22;
+        push %tmp.23;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_161_29_161_45_end:
+        %tmp.24 = phi [%tmp.18 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_161_7_161_45_begin] [%tmp.23 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_161_29_161_45_true] [%tmp.24 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_161_29_161_45_end];
+        bf %tmp.24 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_161_4_166_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_161_4_166_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_161_51_163_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 162 6 ]
+        symbol [ self %self 162 6 10 ];
+        %tmp.25 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.25 162 26 32 ];
+        %tmp.26 = as %tmp.25 { (interface { var speed; }) };
+        symbol [ speed %tmp.27 162 33 38 ];
+        %tmp.27 = getv %tmp.26 :speed;
+        symbol [ fSensorSpeed ? 162 11 23 ];
+        putv self :fSensorSpeed %tmp.27;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_161_51_163_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_161_4_166_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_161_4_166_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_164_9_166_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 165 6 ]
+        symbol [ self %self 165 6 10 ];
+        %tmp.28 = null;
+        symbol [ fSensorSpeed ? 165 11 23 ];
+        putv self :fSensorSpeed %tmp.28;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_164_9_166_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_161_4_166_4_if_end:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 168 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_168_4_173_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_168_7_168_49_begin:
+        %tmp.29 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.29 168 7 13 ];
+        %tmp.31 = const :heading;
+        symbol [ heading %tmp.31 168 19 26 const ];
+        %tmp.32 = canhazplz %tmp.29 %tmp.31;
+        bf %tmp.32 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_168_4_173_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_168_31_168_49_true:
+        %tmp.33 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.33 168 31 37 ];
+        %tmp.34 = as %tmp.33 { (interface { var heading; }) };
+        symbol [ heading %tmp.35 168 38 45 ];
+        %tmp.35 = getv %tmp.34 :heading;
+        %tmp.36 = null;
+        %tmp.37 = ne %tmp.35 %tmp.36;
+        push %tmp.37;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_168_31_168_49_end:
+        %tmp.38 = phi [%tmp.32 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_168_7_168_49_begin] [%tmp.37 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_168_31_168_49_true] [%tmp.38 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_168_31_168_49_end];
+        bf %tmp.38 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_168_4_173_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_168_4_173_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_168_55_170_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 169 6 ]
+        symbol [ self %self 169 6 10 ];
+        %tmp.39 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.39 169 28 34 ];
+        %tmp.40 = as %tmp.39 { (interface { var heading; }) };
+        symbol [ heading %tmp.41 169 35 42 ];
+        %tmp.41 = getv %tmp.40 :heading;
+        symbol [ fSensorHeading ? 169 11 25 ];
+        putv self :fSensorHeading %tmp.41;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_168_55_170_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_168_4_173_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_168_4_173_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_171_9_173_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 172 6 ]
+        symbol [ self %self 172 6 10 ];
+        %tmp.42 = null;
+        symbol [ fSensorHeading ? 172 11 25 ];
+        putv self :fSensorHeading %tmp.42;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_171_9_173_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_168_4_173_4_if_end:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 175 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_175_4_180_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_175_7_175_51_begin:
+        %tmp.43 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.43 175 7 13 ];
+        %tmp.45 = const :pressure;
+        symbol [ pressure %tmp.45 175 19 27 const ];
+        %tmp.46 = canhazplz %tmp.43 %tmp.45;
+        bf %tmp.46 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_175_4_180_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_175_32_175_51_true:
+        %tmp.47 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.47 175 32 38 ];
+        %tmp.48 = as %tmp.47 { (interface { var pressure; }) };
+        symbol [ pressure %tmp.49 175 39 47 ];
+        %tmp.49 = getv %tmp.48 :pressure;
+        %tmp.50 = null;
+        %tmp.51 = ne %tmp.49 %tmp.50;
+        push %tmp.51;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_175_32_175_51_end:
+        %tmp.52 = phi [%tmp.46 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_175_7_175_51_begin] [%tmp.51 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_175_32_175_51_true] [%tmp.52 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_175_32_175_51_end];
+        bf %tmp.52 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_175_4_180_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_175_4_180_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_175_57_177_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 176 6 ]
+        symbol [ self %self 176 6 10 ];
+        %tmp.53 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.53 176 29 35 ];
+        %tmp.54 = as %tmp.53 { (interface { var pressure; }) };
+        symbol [ pressure %tmp.55 176 36 44 ];
+        %tmp.55 = getv %tmp.54 :pressure;
+        symbol [ fSensorPressure ? 176 11 26 ];
+        putv self :fSensorPressure %tmp.55;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_175_57_177_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_175_4_180_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_175_4_180_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_178_9_180_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 179 6 ]
+        symbol [ self %self 179 6 10 ];
+        %tmp.56 = null;
+        symbol [ fSensorPressure ? 179 11 26 ];
+        putv self :fSensorPressure %tmp.56;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_178_9_180_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_175_4_180_4_if_end:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 182 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_182_4_191_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_182_7_182_45_begin:
+        %tmp.57 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.57 182 7 13 ];
+        %tmp.59 = const :accel;
+        symbol [ accel %tmp.59 182 19 24 const ];
+        %tmp.60 = canhazplz %tmp.57 %tmp.59;
+        bf %tmp.60 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_182_4_191_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_182_29_182_45_true:
+        %tmp.61 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.61 182 29 35 ];
+        %tmp.62 = as %tmp.61 { (interface { var accel; }) };
+        symbol [ accel %tmp.63 182 36 41 ];
+        %tmp.63 = getv %tmp.62 :accel;
+        %tmp.64 = null;
+        %tmp.65 = ne %tmp.63 %tmp.64;
+        push %tmp.65;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_182_29_182_45_end:
+        %tmp.66 = phi [%tmp.60 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_182_7_182_45_begin] [%tmp.65 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_182_29_182_45_true] [%tmp.66 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_182_29_182_45_end];
+        bf %tmp.66 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_182_4_191_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_182_4_191_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_182_51_186_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 183 6 ]
+        symbol [ self %self 183 6 10 ];
+        %tmp.67 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.67 183 35 41 ];
+        %tmp.68 = as %tmp.67 { (interface { var accel; }) };
+        symbol [ accel %tmp.69 183 42 47 ];
+        %tmp.69 = getv %tmp.68 :accel;
+        %tmp.70 = as %tmp.69 Array<Number>;
+        symbol [ Array %tmp.70 183 51 56 ];
+        symbol [ Number %tmp.70 183 57 63 ];
+        %tmp.71 = 0;
+        %tmp.72 = agetv %tmp.70 %tmp.71;
+        symbol [ iSensorAccelerationX ? 183 11 31 ];
+        putv self :iSensorAccelerationX %tmp.72;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 184 6 ]
+        symbol [ self %self 184 6 10 ];
+        %tmp.73 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.73 184 35 41 ];
+        %tmp.74 = as %tmp.73 { (interface { var accel; }) };
+        symbol [ accel %tmp.75 184 42 47 ];
+        %tmp.75 = getv %tmp.74 :accel;
+        %tmp.76 = as %tmp.75 Array<Number>;
+        symbol [ Array %tmp.76 184 51 56 ];
+        symbol [ Number %tmp.76 184 57 63 ];
+        %tmp.77 = 1;
+        %tmp.78 = agetv %tmp.76 %tmp.77;
+        symbol [ iSensorAccelerationY ? 184 11 31 ];
+        putv self :iSensorAccelerationY %tmp.78;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 185 6 ]
+        symbol [ self %self 185 6 10 ];
+        %tmp.79 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.79 185 35 41 ];
+        %tmp.80 = as %tmp.79 { (interface { var accel; }) };
+        symbol [ accel %tmp.81 185 42 47 ];
+        %tmp.81 = getv %tmp.80 :accel;
+        %tmp.82 = as %tmp.81 Array<Number>;
+        symbol [ Array %tmp.82 185 51 56 ];
+        symbol [ Number %tmp.82 185 57 63 ];
+        %tmp.83 = 2;
+        %tmp.84 = agetv %tmp.82 %tmp.83;
+        symbol [ iSensorAccelerationZ ? 185 11 31 ];
+        putv self :iSensorAccelerationZ %tmp.84;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_182_51_186_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_182_4_191_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_182_4_191_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_187_9_191_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 188 6 ]
+        symbol [ self %self 188 6 10 ];
+        %tmp.85 = null;
+        symbol [ iSensorAccelerationX ? 188 11 31 ];
+        putv self :iSensorAccelerationX %tmp.85;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 189 6 ]
+        symbol [ self %self 189 6 10 ];
+        %tmp.86 = null;
+        symbol [ iSensorAccelerationY ? 189 11 31 ];
+        putv self :iSensorAccelerationY %tmp.86;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 190 6 ]
+        symbol [ self %self 190 6 10 ];
+        %tmp.87 = null;
+        symbol [ iSensorAccelerationZ ? 190 11 31 ];
+        putv self :iSensorAccelerationZ %tmp.87;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_187_9_191_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_182_4_191_4_if_end:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 193 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_193_4_223_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_193_7_193_43_begin:
+        %tmp.88 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.88 193 7 13 ];
+        %tmp.90 = const :gyro;
+        symbol [ gyro %tmp.90 193 19 23 const ];
+        %tmp.91 = canhazplz %tmp.88 %tmp.90;
+        bf %tmp.91 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_193_4_223_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_193_28_193_43_true:
+        %tmp.92 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.92 193 28 34 ];
+        %tmp.93 = as %tmp.92 { (interface { var gyro; }) };
+        symbol [ gyro %tmp.94 193 35 39 ];
+        %tmp.94 = getv %tmp.93 :gyro;
+        %tmp.95 = null;
+        %tmp.96 = ne %tmp.94 %tmp.95;
+        push %tmp.96;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_193_28_193_43_end:
+        %tmp.97 = phi [%tmp.91 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_193_7_193_43_begin] [%tmp.96 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_193_28_193_43_true] [%tmp.97 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_193_28_193_43_end];
+        bf %tmp.97 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_193_4_223_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_193_4_223_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_193_49_214_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 194 6 ]
+        try @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_194_6_213_6_beginTry @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_194_6_213_6_endTry @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_194_6_213_6_catch @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_194_6_213_6_finally;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_194_6_213_6_beginTry:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_194_10_208_6_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 195 8 ]
+        [ "_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_194_10_208_6_start" "_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_194_10_208_6_stop" ]
+        %gyroData.1 = local;
+        symbol [ gyroData %gyroData.1 195 12 20 ];
+        %tmp.98 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.98 195 23 29 ];
+        %tmp.99 = as %tmp.98 { (interface { var gyro; }) };
+        symbol [ gyro %tmp.100 195 30 34 ];
+        %tmp.100 = getv %tmp.99 :gyro;
+        %tmp.101 = as %tmp.100 Array<Number>;
+        symbol [ Array %tmp.101 195 38 43 ];
+        symbol [ Number %tmp.101 195 44 50 ];
+        lputv %gyroData.1 %tmp.101;
+        symbol [ gyroData %gyroData.1 195 12 20 ];
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 196 8 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_196_8_207_8_if_stmt:
+        %tmp.102 = lgetv %gyroData.1;
+        symbol [ gyroData %tmp.102 196 11 19 ];
+        symbol [ size %tmp.103 196 20 24 ];
+        %tmp.103 = getv function %tmp.102 :size;
+        %tmp.104 = invoke %tmp.102 %tmp.103();
+        %tmp.105 = 3;
+        %tmp.106 = gte %tmp.104 %tmp.105;
+        bf %tmp.106 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_196_8_207_8_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_196_8_207_8_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_196_33_202_8_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 197 10 ]
+        symbol [ self %self 197 10 14 ];
+        %tmp.107 = lgetv %gyroData.1;
+        symbol [ gyroData %tmp.107 197 35 43 ];
+        %tmp.108 = 0;
+        %tmp.109 = agetv %tmp.107 %tmp.108;
+        symbol [ iSensorGyroscopeX ? 197 15 32 ];
+        putv self :iSensorGyroscopeX %tmp.109;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 198 10 ]
+        symbol [ self %self 198 10 14 ];
+        %tmp.110 = lgetv %gyroData.1;
+        symbol [ gyroData %tmp.110 198 35 43 ];
+        %tmp.111 = 1;
+        %tmp.112 = agetv %tmp.110 %tmp.111;
+        symbol [ iSensorGyroscopeY ? 198 15 32 ];
+        putv self :iSensorGyroscopeY %tmp.112;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 199 10 ]
+        symbol [ self %self 199 10 14 ];
+        %tmp.113 = lgetv %gyroData.1;
+        symbol [ gyroData %tmp.113 199 35 43 ];
+        %tmp.114 = 2;
+        %tmp.115 = agetv %tmp.113 %tmp.114;
+        symbol [ iSensorGyroscopeZ ? 199 15 32 ];
+        putv self :iSensorGyroscopeZ %tmp.115;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 201 10 ]
+        symbol [ Sys %tmp.116 201 10 13 ];
+        %tmp.116 = getm $.Toybox.System;
+        symbol [ println %tmp.117 201 14 21 ];
+        %tmp.117 = getv function %tmp.116 :println;
+        %tmp.118 = "Gyro values received: X=";
+        %tmp.119 = self;
+        symbol [ self %tmp.119 201 51 55 ];
+        symbol [ iSensorGyroscopeX %tmp.120 201 56 73 ];
+        %tmp.120 = getv %tmp.119 :iSensorGyroscopeX;
+        %tmp.121 = add %tmp.118 %tmp.120;
+        %tmp.122 = ", Y=";
+        %tmp.123 = add %tmp.121 %tmp.122;
+        %tmp.124 = self;
+        symbol [ self %tmp.124 201 85 89 ];
+        symbol [ iSensorGyroscopeY %tmp.125 201 90 107 ];
+        %tmp.125 = getv %tmp.124 :iSensorGyroscopeY;
+        %tmp.126 = add %tmp.123 %tmp.125;
+        %tmp.127 = ", Z=";
+        %tmp.128 = add %tmp.126 %tmp.127;
+        %tmp.129 = self;
+        symbol [ self %tmp.129 201 119 123 ];
+        symbol [ iSensorGyroscopeZ %tmp.130 201 124 141 ];
+        %tmp.130 = getv %tmp.129 :iSensorGyroscopeZ;
+        %tmp.131 = add %tmp.128 %tmp.130;
+        invoke %tmp.116 %tmp.117(%tmp.131);
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_196_33_202_8_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_196_8_207_8_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_196_8_207_8_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_202_15_207_8_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 203 10 ]
+        symbol [ Sys %tmp.132 203 10 13 ];
+        %tmp.132 = getm $.Toybox.System;
+        symbol [ println %tmp.133 203 14 21 ];
+        %tmp.133 = getv function %tmp.132 :println;
+        %tmp.134 = "Warning: Gyro data array has insufficient elements: ";
+        %tmp.135 = lgetv %gyroData.1;
+        symbol [ gyroData %tmp.135 203 79 87 ];
+        symbol [ size %tmp.136 203 88 92 ];
+        %tmp.136 = getv function %tmp.135 :size;
+        %tmp.137 = invoke %tmp.135 %tmp.136();
+        %tmp.138 = add %tmp.134 %tmp.137;
+        invoke %tmp.132 %tmp.133(%tmp.138);
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 204 10 ]
+        symbol [ self %self 204 10 14 ];
+        %tmp.139 = null;
+        symbol [ iSensorGyroscopeX ? 204 15 32 ];
+        putv self :iSensorGyroscopeX %tmp.139;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 205 10 ]
+        symbol [ self %self 205 10 14 ];
+        %tmp.140 = null;
+        symbol [ iSensorGyroscopeY ? 205 15 32 ];
+        putv self :iSensorGyroscopeY %tmp.140;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 206 10 ]
+        symbol [ self %self 206 10 14 ];
+        %tmp.141 = null;
+        symbol [ iSensorGyroscopeZ ? 206 15 32 ];
+        putv self :iSensorGyroscopeZ %tmp.141;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_202_15_207_8_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_196_8_207_8_if_end:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_194_10_208_6_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_194_6_213_6_endTry:
+        jsr @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_194_6_213_6_finally;
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_194_6_213_6_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_194_6_213_6_catch:
+        %tmp.142 = exception;
+        push %tmp.142;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 208 8 ]
+        [ "_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_194_6_213_6_catch" "_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_208_8_213_6_end" ]
+        %e.2 = local;
+        symbol [ e %e.2 208 14 15 ];
+        %tmp.143 = dup %tmp.142;
+        lputv %e.2 %tmp.143;
+        symbol [ e %e.2 208 14 15 ];
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_208_17_213_6_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 209 8 ]
+        symbol [ Sys %tmp.144 209 8 11 ];
+        %tmp.144 = getm $.Toybox.System;
+        symbol [ println %tmp.145 209 12 19 ];
+        %tmp.145 = getv function %tmp.144 :println;
+        %tmp.146 = "Error processing gyro data: ";
+        %tmp.147 = lgetv %e.2;
+        symbol [ e %tmp.147 209 53 54 ];
+        symbol [ getErrorMessage %tmp.148 209 55 70 ];
+        %tmp.148 = getv function %tmp.147 :getErrorMessage;
+        %tmp.149 = invoke %tmp.147 %tmp.148();
+        %tmp.150 = add %tmp.146 %tmp.149;
+        invoke %tmp.144 %tmp.145(%tmp.150);
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 210 8 ]
+        symbol [ self %self 210 8 12 ];
+        %tmp.151 = null;
+        symbol [ iSensorGyroscopeX ? 210 13 30 ];
+        putv self :iSensorGyroscopeX %tmp.151;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 211 8 ]
+        symbol [ self %self 211 8 12 ];
+        %tmp.152 = null;
+        symbol [ iSensorGyroscopeY ? 211 13 30 ];
+        putv self :iSensorGyroscopeY %tmp.152;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 212 8 ]
+        symbol [ self %self 212 8 12 ];
+        %tmp.153 = null;
+        symbol [ iSensorGyroscopeZ ? 212 13 30 ];
+        putv self :iSensorGyroscopeZ %tmp.153;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_208_17_213_6_stop:
+        jsr @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_194_6_213_6_finally;
+        pop;
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_194_6_213_6_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_208_8_213_6_end:
+        try @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_194_6_213_6_catch @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_208_8_213_6_end @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_208_8_213_6_end @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_194_6_213_6_finally;
+        jsr @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_194_6_213_6_finally;
+        throw %tmp.142;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_194_6_213_6_finally:
+        jsrret;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_194_6_213_6_end:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_193_49_214_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_193_4_223_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_193_4_223_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_215_9_223_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 217 6 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_217_6_219_6_if_stmt:
+        symbol [ $ %tmp.154 217 9 10 ];
+        %tmp.154 = getm $;
+        symbol [ RL_oSettings %tmp.155 217 11 23 ];
+        %tmp.155 = getv %tmp.154 :RL_oSettings;
+        symbol [ bSensorGyroscope %tmp.156 217 24 40 ];
+        %tmp.156 = getv %tmp.155 :bSensorGyroscope;
+        bf %tmp.156 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_217_6_219_6_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_217_6_219_6_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_217_42_219_6_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 218 8 ]
+        symbol [ Sys %tmp.157 218 8 11 ];
+        %tmp.157 = getm $.Toybox.System;
+        symbol [ println %tmp.158 218 12 19 ];
+        %tmp.158 = getv function %tmp.157 :println;
+        %tmp.159 = "No gyro data in sensor info";
+        invoke %tmp.157 %tmp.158(%tmp.159);
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_217_42_219_6_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_217_6_219_6_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_217_6_219_6_if_end:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 220 6 ]
+        symbol [ self %self 220 6 10 ];
+        %tmp.160 = null;
+        symbol [ iSensorGyroscopeX ? 220 11 28 ];
+        putv self :iSensorGyroscopeX %tmp.160;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 221 6 ]
+        symbol [ self %self 221 6 10 ];
+        %tmp.161 = null;
+        symbol [ iSensorGyroscopeY ? 221 11 28 ];
+        putv self :iSensorGyroscopeY %tmp.161;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 222 6 ]
+        symbol [ self %self 222 6 10 ];
+        %tmp.162 = null;
+        symbol [ iSensorGyroscopeZ ? 222 11 28 ];
+        putv self :iSensorGyroscopeZ %tmp.162;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_215_9_223_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_193_4_223_4_if_end:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 225 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_225_4_234_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_225_7_225_41_begin:
+        %tmp.163 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.163 225 7 13 ];
+        %tmp.165 = const :mag;
+        symbol [ mag %tmp.165 225 19 22 const ];
+        %tmp.166 = canhazplz %tmp.163 %tmp.165;
+        bf %tmp.166 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_225_4_234_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_225_27_225_41_true:
+        %tmp.167 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.167 225 27 33 ];
+        %tmp.168 = as %tmp.167 { (interface { var mag; }) };
+        symbol [ mag %tmp.169 225 34 37 ];
+        %tmp.169 = getv %tmp.168 :mag;
+        %tmp.170 = null;
+        %tmp.171 = ne %tmp.169 %tmp.170;
+        push %tmp.171;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_225_27_225_41_end:
+        %tmp.172 = phi [%tmp.166 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_225_7_225_41_begin] [%tmp.171 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_225_27_225_41_true] [%tmp.172 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_225_27_225_41_end];
+        bf %tmp.172 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_225_4_234_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_225_4_234_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_225_47_229_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 226 6 ]
+        symbol [ self %self 226 6 10 ];
+        %tmp.173 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.173 226 35 41 ];
+        %tmp.174 = as %tmp.173 { (interface { var mag; }) };
+        symbol [ mag %tmp.175 226 42 45 ];
+        %tmp.175 = getv %tmp.174 :mag;
+        %tmp.176 = as %tmp.175 Array<Number>;
+        symbol [ Array %tmp.176 226 49 54 ];
+        symbol [ Number %tmp.176 226 55 61 ];
+        %tmp.177 = 0;
+        %tmp.178 = agetv %tmp.176 %tmp.177;
+        symbol [ iSensorMagnetometerX ? 226 11 31 ];
+        putv self :iSensorMagnetometerX %tmp.178;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 227 6 ]
+        symbol [ self %self 227 6 10 ];
+        %tmp.179 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.179 227 35 41 ];
+        %tmp.180 = as %tmp.179 { (interface { var mag; }) };
+        symbol [ mag %tmp.181 227 42 45 ];
+        %tmp.181 = getv %tmp.180 :mag;
+        %tmp.182 = as %tmp.181 Array<Number>;
+        symbol [ Array %tmp.182 227 49 54 ];
+        symbol [ Number %tmp.182 227 55 61 ];
+        %tmp.183 = 1;
+        %tmp.184 = agetv %tmp.182 %tmp.183;
+        symbol [ iSensorMagnetometerY ? 227 11 31 ];
+        putv self :iSensorMagnetometerY %tmp.184;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 228 6 ]
+        symbol [ self %self 228 6 10 ];
+        %tmp.185 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.185 228 35 41 ];
+        %tmp.186 = as %tmp.185 { (interface { var mag; }) };
+        symbol [ mag %tmp.187 228 42 45 ];
+        %tmp.187 = getv %tmp.186 :mag;
+        %tmp.188 = as %tmp.187 Array<Number>;
+        symbol [ Array %tmp.188 228 49 54 ];
+        symbol [ Number %tmp.188 228 55 61 ];
+        %tmp.189 = 2;
+        %tmp.190 = agetv %tmp.188 %tmp.189;
+        symbol [ iSensorMagnetometerZ ? 228 11 31 ];
+        putv self :iSensorMagnetometerZ %tmp.190;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_225_47_229_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_225_4_234_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_225_4_234_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_230_9_234_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 231 6 ]
+        symbol [ self %self 231 6 10 ];
+        %tmp.191 = null;
+        symbol [ iSensorMagnetometerX ? 231 11 31 ];
+        putv self :iSensorMagnetometerX %tmp.191;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 232 6 ]
+        symbol [ self %self 232 6 10 ];
+        %tmp.192 = null;
+        symbol [ iSensorMagnetometerY ? 232 11 31 ];
+        putv self :iSensorMagnetometerY %tmp.192;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 233 6 ]
+        symbol [ self %self 233 6 10 ];
+        %tmp.193 = null;
+        symbol [ iSensorMagnetometerZ ? 233 11 31 ];
+        putv self :iSensorMagnetometerZ %tmp.193;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_230_9_234_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_225_4_234_4_if_end:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 236 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_236_4_241_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_236_7_236_53_begin:
+        %tmp.194 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.194 236 7 13 ];
+        %tmp.196 = const :heartRate;
+        symbol [ heartRate %tmp.196 236 19 28 const ];
+        %tmp.197 = canhazplz %tmp.194 %tmp.196;
+        bf %tmp.197 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_236_4_241_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_236_33_236_53_true:
+        %tmp.198 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.198 236 33 39 ];
+        %tmp.199 = as %tmp.198 { (interface { var heartRate; }) };
+        symbol [ heartRate %tmp.200 236 40 49 ];
+        %tmp.200 = getv %tmp.199 :heartRate;
+        %tmp.201 = null;
+        %tmp.202 = ne %tmp.200 %tmp.201;
+        push %tmp.202;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_236_33_236_53_end:
+        %tmp.203 = phi [%tmp.197 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_236_7_236_53_begin] [%tmp.202 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_236_33_236_53_true] [%tmp.203 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_236_33_236_53_end];
+        bf %tmp.203 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_236_4_241_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_236_4_241_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_236_59_238_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 237 6 ]
+        symbol [ self %self 237 6 10 ];
+        %tmp.204 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.204 237 30 36 ];
+        %tmp.205 = as %tmp.204 { (interface { var heartRate; }) };
+        symbol [ heartRate %tmp.206 237 37 46 ];
+        %tmp.206 = getv %tmp.205 :heartRate;
+        symbol [ iSensorHeartrate ? 237 11 27 ];
+        putv self :iSensorHeartrate %tmp.206;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_236_59_238_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_236_4_241_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_236_4_241_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_239_9_241_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 240 6 ]
+        symbol [ self %self 240 6 10 ];
+        %tmp.207 = null;
+        symbol [ iSensorHeartrate ? 240 11 27 ];
+        putv self :iSensorHeartrate %tmp.207;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_239_9_241_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_236_4_241_4_if_end:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 243 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_243_4_248_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_243_7_243_49_begin:
+        %tmp.208 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.208 243 7 13 ];
+        %tmp.210 = const :cadence;
+        symbol [ cadence %tmp.210 243 19 26 const ];
+        %tmp.211 = canhazplz %tmp.208 %tmp.210;
+        bf %tmp.211 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_243_4_248_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_243_31_243_49_true:
+        %tmp.212 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.212 243 31 37 ];
+        %tmp.213 = as %tmp.212 { (interface { var cadence; }) };
+        symbol [ cadence %tmp.214 243 38 45 ];
+        %tmp.214 = getv %tmp.213 :cadence;
+        %tmp.215 = null;
+        %tmp.216 = ne %tmp.214 %tmp.215;
+        push %tmp.216;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_243_31_243_49_end:
+        %tmp.217 = phi [%tmp.211 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_243_7_243_49_begin] [%tmp.216 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_243_31_243_49_true] [%tmp.217 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_243_31_243_49_end];
+        bf %tmp.217 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_243_4_248_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_243_4_248_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_243_55_245_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 244 6 ]
+        symbol [ self %self 244 6 10 ];
+        %tmp.218 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.218 244 28 34 ];
+        %tmp.219 = as %tmp.218 { (interface { var cadence; }) };
+        symbol [ cadence %tmp.220 244 35 42 ];
+        %tmp.220 = getv %tmp.219 :cadence;
+        symbol [ iSensorCadence ? 244 11 25 ];
+        putv self :iSensorCadence %tmp.220;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_243_55_245_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_243_4_248_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_243_4_248_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_246_9_248_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 247 6 ]
+        symbol [ self %self 247 6 10 ];
+        %tmp.221 = null;
+        symbol [ iSensorCadence ? 247 11 25 ];
+        putv self :iSensorCadence %tmp.221;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_246_9_248_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_243_4_248_4_if_end:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 250 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_250_4_255_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_250_7_250_45_begin:
+        %tmp.222 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.222 250 7 13 ];
+        %tmp.224 = const :power;
+        symbol [ power %tmp.224 250 19 24 const ];
+        %tmp.225 = canhazplz %tmp.222 %tmp.224;
+        bf %tmp.225 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_250_4_255_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_250_29_250_45_true:
+        %tmp.226 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.226 250 29 35 ];
+        %tmp.227 = as %tmp.226 { (interface { var power; }) };
+        symbol [ power %tmp.228 250 36 41 ];
+        %tmp.228 = getv %tmp.227 :power;
+        %tmp.229 = null;
+        %tmp.230 = ne %tmp.228 %tmp.229;
+        push %tmp.230;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_250_29_250_45_end:
+        %tmp.231 = phi [%tmp.225 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_250_7_250_45_begin] [%tmp.230 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_250_29_250_45_true] [%tmp.231 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_250_29_250_45_end];
+        bf %tmp.231 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_250_4_255_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_250_4_255_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_250_51_252_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 251 6 ]
+        symbol [ self %self 251 6 10 ];
+        %tmp.232 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.232 251 26 32 ];
+        %tmp.233 = as %tmp.232 { (interface { var power; }) };
+        symbol [ power %tmp.234 251 33 38 ];
+        %tmp.234 = getv %tmp.233 :power;
+        symbol [ iSensorPower ? 251 11 23 ];
+        putv self :iSensorPower %tmp.234;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_250_51_252_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_250_4_255_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_250_4_255_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_253_9_255_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 254 6 ]
+        symbol [ self %self 254 6 10 ];
+        %tmp.235 = null;
+        symbol [ iSensorPower ? 254 11 23 ];
+        putv self :iSensorPower %tmp.235;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_253_9_255_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_250_4_255_4_if_end:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 257 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_257_4_262_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_257_7_257_57_begin:
+        %tmp.236 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.236 257 7 13 ];
+        %tmp.238 = const :temperature;
+        symbol [ temperature %tmp.238 257 19 30 const ];
+        %tmp.239 = canhazplz %tmp.236 %tmp.238;
+        bf %tmp.239 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_257_4_262_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_257_35_257_57_true:
+        %tmp.240 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.240 257 35 41 ];
+        %tmp.241 = as %tmp.240 { (interface { var temperature; }) };
+        symbol [ temperature %tmp.242 257 42 53 ];
+        %tmp.242 = getv %tmp.241 :temperature;
+        %tmp.243 = null;
+        %tmp.244 = ne %tmp.242 %tmp.243;
+        push %tmp.244;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_257_35_257_57_end:
+        %tmp.245 = phi [%tmp.239 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_257_7_257_57_begin] [%tmp.244 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_257_35_257_57_true] [%tmp.245 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_257_35_257_57_end];
+        bf %tmp.245 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_257_4_262_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_257_4_262_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_257_63_259_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 258 6 ]
+        symbol [ self %self 258 6 10 ];
+        %tmp.246 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.246 258 32 38 ];
+        %tmp.247 = as %tmp.246 { (interface { var temperature; }) };
+        symbol [ temperature %tmp.248 258 39 50 ];
+        %tmp.248 = getv %tmp.247 :temperature;
+        symbol [ fSensorTemperature ? 258 11 29 ];
+        putv self :fSensorTemperature %tmp.248;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_257_63_259_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_257_4_262_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_257_4_262_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_260_9_262_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 261 6 ]
+        symbol [ self %self 261 6 10 ];
+        %tmp.249 = null;
+        symbol [ fSensorTemperature ? 261 11 29 ];
+        putv self :fSensorTemperature %tmp.249;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_260_9_262_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_257_4_262_4_if_end:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_152_58_263_2_stop:
+    }
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 265; @symbol_functiondef = [storeSensorData,265,11,26]; @symbol_param<0> = [_oData,265,27,33]; @symbol_param<0>_type<0> = [Sensor,265,37,43]; @symbol_param<0>_type<1> = [SensorData,265,44,54]; ]
+    function storeSensorData(_oData as Sensor.SensorData) as Void {
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_265_64_277_2_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 267 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_267_4_276_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_267_7_267_69_begin:
+        %tmp.1 = lgetv %_oData;
+        symbol [ _oData %tmp.1 267 7 13 ];
+        %tmp.3 = const :accelerometerData;
+        symbol [ accelerometerData %tmp.3 267 19 36 const ];
+        %tmp.4 = canhazplz %tmp.1 %tmp.3;
+        bf %tmp.4 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_267_4_276_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_267_41_267_69_true:
+        %tmp.5 = lgetv %_oData;
+        symbol [ _oData %tmp.5 267 41 47 ];
+        %tmp.6 = as %tmp.5 { (interface { var accelerometerData; }) };
+        symbol [ accelerometerData %tmp.7 267 48 65 ];
+        %tmp.7 = getv %tmp.6 :accelerometerData;
+        %tmp.8 = null;
+        %tmp.9 = ne %tmp.7 %tmp.8;
+        push %tmp.9;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_267_41_267_69_end:
+        %tmp.10 = phi [%tmp.4 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_267_7_267_69_begin] [%tmp.9 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_267_41_267_69_true] [%tmp.10 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_267_41_267_69_end];
+        bf %tmp.10 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_267_4_276_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_267_4_276_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_267_75_271_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 268 6 ]
+        symbol [ self %self 268 6 10 ];
+        %tmp.11 = lgetv %_oData;
+        symbol [ _oData %tmp.11 268 39 45 ];
+        %tmp.12 = as %tmp.11 { (interface { var accelerometerData; }) };
+        symbol [ accelerometerData %tmp.13 268 46 63 ];
+        %tmp.13 = getv %tmp.12 :accelerometerData;
+        %tmp.14 = as %tmp.13 Sensor.AccelerometerData;
+        symbol [ Sensor %tmp.14 268 67 73 ];
+        symbol [ AccelerometerData %tmp.14 268 74 91 ];
+        symbol [ x %tmp.15 268 93 94 ];
+        %tmp.15 = getv %tmp.14 :x;
+        symbol [ aiSensorAccelerationX_HD ? 268 11 35 ];
+        putv self :aiSensorAccelerationX_HD %tmp.15;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 269 6 ]
+        symbol [ self %self 269 6 10 ];
+        %tmp.16 = lgetv %_oData;
+        symbol [ _oData %tmp.16 269 39 45 ];
+        %tmp.17 = as %tmp.16 { (interface { var accelerometerData; }) };
+        symbol [ accelerometerData %tmp.18 269 46 63 ];
+        %tmp.18 = getv %tmp.17 :accelerometerData;
+        %tmp.19 = as %tmp.18 Sensor.AccelerometerData;
+        symbol [ Sensor %tmp.19 269 67 73 ];
+        symbol [ AccelerometerData %tmp.19 269 74 91 ];
+        symbol [ y %tmp.20 269 93 94 ];
+        %tmp.20 = getv %tmp.19 :y;
+        symbol [ aiSensorAccelerationY_HD ? 269 11 35 ];
+        putv self :aiSensorAccelerationY_HD %tmp.20;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 270 6 ]
+        symbol [ self %self 270 6 10 ];
+        %tmp.21 = lgetv %_oData;
+        symbol [ _oData %tmp.21 270 39 45 ];
+        %tmp.22 = as %tmp.21 { (interface { var accelerometerData; }) };
+        symbol [ accelerometerData %tmp.23 270 46 63 ];
+        %tmp.23 = getv %tmp.22 :accelerometerData;
+        %tmp.24 = as %tmp.23 Sensor.AccelerometerData;
+        symbol [ Sensor %tmp.24 270 67 73 ];
+        symbol [ AccelerometerData %tmp.24 270 74 91 ];
+        symbol [ z %tmp.25 270 93 94 ];
+        %tmp.25 = getv %tmp.24 :z;
+        symbol [ aiSensorAccelerationZ_HD ? 270 11 35 ];
+        putv self :aiSensorAccelerationZ_HD %tmp.25;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_267_75_271_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_267_4_276_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_267_4_276_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_272_9_276_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 273 6 ]
+        symbol [ self %self 273 6 10 ];
+        %tmp.26 = null;
+        symbol [ aiSensorAccelerationX_HD ? 273 11 35 ];
+        putv self :aiSensorAccelerationX_HD %tmp.26;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 274 6 ]
+        symbol [ self %self 274 6 10 ];
+        %tmp.27 = null;
+        symbol [ aiSensorAccelerationY_HD ? 274 11 35 ];
+        putv self :aiSensorAccelerationY_HD %tmp.27;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 275 6 ]
+        symbol [ self %self 275 6 10 ];
+        %tmp.28 = null;
+        symbol [ aiSensorAccelerationZ_HD ? 275 11 35 ];
+        putv self :aiSensorAccelerationZ_HD %tmp.28;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_272_9_276_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_267_4_276_4_if_end:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_265_64_277_2_stop:
+    }
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 279; @symbol_functiondef = [storeActivityInfo,279,11,28]; @symbol_param<0> = [_oInfo,279,29,35]; @symbol_param<0>_type<0> = [Activity,279,39,47]; @symbol_param<0>_type<1> = [Info,279,48,52]; ]
+    function storeActivityInfo(_oInfo as Activity.Info) as Void {
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_279_62_360_2_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 281 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_281_4_289_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_281_7_281_65_begin:
+        %tmp.1 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.1 281 7 13 ];
+        %tmp.3 = const :currentLocation;
+        symbol [ currentLocation %tmp.3 281 19 34 const ];
+        %tmp.4 = canhazplz %tmp.1 %tmp.3;
+        bf %tmp.4 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_281_4_289_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_281_39_281_65_true:
+        %tmp.5 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.5 281 39 45 ];
+        %tmp.6 = as %tmp.5 { (interface { var currentLocation; }) };
+        symbol [ currentLocation %tmp.7 281 46 61 ];
+        %tmp.7 = getv %tmp.6 :currentLocation;
+        %tmp.8 = null;
+        %tmp.9 = ne %tmp.7 %tmp.8;
+        push %tmp.9;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_281_39_281_65_end:
+        %tmp.10 = phi [%tmp.4 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_281_7_281_65_begin] [%tmp.9 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_281_39_281_65_true] [%tmp.10 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_281_39_281_65_end];
+        bf %tmp.10 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_281_4_289_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_281_4_289_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_281_71_285_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 282 6 ]
+        [ "_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_281_71_285_4_start" "_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_281_71_285_4_stop" ]
+        %afLocation.1 = local;
+        symbol [ afLocation %afLocation.1 282 10 20 ];
+        %tmp.11 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.11 282 24 30 ];
+        %tmp.12 = as %tmp.11 { (interface { var currentLocation; }) };
+        symbol [ currentLocation %tmp.13 282 31 46 ];
+        %tmp.13 = getv %tmp.12 :currentLocation;
+        %tmp.14 = as %tmp.13 Position.Location;
+        symbol [ Position %tmp.14 282 50 58 ];
+        symbol [ Location %tmp.14 282 59 67 ];
+        symbol [ toDegrees %tmp.15 282 69 78 ];
+        %tmp.15 = getv function %tmp.14 :toDegrees;
+        %tmp.16 = invoke %tmp.14 %tmp.15();
+        lputv %afLocation.1 %tmp.16;
+        symbol [ afLocation %afLocation.1 282 10 20 ];
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 283 6 ]
+        symbol [ self %self 283 6 10 ];
+        %tmp.17 = lgetv %afLocation.1;
+        symbol [ afLocation %tmp.17 283 31 41 ];
+        %tmp.18 = 0;
+        %tmp.19 = agetv %tmp.17 %tmp.18;
+        symbol [ dActivityLatitude ? 283 11 28 ];
+        putv self :dActivityLatitude %tmp.19;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 284 6 ]
+        symbol [ self %self 284 6 10 ];
+        %tmp.20 = lgetv %afLocation.1;
+        symbol [ afLocation %tmp.20 284 32 42 ];
+        %tmp.21 = 1;
+        %tmp.22 = agetv %tmp.20 %tmp.21;
+        symbol [ dActivityLongitude ? 284 11 29 ];
+        putv self :dActivityLongitude %tmp.22;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_281_71_285_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_281_4_289_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_281_4_289_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_286_9_289_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 287 6 ]
+        symbol [ self %self 287 6 10 ];
+        %tmp.23 = null;
+        symbol [ dActivityLatitude ? 287 11 28 ];
+        putv self :dActivityLatitude %tmp.23;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 288 6 ]
+        symbol [ self %self 288 6 10 ];
+        %tmp.24 = null;
+        symbol [ dActivityLongitude ? 288 11 29 ];
+        putv self :dActivityLongitude %tmp.24;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_286_9_289_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_281_4_289_4_if_end:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 291 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_291_4_296_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_291_7_291_51_begin:
+        %tmp.25 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.25 291 7 13 ];
+        %tmp.27 = const :altitude;
+        symbol [ altitude %tmp.27 291 19 27 const ];
+        %tmp.28 = canhazplz %tmp.25 %tmp.27;
+        bf %tmp.28 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_291_4_296_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_291_32_291_51_true:
+        %tmp.29 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.29 291 32 38 ];
+        %tmp.30 = as %tmp.29 { (interface { var altitude; }) };
+        symbol [ altitude %tmp.31 291 39 47 ];
+        %tmp.31 = getv %tmp.30 :altitude;
+        %tmp.32 = null;
+        %tmp.33 = ne %tmp.31 %tmp.32;
+        push %tmp.33;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_291_32_291_51_end:
+        %tmp.34 = phi [%tmp.28 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_291_7_291_51_begin] [%tmp.33 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_291_32_291_51_true] [%tmp.34 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_291_32_291_51_end];
+        bf %tmp.34 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_291_4_296_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_291_4_296_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_291_57_293_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 292 6 ]
+        symbol [ self %self 292 6 10 ];
+        %tmp.35 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.35 292 31 37 ];
+        %tmp.36 = as %tmp.35 { (interface { var altitude; }) };
+        symbol [ altitude %tmp.37 292 38 46 ];
+        %tmp.37 = getv %tmp.36 :altitude;
+        symbol [ fActivityAltitude ? 292 11 28 ];
+        putv self :fActivityAltitude %tmp.37;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_291_57_293_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_291_4_296_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_291_4_296_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_294_9_296_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 295 6 ]
+        symbol [ self %self 295 6 10 ];
+        %tmp.38 = null;
+        symbol [ fActivityAltitude ? 295 11 28 ];
+        putv self :fActivityAltitude %tmp.38;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_294_9_296_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_291_4_296_4_if_end:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 298 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_298_4_303_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_298_7_298_59_begin:
+        %tmp.39 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.39 298 7 13 ];
+        %tmp.41 = const :currentSpeed;
+        symbol [ currentSpeed %tmp.41 298 19 31 const ];
+        %tmp.42 = canhazplz %tmp.39 %tmp.41;
+        bf %tmp.42 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_298_4_303_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_298_36_298_59_true:
+        %tmp.43 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.43 298 36 42 ];
+        %tmp.44 = as %tmp.43 { (interface { var currentSpeed; }) };
+        symbol [ currentSpeed %tmp.45 298 43 55 ];
+        %tmp.45 = getv %tmp.44 :currentSpeed;
+        %tmp.46 = null;
+        %tmp.47 = ne %tmp.45 %tmp.46;
+        push %tmp.47;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_298_36_298_59_end:
+        %tmp.48 = phi [%tmp.42 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_298_7_298_59_begin] [%tmp.47 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_298_36_298_59_true] [%tmp.48 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_298_36_298_59_end];
+        bf %tmp.48 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_298_4_303_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_298_4_303_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_298_65_300_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 299 6 ]
+        symbol [ self %self 299 6 10 ];
+        %tmp.49 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.49 299 28 34 ];
+        %tmp.50 = as %tmp.49 { (interface { var currentSpeed; }) };
+        symbol [ currentSpeed %tmp.51 299 35 47 ];
+        %tmp.51 = getv %tmp.50 :currentSpeed;
+        symbol [ fActivitySpeed ? 299 11 25 ];
+        putv self :fActivitySpeed %tmp.51;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_298_65_300_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_298_4_303_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_298_4_303_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_301_9_303_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 302 6 ]
+        symbol [ self %self 302 6 10 ];
+        %tmp.52 = null;
+        symbol [ fActivitySpeed ? 302 11 25 ];
+        putv self :fActivitySpeed %tmp.52;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_301_9_303_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_298_4_303_4_if_end:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 305 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_305_4_310_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_305_7_305_63_begin:
+        %tmp.53 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.53 305 7 13 ];
+        %tmp.55 = const :currentHeading;
+        symbol [ currentHeading %tmp.55 305 19 33 const ];
+        %tmp.56 = canhazplz %tmp.53 %tmp.55;
+        bf %tmp.56 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_305_4_310_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_305_38_305_63_true:
+        %tmp.57 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.57 305 38 44 ];
+        %tmp.58 = as %tmp.57 { (interface { var currentHeading; }) };
+        symbol [ currentHeading %tmp.59 305 45 59 ];
+        %tmp.59 = getv %tmp.58 :currentHeading;
+        %tmp.60 = null;
+        %tmp.61 = ne %tmp.59 %tmp.60;
+        push %tmp.61;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_305_38_305_63_end:
+        %tmp.62 = phi [%tmp.56 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_305_7_305_63_begin] [%tmp.61 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_305_38_305_63_true] [%tmp.62 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_305_38_305_63_end];
+        bf %tmp.62 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_305_4_310_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_305_4_310_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_305_69_307_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 306 6 ]
+        symbol [ self %self 306 6 10 ];
+        %tmp.63 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.63 306 30 36 ];
+        %tmp.64 = as %tmp.63 { (interface { var currentHeading; }) };
+        symbol [ currentHeading %tmp.65 306 37 51 ];
+        %tmp.65 = getv %tmp.64 :currentHeading;
+        symbol [ fActivityHeading ? 306 11 27 ];
+        putv self :fActivityHeading %tmp.65;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_305_69_307_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_305_4_310_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_305_4_310_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_308_9_310_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 309 6 ]
+        symbol [ self %self 309 6 10 ];
+        %tmp.66 = null;
+        symbol [ fActivityHeading ? 309 11 27 ];
+        putv self :fActivityHeading %tmp.66;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_308_9_310_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_305_4_310_4_if_end:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 312 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_312_4_317_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_312_7_312_81_begin:
+        %tmp.67 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.67 312 7 13 ];
+        %tmp.69 = const :currentLocationAccuracy;
+        symbol [ currentLocationAccuracy %tmp.69 312 19 42 const ];
+        %tmp.70 = canhazplz %tmp.67 %tmp.69;
+        bf %tmp.70 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_312_4_317_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_312_47_312_81_true:
+        %tmp.71 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.71 312 47 53 ];
+        %tmp.72 = as %tmp.71 { (interface { var currentLocationAccuracy; }) };
+        symbol [ currentLocationAccuracy %tmp.73 312 54 77 ];
+        %tmp.73 = getv %tmp.72 :currentLocationAccuracy;
+        %tmp.74 = null;
+        %tmp.75 = ne %tmp.73 %tmp.74;
+        push %tmp.75;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_312_47_312_81_end:
+        %tmp.76 = phi [%tmp.70 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_312_7_312_81_begin] [%tmp.75 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_312_47_312_81_true] [%tmp.76 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_312_47_312_81_end];
+        bf %tmp.76 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_312_4_317_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_312_4_317_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_312_87_314_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 313 6 ]
+        symbol [ self %self 313 6 10 ];
+        %tmp.77 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.77 313 31 37 ];
+        %tmp.78 = as %tmp.77 { (interface { var currentLocationAccuracy; }) };
+        symbol [ currentLocationAccuracy %tmp.79 313 38 61 ];
+        %tmp.79 = getv %tmp.78 :currentLocationAccuracy;
+        symbol [ eActivityAccuracy ? 313 11 28 ];
+        putv self :eActivityAccuracy %tmp.79;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_312_87_314_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_312_4_317_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_312_4_317_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_315_9_317_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 316 6 ]
+        symbol [ self %self 316 6 10 ];
+        %tmp.80 = null;
+        symbol [ eActivityAccuracy ? 316 11 28 ];
+        putv self :eActivityAccuracy %tmp.80;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_315_9_317_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_312_4_317_4_if_end:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 319 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_319_4_324_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_319_7_319_71_begin:
+        %tmp.81 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.81 319 7 13 ];
+        %tmp.83 = const :rawAmbientPressure;
+        symbol [ rawAmbientPressure %tmp.83 319 19 37 const ];
+        %tmp.84 = canhazplz %tmp.81 %tmp.83;
+        bf %tmp.84 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_319_4_324_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_319_42_319_71_true:
+        %tmp.85 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.85 319 42 48 ];
+        %tmp.86 = as %tmp.85 { (interface { var rawAmbientPressure; }) };
+        symbol [ rawAmbientPressure %tmp.87 319 49 67 ];
+        %tmp.87 = getv %tmp.86 :rawAmbientPressure;
+        %tmp.88 = null;
+        %tmp.89 = ne %tmp.87 %tmp.88;
+        push %tmp.89;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_319_42_319_71_end:
+        %tmp.90 = phi [%tmp.84 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_319_7_319_71_begin] [%tmp.89 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_319_42_319_71_true] [%tmp.90 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_319_42_319_71_end];
+        bf %tmp.90 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_319_4_324_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_319_4_324_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_319_77_321_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 320 6 ]
+        symbol [ self %self 320 6 10 ];
+        %tmp.91 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.91 320 34 40 ];
+        %tmp.92 = as %tmp.91 { (interface { var rawAmbientPressure; }) };
+        symbol [ rawAmbientPressure %tmp.93 320 41 59 ];
+        %tmp.93 = getv %tmp.92 :rawAmbientPressure;
+        symbol [ fActivityPressureRaw ? 320 11 31 ];
+        putv self :fActivityPressureRaw %tmp.93;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_319_77_321_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_319_4_324_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_319_4_324_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_322_9_324_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 323 6 ]
+        symbol [ self %self 323 6 10 ];
+        %tmp.94 = null;
+        symbol [ fActivityPressureRaw ? 323 11 31 ];
+        putv self :fActivityPressureRaw %tmp.94;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_322_9_324_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_319_4_324_4_if_end:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 326 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_326_4_331_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_326_7_326_65_begin:
+        %tmp.95 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.95 326 7 13 ];
+        %tmp.97 = const :ambientPressure;
+        symbol [ ambientPressure %tmp.97 326 19 34 const ];
+        %tmp.98 = canhazplz %tmp.95 %tmp.97;
+        bf %tmp.98 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_326_4_331_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_326_39_326_65_true:
+        %tmp.99 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.99 326 39 45 ];
+        %tmp.100 = as %tmp.99 { (interface { var ambientPressure; }) };
+        symbol [ ambientPressure %tmp.101 326 46 61 ];
+        %tmp.101 = getv %tmp.100 :ambientPressure;
+        %tmp.102 = null;
+        %tmp.103 = ne %tmp.101 %tmp.102;
+        push %tmp.103;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_326_39_326_65_end:
+        %tmp.104 = phi [%tmp.98 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_326_7_326_65_begin] [%tmp.103 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_326_39_326_65_true] [%tmp.104 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_326_39_326_65_end];
+        bf %tmp.104 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_326_4_331_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_326_4_331_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_326_71_328_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 327 6 ]
+        symbol [ self %self 327 6 10 ];
+        %tmp.105 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.105 327 38 44 ];
+        %tmp.106 = as %tmp.105 { (interface { var ambientPressure; }) };
+        symbol [ ambientPressure %tmp.107 327 45 60 ];
+        %tmp.107 = getv %tmp.106 :ambientPressure;
+        symbol [ fActivityPressureAmbient ? 327 11 35 ];
+        putv self :fActivityPressureAmbient %tmp.107;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_326_71_328_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_326_4_331_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_326_4_331_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_329_9_331_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 330 6 ]
+        symbol [ self %self 330 6 10 ];
+        %tmp.108 = null;
+        symbol [ fActivityPressureAmbient ? 330 11 35 ];
+        putv self :fActivityPressureAmbient %tmp.108;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_329_9_331_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_326_4_331_4_if_end:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 333 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_333_4_338_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_333_7_333_75_begin:
+        %tmp.109 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.109 333 7 13 ];
+        %tmp.111 = const :meanSeaLevelPressure;
+        symbol [ meanSeaLevelPressure %tmp.111 333 19 39 const ];
+        %tmp.112 = canhazplz %tmp.109 %tmp.111;
+        bf %tmp.112 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_333_4_338_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_333_44_333_75_true:
+        %tmp.113 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.113 333 44 50 ];
+        %tmp.114 = as %tmp.113 { (interface { var meanSeaLevelPressure; }) };
+        symbol [ meanSeaLevelPressure %tmp.115 333 51 71 ];
+        %tmp.115 = getv %tmp.114 :meanSeaLevelPressure;
+        %tmp.116 = null;
+        %tmp.117 = ne %tmp.115 %tmp.116;
+        push %tmp.117;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_333_44_333_75_end:
+        %tmp.118 = phi [%tmp.112 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_333_7_333_75_begin] [%tmp.117 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_333_44_333_75_true] [%tmp.118 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_333_44_333_75_end];
+        bf %tmp.118 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_333_4_338_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_333_4_338_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_333_81_335_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 334 6 ]
+        symbol [ self %self 334 6 10 ];
+        %tmp.119 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.119 334 35 41 ];
+        %tmp.120 = as %tmp.119 { (interface { var meanSeaLevelPressure; }) };
+        symbol [ meanSeaLevelPressure %tmp.121 334 42 62 ];
+        %tmp.121 = getv %tmp.120 :meanSeaLevelPressure;
+        symbol [ fActivityPressureMean ? 334 11 32 ];
+        putv self :fActivityPressureMean %tmp.121;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_333_81_335_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_333_4_338_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_333_4_338_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_336_9_338_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 337 6 ]
+        symbol [ self %self 337 6 10 ];
+        %tmp.122 = null;
+        symbol [ fActivityPressureMean ? 337 11 32 ];
+        putv self :fActivityPressureMean %tmp.122;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_336_9_338_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_333_4_338_4_if_end:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 340 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_340_4_345_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_340_7_340_67_begin:
+        %tmp.123 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.123 340 7 13 ];
+        %tmp.125 = const :currentHeartRate;
+        symbol [ currentHeartRate %tmp.125 340 19 35 const ];
+        %tmp.126 = canhazplz %tmp.123 %tmp.125;
+        bf %tmp.126 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_340_4_345_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_340_40_340_67_true:
+        %tmp.127 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.127 340 40 46 ];
+        %tmp.128 = as %tmp.127 { (interface { var currentHeartRate; }) };
+        symbol [ currentHeartRate %tmp.129 340 47 63 ];
+        %tmp.129 = getv %tmp.128 :currentHeartRate;
+        %tmp.130 = null;
+        %tmp.131 = ne %tmp.129 %tmp.130;
+        push %tmp.131;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_340_40_340_67_end:
+        %tmp.132 = phi [%tmp.126 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_340_7_340_67_begin] [%tmp.131 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_340_40_340_67_true] [%tmp.132 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_340_40_340_67_end];
+        bf %tmp.132 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_340_4_345_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_340_4_345_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_340_73_342_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 341 6 ]
+        symbol [ self %self 341 6 10 ];
+        %tmp.133 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.133 341 32 38 ];
+        %tmp.134 = as %tmp.133 { (interface { var currentHeartRate; }) };
+        symbol [ currentHeartRate %tmp.135 341 39 55 ];
+        %tmp.135 = getv %tmp.134 :currentHeartRate;
+        symbol [ iActivityHeartrate ? 341 11 29 ];
+        putv self :iActivityHeartrate %tmp.135;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_340_73_342_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_340_4_345_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_340_4_345_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_343_9_345_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 344 6 ]
+        symbol [ self %self 344 6 10 ];
+        %tmp.136 = null;
+        symbol [ iActivityHeartrate ? 344 11 29 ];
+        putv self :iActivityHeartrate %tmp.136;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_343_9_345_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_340_4_345_4_if_end:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 347 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_347_4_352_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_347_7_347_63_begin:
+        %tmp.137 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.137 347 7 13 ];
+        %tmp.139 = const :currentCadence;
+        symbol [ currentCadence %tmp.139 347 19 33 const ];
+        %tmp.140 = canhazplz %tmp.137 %tmp.139;
+        bf %tmp.140 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_347_4_352_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_347_38_347_63_true:
+        %tmp.141 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.141 347 38 44 ];
+        %tmp.142 = as %tmp.141 { (interface { var currentCadence; }) };
+        symbol [ currentCadence %tmp.143 347 45 59 ];
+        %tmp.143 = getv %tmp.142 :currentCadence;
+        %tmp.144 = null;
+        %tmp.145 = ne %tmp.143 %tmp.144;
+        push %tmp.145;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_347_38_347_63_end:
+        %tmp.146 = phi [%tmp.140 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_347_7_347_63_begin] [%tmp.145 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_347_38_347_63_true] [%tmp.146 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_347_38_347_63_end];
+        bf %tmp.146 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_347_4_352_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_347_4_352_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_347_69_349_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 348 6 ]
+        symbol [ self %self 348 6 10 ];
+        %tmp.147 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.147 348 30 36 ];
+        %tmp.148 = as %tmp.147 { (interface { var currentCadence; }) };
+        symbol [ currentCadence %tmp.149 348 37 51 ];
+        %tmp.149 = getv %tmp.148 :currentCadence;
+        symbol [ iActivityCadence ? 348 11 27 ];
+        putv self :iActivityCadence %tmp.149;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_347_69_349_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_347_4_352_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_347_4_352_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_350_9_352_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 351 6 ]
+        symbol [ self %self 351 6 10 ];
+        %tmp.150 = null;
+        symbol [ iActivityCadence ? 351 11 27 ];
+        putv self :iActivityCadence %tmp.150;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_350_9_352_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_347_4_352_4_if_end:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 354 4 ]
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_354_4_359_4_if_stmt:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_354_7_354_59_begin:
+        %tmp.151 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.151 354 7 13 ];
+        %tmp.153 = const :currentPower;
+        symbol [ currentPower %tmp.153 354 19 31 const ];
+        %tmp.154 = canhazplz %tmp.151 %tmp.153;
+        bf %tmp.154 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_354_4_359_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_354_36_354_59_true:
+        %tmp.155 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.155 354 36 42 ];
+        %tmp.156 = as %tmp.155 { (interface { var currentPower; }) };
+        symbol [ currentPower %tmp.157 354 43 55 ];
+        %tmp.157 = getv %tmp.156 :currentPower;
+        %tmp.158 = null;
+        %tmp.159 = ne %tmp.157 %tmp.158;
+        push %tmp.159;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_354_36_354_59_end:
+        %tmp.160 = phi [%tmp.154 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_354_7_354_59_begin] [%tmp.159 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_354_36_354_59_true] [%tmp.160 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_354_36_354_59_end];
+        bf %tmp.160 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_354_4_359_4_if_else_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_354_4_359_4_if_true:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_354_65_356_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 355 6 ]
+        symbol [ self %self 355 6 10 ];
+        %tmp.161 = lgetv %_oInfo;
+        symbol [ _oInfo %tmp.161 355 28 34 ];
+        %tmp.162 = as %tmp.161 { (interface { var currentPower; }) };
+        symbol [ currentPower %tmp.163 355 35 47 ];
+        %tmp.163 = getv %tmp.162 :currentPower;
+        symbol [ iActivityPower ? 355 11 25 ];
+        putv self :iActivityPower %tmp.163;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_354_65_356_4_stop:
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_354_4_359_4_if_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_354_4_359_4_if_else_false:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_357_9_359_4_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc" 358 6 ]
+        symbol [ self %self 358 6 10 ];
+        %tmp.164 = null;
+        symbol [ iActivityPower ? 358 11 25 ];
+        putv self :iActivityPower %tmp.164;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_357_9_359_4_stop:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_354_4_359_4_if_end:
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Data_mc_279_62_360_2_stop:
+    }
+}
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Data.mc"; @line = 19; ]
+<init> {
+}

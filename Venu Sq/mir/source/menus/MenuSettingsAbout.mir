@@ -1,0 +1,168 @@
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsAbout.mc"; @line = 19; @symbol_importdef<0> = [Toybox,19,7,13]; @symbol_importdef<1> = [Lang,19,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsAbout.mc"; @line = 20; @symbol_usingdef<0> = [Toybox,20,6,12]; @symbol_usingdef<1> = [WatchUi,20,13,20]; @symbol_usingAlias = [Ui,20,24,26]; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsAbout.mc"; @line = 22; @symbol_classdef = [MenuSettingsAbout,22,6,23]; @symbol_extends<0> = [Ui,22,32,34]; @symbol_extends<1> = [Menu,22,35,39]; ]
+class MenuSettingsAbout extends Ui.Menu {
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsAbout.mc"; @line = 22; ]
+    <init> {
+    }
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsAbout.mc"; @line = 22; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsAbout.mc"; @line = 28; @symbol_functiondef = [initialize,28,11,21]; ]
+    function initialize() as Void {
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_MenuSettingsAbout_mc_28_24_34_2_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsAbout.mc" 29 4 ]
+        symbol [ Menu %tmp.2 29 4 8 ];
+        %tmp.2 = getv ? :Menu;
+        symbol [ initialize %tmp.3 29 9 19 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsAbout.mc" 30 4 ]
+        symbol [ Menu %tmp.5 30 4 8 ];
+        %tmp.5 = getv ? :Menu;
+        symbol [ setTitle %tmp.6 30 9 17 ];
+        %tmp.6 = getv function %tmp.5 :setTitle;
+        symbol [ Ui %tmp.7 30 18 20 ];
+        %tmp.7 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.8 30 21 33 ];
+        %tmp.8 = getv function %tmp.7 :loadResource;
+        symbol [ Rez %tmp.10 30 34 37 ];
+        %tmp.10 = getv ? :Rez;
+        symbol [ Strings %tmp.11 30 38 45 ];
+        %tmp.11 = getv %tmp.10 :Strings;
+        symbol [ menuSettingsAbout %tmp.12 30 46 63 ];
+        %tmp.12 = getv %tmp.11 :menuSettingsAbout;
+        %tmp.13 = invoke %tmp.7 %tmp.8(%tmp.12);
+        %tmp.14 = as %tmp.13 String;
+        symbol [ String %tmp.14 30 68 74 ];
+        invoke %tmp.5 %tmp.6(%tmp.14);
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsAbout.mc" 31 4 ]
+        symbol [ Menu %tmp.16 31 4 8 ];
+        %tmp.16 = getv ? :Menu;
+        symbol [ addItem %tmp.17 31 9 16 ];
+        %tmp.17 = getv function %tmp.16 :addItem;
+        symbol [ Lang %tmp.18 31 17 21 ];
+        %tmp.18 = getm $.Toybox.Lang;
+        symbol [ format %tmp.19 31 22 28 ];
+        %tmp.19 = getv function %tmp.18 :format;
+        %tmp.20 = "$1$: $2$";
+        %tmp.21 = newa 2;
+        symbol [ Ui %tmp.22 31 42 44 ];
+        %tmp.22 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.23 31 45 57 ];
+        %tmp.23 = getv function %tmp.22 :loadResource;
+        symbol [ Rez %tmp.25 31 58 61 ];
+        %tmp.25 = getv ? :Rez;
+        symbol [ Strings %tmp.26 31 62 69 ];
+        %tmp.26 = getv %tmp.25 :Strings;
+        symbol [ titleVersion %tmp.27 31 70 82 ];
+        %tmp.27 = getv %tmp.26 :titleVersion;
+        %tmp.28 = invoke %tmp.22 %tmp.23(%tmp.27);
+        %tmp.29 = dup %tmp.21;
+        %tmp.30 = aputv %tmp.29 0 %tmp.28;
+        symbol [ Ui %tmp.31 31 85 87 ];
+        %tmp.31 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.32 31 88 100 ];
+        %tmp.32 = getv function %tmp.31 :loadResource;
+        symbol [ Rez %tmp.34 31 101 104 ];
+        %tmp.34 = getv ? :Rez;
+        symbol [ Strings %tmp.35 31 105 112 ];
+        %tmp.35 = getv %tmp.34 :Strings;
+        symbol [ AppVersion %tmp.36 31 113 123 ];
+        %tmp.36 = getv %tmp.35 :AppVersion;
+        %tmp.37 = invoke %tmp.31 %tmp.32(%tmp.36);
+        %tmp.38 = dup %tmp.30;
+        %tmp.39 = aputv %tmp.38 1 %tmp.37;
+        %tmp.40 = invoke %tmp.18 %tmp.19(%tmp.20, %tmp.39);
+        %tmp.42 = const :aboutVersion;
+        symbol [ aboutVersion %tmp.42 31 129 141 const ];
+        invoke %tmp.16 %tmp.17(%tmp.40, %tmp.42);
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsAbout.mc" 32 4 ]
+        symbol [ Menu %tmp.44 32 4 8 ];
+        %tmp.44 = getv ? :Menu;
+        symbol [ addItem %tmp.45 32 9 16 ];
+        %tmp.45 = getv function %tmp.44 :addItem;
+        symbol [ Lang %tmp.46 32 17 21 ];
+        %tmp.46 = getm $.Toybox.Lang;
+        symbol [ format %tmp.47 32 22 28 ];
+        %tmp.47 = getv function %tmp.46 :format;
+        %tmp.48 = "$1$: GPL 3.0";
+        %tmp.49 = newa 1;
+        symbol [ Ui %tmp.50 32 46 48 ];
+        %tmp.50 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.51 32 49 61 ];
+        %tmp.51 = getv function %tmp.50 :loadResource;
+        symbol [ Rez %tmp.53 32 62 65 ];
+        %tmp.53 = getv ? :Rez;
+        symbol [ Strings %tmp.54 32 66 73 ];
+        %tmp.54 = getv %tmp.53 :Strings;
+        symbol [ titleLicense %tmp.55 32 74 86 ];
+        %tmp.55 = getv %tmp.54 :titleLicense;
+        %tmp.56 = invoke %tmp.50 %tmp.51(%tmp.55);
+        %tmp.57 = dup %tmp.49;
+        %tmp.58 = aputv %tmp.57 0 %tmp.56;
+        %tmp.59 = invoke %tmp.46 %tmp.47(%tmp.48, %tmp.58);
+        %tmp.61 = const :aboutLicense;
+        symbol [ aboutLicense %tmp.61 32 92 104 const ];
+        invoke %tmp.44 %tmp.45(%tmp.59, %tmp.61);
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsAbout.mc" 33 4 ]
+        symbol [ Menu %tmp.63 33 4 8 ];
+        %tmp.63 = getv ? :Menu;
+        symbol [ addItem %tmp.64 33 9 16 ];
+        %tmp.64 = getv function %tmp.63 :addItem;
+        symbol [ Lang %tmp.65 33 17 21 ];
+        %tmp.65 = getm $.Toybox.Lang;
+        symbol [ format %tmp.66 33 22 28 ];
+        %tmp.66 = getv function %tmp.65 :format;
+        %tmp.67 = "$1$: Cédric Dufour";
+        %tmp.68 = newa 1;
+        symbol [ Ui %tmp.69 33 52 54 ];
+        %tmp.69 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.70 33 55 67 ];
+        %tmp.70 = getv function %tmp.69 :loadResource;
+        symbol [ Rez %tmp.72 33 68 71 ];
+        %tmp.72 = getv ? :Rez;
+        symbol [ Strings %tmp.73 33 72 79 ];
+        %tmp.73 = getv %tmp.72 :Strings;
+        symbol [ titleAuthor %tmp.74 33 80 91 ];
+        %tmp.74 = getv %tmp.73 :titleAuthor;
+        %tmp.75 = invoke %tmp.69 %tmp.70(%tmp.74);
+        %tmp.76 = dup %tmp.68;
+        %tmp.77 = aputv %tmp.76 0 %tmp.75;
+        %tmp.78 = invoke %tmp.65 %tmp.66(%tmp.67, %tmp.77);
+        %tmp.80 = const :aboutAuthor;
+        symbol [ aboutAuthor %tmp.80 33 97 108 const ];
+        invoke %tmp.63 %tmp.64(%tmp.78, %tmp.80);
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_MenuSettingsAbout_mc_28_24_34_2_stop:
+    }
+}
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsAbout.mc"; @line = 38; @symbol_classdef = [MenuDelegateSettingsAbout,38,6,31]; @symbol_extends<0> = [Ui,38,40,42]; @symbol_extends<1> = [MenuInputDelegate,38,43,60]; ]
+class MenuDelegateSettingsAbout extends Ui.MenuInputDelegate {
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsAbout.mc"; @line = 38; ]
+    <init> {
+    }
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsAbout.mc"; @line = 38; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsAbout.mc"; @line = 44; @symbol_functiondef = [initialize,44,11,21]; ]
+    function initialize() as Void {
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_MenuSettingsAbout_mc_44_24_46_2_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsAbout.mc" 45 4 ]
+        symbol [ MenuInputDelegate %tmp.2 45 4 21 ];
+        %tmp.2 = getv ? :MenuInputDelegate;
+        symbol [ initialize %tmp.3 45 22 32 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_MenuSettingsAbout_mc_44_24_46_2_stop:
+    }
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsAbout.mc"; @line = 48; @symbol_functiondef = [onMenuItem,48,11,21]; @symbol_param<0> = [item,48,22,26]; ]
+    function onMenuItem(item) {
+    }
+}
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/MenuSettingsAbout.mc"; @line = 19; ]
+<init> {
+}

@@ -6,3 +6,5 @@ semantic.cache
 # Ignore build output (binary) directory
 /bin
 
+
+.DS_Store
