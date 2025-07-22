@@ -1,0 +1,498 @@
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 19; @symbol_importdef<0> = [Toybox,19,7,13]; @symbol_importdef<1> = [Lang,19,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 20; @symbol_usingdef<0> = [Toybox,20,6,12]; @symbol_usingdef<1> = [Application,20,13,24]; @symbol_usingAlias = [App,20,28,31]; ]
+using Toybox.Application as :App;
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 26; @symbol_classdef = [RL_Settings,26,6,17]; ]
+class RL_Settings {
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 26; ]
+    <init> {
+    }
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 26; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 34; @position = 13; @symbol_vardef = [bSystemBattery,34,13,27]; @symbol_type<0> = [Boolean,34,31,38]; ]
+    public
+    var bSystemBattery as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 35; @position = 13; @symbol_vardef = [bSystemMemory,35,13,26]; @symbol_type<0> = [Boolean,35,30,37]; ]
+    public
+    var bSystemMemory as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 37; @position = 13; @symbol_vardef = [bPositionLocation,37,13,30]; @symbol_type<0> = [Boolean,37,34,41]; ]
+    public
+    var bPositionLocation as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 38; @position = 13; @symbol_vardef = [bPositionAltitude,38,13,30]; @symbol_type<0> = [Boolean,38,34,41]; ]
+    public
+    var bPositionAltitude as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 39; @position = 13; @symbol_vardef = [bPositionSpeed,39,13,27]; @symbol_type<0> = [Boolean,39,31,38]; ]
+    public
+    var bPositionSpeed as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 40; @position = 13; @symbol_vardef = [bPositionHeading,40,13,29]; @symbol_type<0> = [Boolean,40,33,40]; ]
+    public
+    var bPositionHeading as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 41; @position = 13; @symbol_vardef = [bPositionAccuracy,41,13,30]; @symbol_type<0> = [Boolean,41,34,41]; ]
+    public
+    var bPositionAccuracy as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 43; @position = 13; @symbol_vardef = [bSensorAltitude,43,13,28]; @symbol_type<0> = [Boolean,43,32,39]; ]
+    public
+    var bSensorAltitude as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 44; @position = 13; @symbol_vardef = [bSensorSpeed,44,13,25]; @symbol_type<0> = [Boolean,44,29,36]; ]
+    public
+    var bSensorSpeed as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 45; @position = 13; @symbol_vardef = [bSensorHeading,45,13,27]; @symbol_type<0> = [Boolean,45,31,38]; ]
+    public
+    var bSensorHeading as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 46; @position = 13; @symbol_vardef = [bSensorPressure,46,13,28]; @symbol_type<0> = [Boolean,46,32,39]; ]
+    public
+    var bSensorPressure as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 47; @position = 13; @symbol_vardef = [bSensorAcceleration,47,13,32]; @symbol_type<0> = [Boolean,47,36,43]; ]
+    public
+    var bSensorAcceleration as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 48; @position = 13; @symbol_vardef = [bSensorAcceleration_HD,48,13,35]; @symbol_type<0> = [Boolean,48,39,46]; ]
+    public
+    var bSensorAcceleration_HD as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 49; @position = 13; @symbol_vardef = [bSensorMagnetometer,49,13,32]; @symbol_type<0> = [Boolean,49,36,43]; ]
+    public
+    var bSensorMagnetometer as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 50; @position = 13; @symbol_vardef = [bSensorHeartrate,50,13,29]; @symbol_type<0> = [Boolean,50,33,40]; ]
+    public
+    var bSensorHeartrate as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 51; @position = 13; @symbol_vardef = [bSensorCadence,51,13,27]; @symbol_type<0> = [Boolean,51,31,38]; ]
+    public
+    var bSensorCadence as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 52; @position = 13; @symbol_vardef = [bSensorPower,52,13,25]; @symbol_type<0> = [Boolean,52,29,36]; ]
+    public
+    var bSensorPower as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 53; @position = 13; @symbol_vardef = [bSensorTemperature,53,13,31]; @symbol_type<0> = [Boolean,53,35,42]; ]
+    public
+    var bSensorTemperature as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 54; @position = 13; @symbol_vardef = [bSensorGyroscope,54,13,29]; @symbol_type<0> = [Boolean,54,33,40]; ]
+    public
+    var bSensorGyroscope as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 56; @position = 13; @symbol_vardef = [bActivityLocation,56,13,30]; @symbol_type<0> = [Boolean,56,34,41]; ]
+    public
+    var bActivityLocation as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 57; @position = 13; @symbol_vardef = [bActivityAltitude,57,13,30]; @symbol_type<0> = [Boolean,57,34,41]; ]
+    public
+    var bActivityAltitude as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 58; @position = 13; @symbol_vardef = [bActivitySpeed,58,13,27]; @symbol_type<0> = [Boolean,58,31,38]; ]
+    public
+    var bActivitySpeed as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 59; @position = 13; @symbol_vardef = [bActivityHeading,59,13,29]; @symbol_type<0> = [Boolean,59,33,40]; ]
+    public
+    var bActivityHeading as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 60; @position = 13; @symbol_vardef = [bActivityAccuracy,60,13,30]; @symbol_type<0> = [Boolean,60,34,41]; ]
+    public
+    var bActivityAccuracy as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 61; @position = 13; @symbol_vardef = [bActivityPressure,61,13,30]; @symbol_type<0> = [Boolean,61,34,41]; ]
+    public
+    var bActivityPressure as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 62; @position = 13; @symbol_vardef = [bActivityHeartrate,62,13,31]; @symbol_type<0> = [Boolean,62,35,42]; ]
+    public
+    var bActivityHeartrate as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 63; @position = 13; @symbol_vardef = [bActivityCadence,63,13,29]; @symbol_type<0> = [Boolean,63,33,40]; ]
+    public
+    var bActivityCadence as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 64; @position = 13; @symbol_vardef = [bActivityPower,64,13,27]; @symbol_type<0> = [Boolean,64,31,38]; ]
+    public
+    var bActivityPower as Boolean = false;
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 71; @symbol_functiondef = [load,71,11,15]; ]
+    function load() as Void {
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Settings_mc_71_26_105_2_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 74 4 ]
+        symbol [ self %self 74 4 8 ];
+        symbol [ App %tmp.1 74 26 29 ];
+        %tmp.1 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.2 74 30 40 ];
+        %tmp.2 = getv %tmp.1 :Properties;
+        symbol [ getValue %tmp.3 74 41 49 ];
+        %tmp.3 = getv function %tmp.2 :getValue;
+        %tmp.4 = "userSystemBattery";
+        %tmp.5 = invoke %tmp.2 %tmp.3(%tmp.4);
+        %tmp.6 = as %tmp.5 Boolean;
+        symbol [ Boolean %tmp.6 74 74 81 ];
+        symbol [ bSystemBattery ? 74 9 23 ];
+        putv self :bSystemBattery %tmp.6;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 75 4 ]
+        symbol [ self %self 75 4 8 ];
+        symbol [ App %tmp.7 75 25 28 ];
+        %tmp.7 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.8 75 29 39 ];
+        %tmp.8 = getv %tmp.7 :Properties;
+        symbol [ getValue %tmp.9 75 40 48 ];
+        %tmp.9 = getv function %tmp.8 :getValue;
+        %tmp.10 = "userSystemMemory";
+        %tmp.11 = invoke %tmp.8 %tmp.9(%tmp.10);
+        %tmp.12 = as %tmp.11 Boolean;
+        symbol [ Boolean %tmp.12 75 72 79 ];
+        symbol [ bSystemMemory ? 75 9 22 ];
+        putv self :bSystemMemory %tmp.12;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 77 4 ]
+        symbol [ self %self 77 4 8 ];
+        symbol [ App %tmp.13 77 29 32 ];
+        %tmp.13 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.14 77 33 43 ];
+        %tmp.14 = getv %tmp.13 :Properties;
+        symbol [ getValue %tmp.15 77 44 52 ];
+        %tmp.15 = getv function %tmp.14 :getValue;
+        %tmp.16 = "userPositionLocation";
+        %tmp.17 = invoke %tmp.14 %tmp.15(%tmp.16);
+        %tmp.18 = as %tmp.17 Boolean;
+        symbol [ Boolean %tmp.18 77 80 87 ];
+        symbol [ bPositionLocation ? 77 9 26 ];
+        putv self :bPositionLocation %tmp.18;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 78 4 ]
+        symbol [ self %self 78 4 8 ];
+        symbol [ App %tmp.19 78 29 32 ];
+        %tmp.19 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.20 78 33 43 ];
+        %tmp.20 = getv %tmp.19 :Properties;
+        symbol [ getValue %tmp.21 78 44 52 ];
+        %tmp.21 = getv function %tmp.20 :getValue;
+        %tmp.22 = "userPositionAltitude";
+        %tmp.23 = invoke %tmp.20 %tmp.21(%tmp.22);
+        %tmp.24 = as %tmp.23 Boolean;
+        symbol [ Boolean %tmp.24 78 80 87 ];
+        symbol [ bPositionAltitude ? 78 9 26 ];
+        putv self :bPositionAltitude %tmp.24;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 79 4 ]
+        symbol [ self %self 79 4 8 ];
+        symbol [ App %tmp.25 79 26 29 ];
+        %tmp.25 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.26 79 30 40 ];
+        %tmp.26 = getv %tmp.25 :Properties;
+        symbol [ getValue %tmp.27 79 41 49 ];
+        %tmp.27 = getv function %tmp.26 :getValue;
+        %tmp.28 = "userPositionSpeed";
+        %tmp.29 = invoke %tmp.26 %tmp.27(%tmp.28);
+        %tmp.30 = as %tmp.29 Boolean;
+        symbol [ Boolean %tmp.30 79 74 81 ];
+        symbol [ bPositionSpeed ? 79 9 23 ];
+        putv self :bPositionSpeed %tmp.30;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 80 4 ]
+        symbol [ self %self 80 4 8 ];
+        symbol [ App %tmp.31 80 28 31 ];
+        %tmp.31 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.32 80 32 42 ];
+        %tmp.32 = getv %tmp.31 :Properties;
+        symbol [ getValue %tmp.33 80 43 51 ];
+        %tmp.33 = getv function %tmp.32 :getValue;
+        %tmp.34 = "userPositionHeading";
+        %tmp.35 = invoke %tmp.32 %tmp.33(%tmp.34);
+        %tmp.36 = as %tmp.35 Boolean;
+        symbol [ Boolean %tmp.36 80 78 85 ];
+        symbol [ bPositionHeading ? 80 9 25 ];
+        putv self :bPositionHeading %tmp.36;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 81 4 ]
+        symbol [ self %self 81 4 8 ];
+        symbol [ App %tmp.37 81 29 32 ];
+        %tmp.37 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.38 81 33 43 ];
+        %tmp.38 = getv %tmp.37 :Properties;
+        symbol [ getValue %tmp.39 81 44 52 ];
+        %tmp.39 = getv function %tmp.38 :getValue;
+        %tmp.40 = "userPositionAccuracy";
+        %tmp.41 = invoke %tmp.38 %tmp.39(%tmp.40);
+        %tmp.42 = as %tmp.41 Boolean;
+        symbol [ Boolean %tmp.42 81 80 87 ];
+        symbol [ bPositionAccuracy ? 81 9 26 ];
+        putv self :bPositionAccuracy %tmp.42;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 83 4 ]
+        symbol [ self %self 83 4 8 ];
+        symbol [ App %tmp.43 83 27 30 ];
+        %tmp.43 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.44 83 31 41 ];
+        %tmp.44 = getv %tmp.43 :Properties;
+        symbol [ getValue %tmp.45 83 42 50 ];
+        %tmp.45 = getv function %tmp.44 :getValue;
+        %tmp.46 = "userSensorAltitude";
+        %tmp.47 = invoke %tmp.44 %tmp.45(%tmp.46);
+        %tmp.48 = as %tmp.47 Boolean;
+        symbol [ Boolean %tmp.48 83 76 83 ];
+        symbol [ bSensorAltitude ? 83 9 24 ];
+        putv self :bSensorAltitude %tmp.48;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 84 4 ]
+        symbol [ self %self 84 4 8 ];
+        symbol [ App %tmp.49 84 24 27 ];
+        %tmp.49 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.50 84 28 38 ];
+        %tmp.50 = getv %tmp.49 :Properties;
+        symbol [ getValue %tmp.51 84 39 47 ];
+        %tmp.51 = getv function %tmp.50 :getValue;
+        %tmp.52 = "userSensorSpeed";
+        %tmp.53 = invoke %tmp.50 %tmp.51(%tmp.52);
+        %tmp.54 = as %tmp.53 Boolean;
+        symbol [ Boolean %tmp.54 84 70 77 ];
+        symbol [ bSensorSpeed ? 84 9 21 ];
+        putv self :bSensorSpeed %tmp.54;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 85 4 ]
+        symbol [ self %self 85 4 8 ];
+        symbol [ App %tmp.55 85 26 29 ];
+        %tmp.55 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.56 85 30 40 ];
+        %tmp.56 = getv %tmp.55 :Properties;
+        symbol [ getValue %tmp.57 85 41 49 ];
+        %tmp.57 = getv function %tmp.56 :getValue;
+        %tmp.58 = "userSensorHeading";
+        %tmp.59 = invoke %tmp.56 %tmp.57(%tmp.58);
+        %tmp.60 = as %tmp.59 Boolean;
+        symbol [ Boolean %tmp.60 85 74 81 ];
+        symbol [ bSensorHeading ? 85 9 23 ];
+        putv self :bSensorHeading %tmp.60;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 86 4 ]
+        symbol [ self %self 86 4 8 ];
+        symbol [ App %tmp.61 86 27 30 ];
+        %tmp.61 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.62 86 31 41 ];
+        %tmp.62 = getv %tmp.61 :Properties;
+        symbol [ getValue %tmp.63 86 42 50 ];
+        %tmp.63 = getv function %tmp.62 :getValue;
+        %tmp.64 = "userSensorPressure";
+        %tmp.65 = invoke %tmp.62 %tmp.63(%tmp.64);
+        %tmp.66 = as %tmp.65 Boolean;
+        symbol [ Boolean %tmp.66 86 76 83 ];
+        symbol [ bSensorPressure ? 86 9 24 ];
+        putv self :bSensorPressure %tmp.66;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 87 4 ]
+        symbol [ self %self 87 4 8 ];
+        symbol [ App %tmp.67 87 31 34 ];
+        %tmp.67 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.68 87 35 45 ];
+        %tmp.68 = getv %tmp.67 :Properties;
+        symbol [ getValue %tmp.69 87 46 54 ];
+        %tmp.69 = getv function %tmp.68 :getValue;
+        %tmp.70 = "userSensorAcceleration";
+        %tmp.71 = invoke %tmp.68 %tmp.69(%tmp.70);
+        %tmp.72 = as %tmp.71 Boolean;
+        symbol [ Boolean %tmp.72 87 84 91 ];
+        symbol [ bSensorAcceleration ? 87 9 28 ];
+        putv self :bSensorAcceleration %tmp.72;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 88 4 ]
+        symbol [ self %self 88 4 8 ];
+        symbol [ App %tmp.73 88 34 37 ];
+        %tmp.73 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.74 88 38 48 ];
+        %tmp.74 = getv %tmp.73 :Properties;
+        symbol [ getValue %tmp.75 88 49 57 ];
+        %tmp.75 = getv function %tmp.74 :getValue;
+        %tmp.76 = "userSensorAcceleration_HD";
+        %tmp.77 = invoke %tmp.74 %tmp.75(%tmp.76);
+        %tmp.78 = as %tmp.77 Boolean;
+        symbol [ Boolean %tmp.78 88 90 97 ];
+        symbol [ bSensorAcceleration_HD ? 88 9 31 ];
+        putv self :bSensorAcceleration_HD %tmp.78;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 89 4 ]
+        symbol [ self %self 89 4 8 ];
+        symbol [ App %tmp.79 89 31 34 ];
+        %tmp.79 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.80 89 35 45 ];
+        %tmp.80 = getv %tmp.79 :Properties;
+        symbol [ getValue %tmp.81 89 46 54 ];
+        %tmp.81 = getv function %tmp.80 :getValue;
+        %tmp.82 = "userSensorMagnetometer";
+        %tmp.83 = invoke %tmp.80 %tmp.81(%tmp.82);
+        %tmp.84 = as %tmp.83 Boolean;
+        symbol [ Boolean %tmp.84 89 84 91 ];
+        symbol [ bSensorMagnetometer ? 89 9 28 ];
+        putv self :bSensorMagnetometer %tmp.84;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 90 4 ]
+        symbol [ self %self 90 4 8 ];
+        symbol [ App %tmp.85 90 28 31 ];
+        %tmp.85 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.86 90 32 42 ];
+        %tmp.86 = getv %tmp.85 :Properties;
+        symbol [ getValue %tmp.87 90 43 51 ];
+        %tmp.87 = getv function %tmp.86 :getValue;
+        %tmp.88 = "userSensorHeartrate";
+        %tmp.89 = invoke %tmp.86 %tmp.87(%tmp.88);
+        %tmp.90 = as %tmp.89 Boolean;
+        symbol [ Boolean %tmp.90 90 78 85 ];
+        symbol [ bSensorHeartrate ? 90 9 25 ];
+        putv self :bSensorHeartrate %tmp.90;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 91 4 ]
+        symbol [ self %self 91 4 8 ];
+        symbol [ App %tmp.91 91 26 29 ];
+        %tmp.91 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.92 91 30 40 ];
+        %tmp.92 = getv %tmp.91 :Properties;
+        symbol [ getValue %tmp.93 91 41 49 ];
+        %tmp.93 = getv function %tmp.92 :getValue;
+        %tmp.94 = "userSensorCadence";
+        %tmp.95 = invoke %tmp.92 %tmp.93(%tmp.94);
+        %tmp.96 = as %tmp.95 Boolean;
+        symbol [ Boolean %tmp.96 91 74 81 ];
+        symbol [ bSensorCadence ? 91 9 23 ];
+        putv self :bSensorCadence %tmp.96;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 92 4 ]
+        symbol [ self %self 92 4 8 ];
+        symbol [ App %tmp.97 92 24 27 ];
+        %tmp.97 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.98 92 28 38 ];
+        %tmp.98 = getv %tmp.97 :Properties;
+        symbol [ getValue %tmp.99 92 39 47 ];
+        %tmp.99 = getv function %tmp.98 :getValue;
+        %tmp.100 = "userSensorPower";
+        %tmp.101 = invoke %tmp.98 %tmp.99(%tmp.100);
+        %tmp.102 = as %tmp.101 Boolean;
+        symbol [ Boolean %tmp.102 92 70 77 ];
+        symbol [ bSensorPower ? 92 9 21 ];
+        putv self :bSensorPower %tmp.102;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 93 4 ]
+        symbol [ self %self 93 4 8 ];
+        symbol [ App %tmp.103 93 30 33 ];
+        %tmp.103 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.104 93 34 44 ];
+        %tmp.104 = getv %tmp.103 :Properties;
+        symbol [ getValue %tmp.105 93 45 53 ];
+        %tmp.105 = getv function %tmp.104 :getValue;
+        %tmp.106 = "userSensorTemperature";
+        %tmp.107 = invoke %tmp.104 %tmp.105(%tmp.106);
+        %tmp.108 = as %tmp.107 Boolean;
+        symbol [ Boolean %tmp.108 93 82 89 ];
+        symbol [ bSensorTemperature ? 93 9 27 ];
+        putv self :bSensorTemperature %tmp.108;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 94 4 ]
+        symbol [ self %self 94 4 8 ];
+        symbol [ App %tmp.109 94 28 31 ];
+        %tmp.109 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.110 94 32 42 ];
+        %tmp.110 = getv %tmp.109 :Properties;
+        symbol [ getValue %tmp.111 94 43 51 ];
+        %tmp.111 = getv function %tmp.110 :getValue;
+        %tmp.112 = "userSensorGyroscope";
+        %tmp.113 = invoke %tmp.110 %tmp.111(%tmp.112);
+        %tmp.114 = as %tmp.113 Boolean;
+        symbol [ Boolean %tmp.114 94 78 85 ];
+        symbol [ bSensorGyroscope ? 94 9 25 ];
+        putv self :bSensorGyroscope %tmp.114;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 96 4 ]
+        symbol [ self %self 96 4 8 ];
+        symbol [ App %tmp.115 96 29 32 ];
+        %tmp.115 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.116 96 33 43 ];
+        %tmp.116 = getv %tmp.115 :Properties;
+        symbol [ getValue %tmp.117 96 44 52 ];
+        %tmp.117 = getv function %tmp.116 :getValue;
+        %tmp.118 = "userActivityLocation";
+        %tmp.119 = invoke %tmp.116 %tmp.117(%tmp.118);
+        %tmp.120 = as %tmp.119 Boolean;
+        symbol [ Boolean %tmp.120 96 80 87 ];
+        symbol [ bActivityLocation ? 96 9 26 ];
+        putv self :bActivityLocation %tmp.120;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 97 4 ]
+        symbol [ self %self 97 4 8 ];
+        symbol [ App %tmp.121 97 29 32 ];
+        %tmp.121 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.122 97 33 43 ];
+        %tmp.122 = getv %tmp.121 :Properties;
+        symbol [ getValue %tmp.123 97 44 52 ];
+        %tmp.123 = getv function %tmp.122 :getValue;
+        %tmp.124 = "userActivityAltitude";
+        %tmp.125 = invoke %tmp.122 %tmp.123(%tmp.124);
+        %tmp.126 = as %tmp.125 Boolean;
+        symbol [ Boolean %tmp.126 97 80 87 ];
+        symbol [ bActivityAltitude ? 97 9 26 ];
+        putv self :bActivityAltitude %tmp.126;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 98 4 ]
+        symbol [ self %self 98 4 8 ];
+        symbol [ App %tmp.127 98 26 29 ];
+        %tmp.127 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.128 98 30 40 ];
+        %tmp.128 = getv %tmp.127 :Properties;
+        symbol [ getValue %tmp.129 98 41 49 ];
+        %tmp.129 = getv function %tmp.128 :getValue;
+        %tmp.130 = "userActivitySpeed";
+        %tmp.131 = invoke %tmp.128 %tmp.129(%tmp.130);
+        %tmp.132 = as %tmp.131 Boolean;
+        symbol [ Boolean %tmp.132 98 74 81 ];
+        symbol [ bActivitySpeed ? 98 9 23 ];
+        putv self :bActivitySpeed %tmp.132;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 99 4 ]
+        symbol [ self %self 99 4 8 ];
+        symbol [ App %tmp.133 99 28 31 ];
+        %tmp.133 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.134 99 32 42 ];
+        %tmp.134 = getv %tmp.133 :Properties;
+        symbol [ getValue %tmp.135 99 43 51 ];
+        %tmp.135 = getv function %tmp.134 :getValue;
+        %tmp.136 = "userActivityHeading";
+        %tmp.137 = invoke %tmp.134 %tmp.135(%tmp.136);
+        %tmp.138 = as %tmp.137 Boolean;
+        symbol [ Boolean %tmp.138 99 78 85 ];
+        symbol [ bActivityHeading ? 99 9 25 ];
+        putv self :bActivityHeading %tmp.138;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 100 4 ]
+        symbol [ self %self 100 4 8 ];
+        symbol [ App %tmp.139 100 29 32 ];
+        %tmp.139 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.140 100 33 43 ];
+        %tmp.140 = getv %tmp.139 :Properties;
+        symbol [ getValue %tmp.141 100 44 52 ];
+        %tmp.141 = getv function %tmp.140 :getValue;
+        %tmp.142 = "userActivityAccuracy";
+        %tmp.143 = invoke %tmp.140 %tmp.141(%tmp.142);
+        %tmp.144 = as %tmp.143 Boolean;
+        symbol [ Boolean %tmp.144 100 80 87 ];
+        symbol [ bActivityAccuracy ? 100 9 26 ];
+        putv self :bActivityAccuracy %tmp.144;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 101 4 ]
+        symbol [ self %self 101 4 8 ];
+        symbol [ App %tmp.145 101 29 32 ];
+        %tmp.145 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.146 101 33 43 ];
+        %tmp.146 = getv %tmp.145 :Properties;
+        symbol [ getValue %tmp.147 101 44 52 ];
+        %tmp.147 = getv function %tmp.146 :getValue;
+        %tmp.148 = "userActivityPressure";
+        %tmp.149 = invoke %tmp.146 %tmp.147(%tmp.148);
+        %tmp.150 = as %tmp.149 Boolean;
+        symbol [ Boolean %tmp.150 101 80 87 ];
+        symbol [ bActivityPressure ? 101 9 26 ];
+        putv self :bActivityPressure %tmp.150;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 102 4 ]
+        symbol [ self %self 102 4 8 ];
+        symbol [ App %tmp.151 102 30 33 ];
+        %tmp.151 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.152 102 34 44 ];
+        %tmp.152 = getv %tmp.151 :Properties;
+        symbol [ getValue %tmp.153 102 45 53 ];
+        %tmp.153 = getv function %tmp.152 :getValue;
+        %tmp.154 = "userActivityHeartrate";
+        %tmp.155 = invoke %tmp.152 %tmp.153(%tmp.154);
+        %tmp.156 = as %tmp.155 Boolean;
+        symbol [ Boolean %tmp.156 102 82 89 ];
+        symbol [ bActivityHeartrate ? 102 9 27 ];
+        putv self :bActivityHeartrate %tmp.156;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 103 4 ]
+        symbol [ self %self 103 4 8 ];
+        symbol [ App %tmp.157 103 28 31 ];
+        %tmp.157 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.158 103 32 42 ];
+        %tmp.158 = getv %tmp.157 :Properties;
+        symbol [ getValue %tmp.159 103 43 51 ];
+        %tmp.159 = getv function %tmp.158 :getValue;
+        %tmp.160 = "userActivityCadence";
+        %tmp.161 = invoke %tmp.158 %tmp.159(%tmp.160);
+        %tmp.162 = as %tmp.161 Boolean;
+        symbol [ Boolean %tmp.162 103 78 85 ];
+        symbol [ bActivityCadence ? 103 9 25 ];
+        putv self :bActivityCadence %tmp.162;
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc" 104 4 ]
+        symbol [ self %self 104 4 8 ];
+        symbol [ App %tmp.163 104 26 29 ];
+        %tmp.163 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.164 104 30 40 ];
+        %tmp.164 = getv %tmp.163 :Properties;
+        symbol [ getValue %tmp.165 104 41 49 ];
+        %tmp.165 = getv function %tmp.164 :getValue;
+        %tmp.166 = "userActivityPower";
+        %tmp.167 = invoke %tmp.164 %tmp.165(%tmp.166);
+        %tmp.168 = as %tmp.167 Boolean;
+        symbol [ Boolean %tmp.168 104 74 81 ];
+        symbol [ bActivityPower ? 104 9 23 ];
+        putv self :bActivityPower %tmp.168;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_RL_Settings_mc_71_26_105_2_stop:
+    }
+}
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/RL_Settings.mc"; @line = 19; ]
+<init> {
+}

@@ -1,0 +1,270 @@
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/PickerGenericOnOff.mc"; @line = 19; @symbol_importdef<0> = [Toybox,19,7,13]; @symbol_importdef<1> = [Lang,19,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/PickerGenericOnOff.mc"; @line = 20; @symbol_usingdef<0> = [Toybox,20,6,12]; @symbol_usingdef<1> = [Application,20,13,24]; @symbol_usingAlias = [App,20,28,31]; ]
+using Toybox.Application as :App;
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/PickerGenericOnOff.mc"; @line = 21; @symbol_usingdef<0> = [Toybox,21,6,12]; @symbol_usingdef<1> = [Graphics,21,13,21]; @symbol_usingAlias = [Gfx,21,25,28]; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/PickerGenericOnOff.mc"; @line = 22; @symbol_usingdef<0> = [Toybox,22,6,12]; @symbol_usingdef<1> = [WatchUi,22,13,20]; @symbol_usingAlias = [Ui,22,24,26]; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/PickerGenericOnOff.mc"; @line = 24; @symbol_classdef = [PickerGenericOnOff,24,6,24]; @symbol_extends<0> = [Ui,24,33,35]; @symbol_extends<1> = [Picker,24,36,42]; ]
+class PickerGenericOnOff extends Ui.Picker {
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/PickerGenericOnOff.mc"; @line = 24; ]
+    <init> {
+    }
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/PickerGenericOnOff.mc"; @line = 24; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/PickerGenericOnOff.mc"; @line = 30; @symbol_functiondef = [initialize,30,11,21]; @symbol_param<0> = [_sPropertyId,30,22,34]; @symbol_param<0>_type<0> = [String,30,38,44]; @symbol_param<1> = [_sTitle,30,46,53]; @symbol_param<1>_type<0> = [String,30,57,63]; ]
+    function initialize(_sPropertyId as String, _sTitle as String) as Void {
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_PickerGenericOnOff_mc_30_65_41_2_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/PickerGenericOnOff.mc" 32 4 ]
+        [ "_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_PickerGenericOnOff_mc_30_65_41_2_start" "_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_PickerGenericOnOff_mc_30_65_41_2_stop" ]
+        %bOnOff.1 = local;
+        symbol [ bOnOff %bOnOff.1 32 8 14 ];
+        symbol [ App %tmp.1 32 17 20 ];
+        %tmp.1 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.2 32 21 31 ];
+        %tmp.2 = getv %tmp.1 :Properties;
+        symbol [ getValue %tmp.3 32 32 40 ];
+        %tmp.3 = getv function %tmp.2 :getValue;
+        %tmp.4 = lgetv %_sPropertyId;
+        symbol [ _sPropertyId %tmp.4 32 41 53 ];
+        %tmp.5 = invoke %tmp.2 %tmp.3(%tmp.4);
+        %tmp.6 = as %tmp.5 Boolean;
+        symbol [ Boolean %tmp.6 32 58 65 ];
+        lputv %bOnOff.1 %tmp.6;
+        symbol [ bOnOff %bOnOff.1 32 8 14 ];
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/PickerGenericOnOff.mc" 35 4 ]
+        [ "_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_PickerGenericOnOff_mc_30_65_41_2_start" "_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_PickerGenericOnOff_mc_30_65_41_2_stop" ]
+        %oFactory.2 = local;
+        symbol [ oFactory %oFactory.2 35 8 16 ];
+        symbol [ PickerFactoryDictionary %tmp.10 35 23 46 ];
+        %tmp.10 = getv ? :PickerFactoryDictionary;
+        %tmp.11 = newa 2;
+        %tmp.12 = true;
+        %tmp.13 = dup %tmp.11;
+        %tmp.14 = aputv %tmp.13 0 %tmp.12;
+        %tmp.15 = false;
+        %tmp.16 = dup %tmp.14;
+        %tmp.17 = aputv %tmp.16 1 %tmp.15;
+        %tmp.18 = newa 2;
+        symbol [ Ui %tmp.19 35 63 65 ];
+        %tmp.19 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.20 35 66 78 ];
+        %tmp.20 = getv function %tmp.19 :loadResource;
+        symbol [ Rez %tmp.22 35 79 82 ];
+        %tmp.22 = getv ? :Rez;
+        symbol [ Strings %tmp.23 35 83 90 ];
+        %tmp.23 = getv %tmp.22 :Strings;
+        symbol [ valueOn %tmp.24 35 91 98 ];
+        %tmp.24 = getv %tmp.23 :valueOn;
+        %tmp.25 = invoke %tmp.19 %tmp.20(%tmp.24);
+        %tmp.26 = dup %tmp.18;
+        %tmp.27 = aputv %tmp.26 0 %tmp.25;
+        symbol [ Ui %tmp.28 35 101 103 ];
+        %tmp.28 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.29 35 104 116 ];
+        %tmp.29 = getv function %tmp.28 :loadResource;
+        symbol [ Rez %tmp.31 35 117 120 ];
+        %tmp.31 = getv ? :Rez;
+        symbol [ Strings %tmp.32 35 121 128 ];
+        %tmp.32 = getv %tmp.31 :Strings;
+        symbol [ valueOff %tmp.33 35 129 137 ];
+        %tmp.33 = getv %tmp.32 :valueOff;
+        %tmp.34 = invoke %tmp.28 %tmp.29(%tmp.33);
+        %tmp.35 = dup %tmp.27;
+        %tmp.36 = aputv %tmp.35 1 %tmp.34;
+        %tmp.37 = null;
+        %tmp.7 = newc %tmp.10 (%tmp.17, %tmp.36, %tmp.37);
+        lputv %oFactory.2 %tmp.7;
+        symbol [ oFactory %oFactory.2 35 8 16 ];
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/PickerGenericOnOff.mc" 36 4 ]
+        symbol [ Picker %tmp.39 36 4 10 ];
+        %tmp.39 = getv ? :Picker;
+        symbol [ initialize %tmp.40 36 11 21 ];
+        %tmp.40 = getv function %tmp.39 :initialize;
+        %tmp.41 = newd 3;
+        %tmp.43 = const :title;
+        symbol [ title %tmp.43 37 7 12 const ];
+        symbol [ Ui %tmp.46 37 20 22 ];
+        %tmp.46 = getm $.Toybox.WatchUi;
+        symbol [ Text %tmp.47 37 23 27 ];
+        %tmp.47 = getv function ? %tmp.46 :Text;
+        %tmp.48 = newd 5;
+        %tmp.50 = const :text;
+        symbol [ text %tmp.50 37 31 35 const ];
+        %tmp.51 = lgetv %_sTitle;
+        symbol [ _sTitle %tmp.51 37 39 46 ];
+        %tmp.52 = dup %tmp.48;
+        %tmp.53 = aputv %tmp.52 %tmp.50 %tmp.51;
+        %tmp.55 = const :font;
+        symbol [ font %tmp.55 37 49 53 const ];
+        symbol [ Gfx %tmp.56 37 57 60 ];
+        %tmp.56 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.57 37 61 70 ];
+        %tmp.57 = getv %tmp.56 :FONT_TINY;
+        %tmp.58 = dup %tmp.53;
+        %tmp.59 = aputv %tmp.58 %tmp.55 %tmp.57;
+        %tmp.61 = const :locX;
+        symbol [ locX %tmp.61 37 73 77 const ];
+        symbol [ Ui %tmp.62 37 79 81 ];
+        %tmp.62 = getm $.Toybox.WatchUi;
+        symbol [ LAYOUT_HALIGN_CENTER %tmp.63 37 82 102 ];
+        %tmp.63 = getv %tmp.62 :LAYOUT_HALIGN_CENTER;
+        %tmp.64 = dup %tmp.59;
+        %tmp.65 = aputv %tmp.64 %tmp.61 %tmp.63;
+        %tmp.67 = const :locY;
+        symbol [ locY %tmp.67 37 105 109 const ];
+        symbol [ Ui %tmp.68 37 111 113 ];
+        %tmp.68 = getm $.Toybox.WatchUi;
+        symbol [ LAYOUT_VALIGN_BOTTOM %tmp.69 37 114 134 ];
+        %tmp.69 = getv %tmp.68 :LAYOUT_VALIGN_BOTTOM;
+        %tmp.70 = dup %tmp.65;
+        %tmp.71 = aputv %tmp.70 %tmp.67 %tmp.69;
+        %tmp.73 = const :color;
+        symbol [ color %tmp.73 37 137 142 const ];
+        symbol [ Gfx %tmp.74 37 146 149 ];
+        %tmp.74 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLUE %tmp.75 37 150 160 ];
+        %tmp.75 = getv %tmp.74 :COLOR_BLUE;
+        %tmp.76 = dup %tmp.71;
+        %tmp.77 = aputv %tmp.76 %tmp.73 %tmp.75;
+        %tmp.44 = newc %tmp.47 (%tmp.77);
+        %tmp.78 = dup %tmp.41;
+        %tmp.79 = aputv %tmp.78 %tmp.43 %tmp.44;
+        %tmp.81 = const :pattern;
+        symbol [ pattern %tmp.81 38 7 14 const ];
+        %tmp.82 = newa 1;
+        %tmp.83 = lgetv %oFactory.2;
+        symbol [ oFactory %tmp.83 38 20 28 ];
+        %tmp.84 = dup %tmp.82;
+        %tmp.85 = aputv %tmp.84 0 %tmp.83;
+        %tmp.86 = dup %tmp.79;
+        %tmp.87 = aputv %tmp.86 %tmp.81 %tmp.85;
+        %tmp.89 = const :defaults;
+        symbol [ defaults %tmp.89 39 7 15 const ];
+        %tmp.90 = newa 1;
+        %tmp.91 = lgetv %oFactory.2;
+        symbol [ oFactory %tmp.91 39 21 29 ];
+        symbol [ indexOfKey %tmp.92 39 30 40 ];
+        %tmp.92 = getv function %tmp.91 :indexOfKey;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_PickerGenericOnOff_mc_39_41_39_67_begin:
+        %tmp.93 = lgetv %bOnOff.1;
+        symbol [ bOnOff %tmp.93 39 41 47 ];
+        %tmp.94 = null;
+        %tmp.95 = ne %tmp.93 %tmp.94;
+        bf %tmp.95 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_PickerGenericOnOff_mc_39_41_39_67_false;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_PickerGenericOnOff_mc_39_41_39_67_true:
+        %tmp.96 = lgetv %bOnOff.1;
+        symbol [ bOnOff %tmp.96 39 58 64 ];
+        %tmp.97 = as %tmp.96 { (!Null) };
+        push %tmp.97;
+        goto @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_PickerGenericOnOff_mc_39_41_39_67_end;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_PickerGenericOnOff_mc_39_41_39_67_false:
+        %tmp.98 = false;
+        push %tmp.98;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_PickerGenericOnOff_mc_39_41_39_67_end:
+        %tmp.99 = phi [%tmp.95 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_PickerGenericOnOff_mc_39_41_39_67_begin] [%tmp.97 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_PickerGenericOnOff_mc_39_41_39_67_true] [%tmp.98 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_PickerGenericOnOff_mc_39_41_39_67_false] [%tmp.99 @_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_PickerGenericOnOff_mc_39_41_39_67_end];
+        %tmp.100 = invoke %tmp.91 %tmp.92(%tmp.99);
+        %tmp.101 = dup %tmp.90;
+        %tmp.102 = aputv %tmp.101 0 %tmp.100;
+        %tmp.103 = dup %tmp.87;
+        %tmp.104 = aputv %tmp.103 %tmp.89 %tmp.102;
+        invoke %tmp.39 %tmp.40(%tmp.104);
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_PickerGenericOnOff_mc_30_65_41_2_stop:
+    }
+}
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/PickerGenericOnOff.mc"; @line = 45; @symbol_classdef = [PickerDelegateGenericOnOff,45,6,32]; @symbol_extends<0> = [Ui,45,41,43]; @symbol_extends<1> = [PickerDelegate,45,44,58]; ]
+class PickerDelegateGenericOnOff extends Ui.PickerDelegate {
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/PickerGenericOnOff.mc"; @line = 45; ]
+    <init> {
+    }
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/PickerGenericOnOff.mc"; @line = 45; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/PickerGenericOnOff.mc"; @line = 51; @position = 14; @symbol_vardef = [sPropertyId,51,14,25]; @symbol_type<0> = [String,51,29,35]; ]
+    private
+    var sPropertyId as String = "null";
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/PickerGenericOnOff.mc"; @line = 58; @symbol_functiondef = [initialize,58,11,21]; @symbol_param<0> = [_sPropertyId,58,22,34]; @symbol_param<0>_type<0> = [String,58,38,44]; ]
+    function initialize(_sPropertyId as String) as Void {
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_PickerGenericOnOff_mc_58_46_61_2_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/PickerGenericOnOff.mc" 59 4 ]
+        symbol [ PickerDelegate %tmp.2 59 4 18 ];
+        %tmp.2 = getv ? :PickerDelegate;
+        symbol [ initialize %tmp.3 59 19 29 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/PickerGenericOnOff.mc" 60 4 ]
+        symbol [ self %self 60 4 8 ];
+        %tmp.4 = lgetv %_sPropertyId;
+        symbol [ _sPropertyId %tmp.4 60 23 35 ];
+        symbol [ sPropertyId ? 60 9 20 ];
+        putv self :sPropertyId %tmp.4;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_PickerGenericOnOff_mc_58_46_61_2_stop:
+    }
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/PickerGenericOnOff.mc"; @line = 64; @symbol_functiondef = [onAccept,64,11,19]; @symbol_param<0> = [_amValues,64,20,29]; ]
+    function onAccept(_amValues) {
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_PickerGenericOnOff_mc_64_31_70_2_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/PickerGenericOnOff.mc" 66 4 ]
+        symbol [ App %tmp.1 66 4 7 ];
+        %tmp.1 = getm $.Toybox.Application;
+        symbol [ Properties %tmp.2 66 8 18 ];
+        %tmp.2 = getv %tmp.1 :Properties;
+        symbol [ setValue %tmp.3 66 19 27 ];
+        %tmp.3 = getv function %tmp.2 :setValue;
+        %tmp.4 = self;
+        symbol [ self %tmp.4 66 28 32 ];
+        symbol [ sPropertyId %tmp.5 66 33 44 ];
+        %tmp.5 = getv %tmp.4 :sPropertyId;
+        %tmp.6 = lgetv %_amValues;
+        symbol [ _amValues %tmp.6 66 46 55 ];
+        %tmp.7 = 0;
+        %tmp.8 = agetv %tmp.6 %tmp.7;
+        invoke %tmp.2 %tmp.3(%tmp.5, %tmp.8);
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/PickerGenericOnOff.mc" 67 4 ]
+        symbol [ $ %tmp.9 67 4 5 ];
+        %tmp.9 = getm $;
+        symbol [ RL_oSettings %tmp.10 67 6 18 ];
+        %tmp.10 = getv %tmp.9 :RL_oSettings;
+        symbol [ load %tmp.11 67 19 23 ];
+        %tmp.11 = getv function %tmp.10 :load;
+        invoke %tmp.10 %tmp.11();
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/PickerGenericOnOff.mc" 68 4 ]
+        symbol [ Ui %tmp.12 68 4 6 ];
+        %tmp.12 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.13 68 7 14 ];
+        %tmp.13 = getv function %tmp.12 :popView;
+        symbol [ Ui %tmp.14 68 15 17 ];
+        %tmp.14 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.15 68 18 33 ];
+        %tmp.15 = getv %tmp.14 :SLIDE_IMMEDIATE;
+        invoke %tmp.12 %tmp.13(%tmp.15);
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/PickerGenericOnOff.mc" 69 4 ]
+        %tmp.16 = true;
+        ret %tmp.16;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_PickerGenericOnOff_mc_64_31_70_2_stop:
+    }
+    [ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/PickerGenericOnOff.mc"; @line = 72; @symbol_functiondef = [onCancel,72,11,19]; ]
+    function onCancel() {
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_PickerGenericOnOff_mc_72_22_76_2_start:
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/PickerGenericOnOff.mc" 74 4 ]
+        symbol [ Ui %tmp.1 74 4 6 ];
+        %tmp.1 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.2 74 7 14 ];
+        %tmp.2 = getv function %tmp.1 :popView;
+        symbol [ Ui %tmp.3 74 15 17 ];
+        %tmp.3 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.4 74 18 33 ];
+        %tmp.4 = getv %tmp.3 :SLIDE_IMMEDIATE;
+        invoke %tmp.1 %tmp.2(%tmp.4);
+[ "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/PickerGenericOnOff.mc" 75 4 ]
+        %tmp.5 = true;
+        ret %tmp.5;
+_Users_utente_Documents_Projects_UBEP_Garmin_rawlogger_source_menus_PickerGenericOnOff_mc_72_22_76_2_stop:
+    }
+}
+[ @file = "/Users/utente/Documents/Projects/UBEP_Garmin_rawlogger/source/menus/PickerGenericOnOff.mc"; @line = 19; ]
+<init> {
+}
