@@ -1,0 +1,574 @@
+[ @file = "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc"; @line = 19; @symbol_importdef<0> = [Toybox,19,7,13]; @symbol_importdef<1> = [Lang,19,14,18]; ]
+import Toybox.Lang;
+[ @file = "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc"; @line = 20; @symbol_usingdef<0> = [Toybox,20,6,12]; @symbol_usingdef<1> = [System,20,13,19]; @symbol_usingAlias = [Sys,20,23,26]; ]
+using Toybox.System as :Sys;
+[ @file = "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc"; @line = 21; @symbol_usingdef<0> = [Toybox,21,6,12]; @symbol_usingdef<1> = [WatchUi,21,13,20]; @symbol_usingAlias = [Ui,21,24,26]; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc"; @line = 25; @symbol_classdef = [MenuDelegateSettingsSensor,25,6,32]; @symbol_extends<0> = [Ui,25,41,43]; @symbol_extends<1> = [MenuInputDelegate,25,44,61]; ]
+class MenuDelegateSettingsSensor extends Ui.MenuInputDelegate {
+    [ @file = "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc"; @line = 25; ]
+    <init> {
+    }
+    [ @file = "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc"; @line = 25; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc"; @line = 31; @symbol_functiondef = [initialize,31,11,21]; ]
+    function initialize() as Void {
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_31_24_33_2_start:
+[ "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc" 32 4 ]
+        symbol [ MenuInputDelegate %tmp.2 32 4 21 ];
+        %tmp.2 = getv ? :MenuInputDelegate;
+        symbol [ initialize %tmp.3 32 22 32 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_31_24_33_2_stop:
+    }
+    [ @file = "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc"; @line = 35; @symbol_functiondef = [onMenuItem,35,11,21]; @symbol_param<0> = [item,35,22,26]; ]
+    function onMenuItem(item) {
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_35_28_84_2_start:
+[ "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc" 36 4 ]
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_36_4_83_4_if_stmt:
+        %tmp.1 = lgetv %item;
+        symbol [ item %tmp.1 36 8 12 ];
+        %tmp.3 = const :menuSettingsAltitude;
+        symbol [ menuSettingsAltitude %tmp.3 36 17 37 const ];
+        %tmp.4 = eq %tmp.1 %tmp.3;
+        bf %tmp.4 @C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_36_4_83_4_if_false;
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_36_4_83_4_if_true:
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_36_39_39_4_start:
+[ "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc" 38 6 ]
+        symbol [ Ui %tmp.5 38 6 8 ];
+        %tmp.5 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.6 38 9 17 ];
+        %tmp.6 = getv function %tmp.5 :pushView;
+        symbol [ PickerGenericOnOff %tmp.10 38 22 40 ];
+        %tmp.10 = getv ? :PickerGenericOnOff;
+        %tmp.11 = "userSensorAltitude";
+        symbol [ Ui %tmp.12 38 63 65 ];
+        %tmp.12 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.13 38 66 78 ];
+        %tmp.13 = getv function %tmp.12 :loadResource;
+        symbol [ Rez %tmp.15 38 79 82 ];
+        %tmp.15 = getv ? :Rez;
+        symbol [ Strings %tmp.16 38 83 90 ];
+        %tmp.16 = getv %tmp.15 :Strings;
+        symbol [ labelAltitude %tmp.17 38 91 104 ];
+        %tmp.17 = getv %tmp.16 :labelAltitude;
+        %tmp.18 = invoke %tmp.12 %tmp.13(%tmp.17);
+        %tmp.19 = as %tmp.18 String;
+        symbol [ String %tmp.19 38 109 115 ];
+        %tmp.7 = newc %tmp.10 (%tmp.11, %tmp.19);
+        symbol [ PickerDelegateGenericOnOff %tmp.23 38 122 148 ];
+        %tmp.23 = getv ? :PickerDelegateGenericOnOff;
+        %tmp.24 = "userSensorAltitude";
+        %tmp.20 = newc %tmp.23 (%tmp.24);
+        symbol [ Ui %tmp.25 38 172 174 ];
+        %tmp.25 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.26 38 175 190 ];
+        %tmp.26 = getv %tmp.25 :SLIDE_IMMEDIATE;
+        invoke %tmp.5 %tmp.6(%tmp.7, %tmp.20, %tmp.26);
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_36_39_39_4_stop:
+        goto @C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_36_4_83_4_if_end;
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_36_4_83_4_if_false:
+[ "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc" 40 9 ]
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_40_9_83_4_if_stmt:
+        %tmp.27 = lgetv %item;
+        symbol [ item %tmp.27 40 13 17 ];
+        %tmp.29 = const :menuSettingsSpeed;
+        symbol [ menuSettingsSpeed %tmp.29 40 22 39 const ];
+        %tmp.30 = eq %tmp.27 %tmp.29;
+        bf %tmp.30 @C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_40_9_83_4_if_false;
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_40_9_83_4_if_true:
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_40_41_43_4_start:
+[ "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc" 42 6 ]
+        symbol [ Ui %tmp.31 42 6 8 ];
+        %tmp.31 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.32 42 9 17 ];
+        %tmp.32 = getv function %tmp.31 :pushView;
+        symbol [ PickerGenericOnOff %tmp.36 42 22 40 ];
+        %tmp.36 = getv ? :PickerGenericOnOff;
+        %tmp.37 = "userSensorSpeed";
+        symbol [ Ui %tmp.38 42 60 62 ];
+        %tmp.38 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.39 42 63 75 ];
+        %tmp.39 = getv function %tmp.38 :loadResource;
+        symbol [ Rez %tmp.41 42 76 79 ];
+        %tmp.41 = getv ? :Rez;
+        symbol [ Strings %tmp.42 42 80 87 ];
+        %tmp.42 = getv %tmp.41 :Strings;
+        symbol [ labelSpeed %tmp.43 42 88 98 ];
+        %tmp.43 = getv %tmp.42 :labelSpeed;
+        %tmp.44 = invoke %tmp.38 %tmp.39(%tmp.43);
+        %tmp.45 = as %tmp.44 String;
+        symbol [ String %tmp.45 42 103 109 ];
+        %tmp.33 = newc %tmp.36 (%tmp.37, %tmp.45);
+        symbol [ PickerDelegateGenericOnOff %tmp.49 42 116 142 ];
+        %tmp.49 = getv ? :PickerDelegateGenericOnOff;
+        %tmp.50 = "userSensorSpeed";
+        %tmp.46 = newc %tmp.49 (%tmp.50);
+        symbol [ Ui %tmp.51 42 163 165 ];
+        %tmp.51 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.52 42 166 181 ];
+        %tmp.52 = getv %tmp.51 :SLIDE_IMMEDIATE;
+        invoke %tmp.31 %tmp.32(%tmp.33, %tmp.46, %tmp.52);
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_40_41_43_4_stop:
+        goto @C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_40_9_83_4_if_end;
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_40_9_83_4_if_false:
+[ "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc" 44 9 ]
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_44_9_83_4_if_stmt:
+        %tmp.53 = lgetv %item;
+        symbol [ item %tmp.53 44 13 17 ];
+        %tmp.55 = const :menuSettingsHeading;
+        symbol [ menuSettingsHeading %tmp.55 44 22 41 const ];
+        %tmp.56 = eq %tmp.53 %tmp.55;
+        bf %tmp.56 @C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_44_9_83_4_if_false;
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_44_9_83_4_if_true:
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_44_43_47_4_start:
+[ "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc" 46 6 ]
+        symbol [ Ui %tmp.57 46 6 8 ];
+        %tmp.57 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.58 46 9 17 ];
+        %tmp.58 = getv function %tmp.57 :pushView;
+        symbol [ PickerGenericOnOff %tmp.62 46 22 40 ];
+        %tmp.62 = getv ? :PickerGenericOnOff;
+        %tmp.63 = "userSensorHeading";
+        symbol [ Ui %tmp.64 46 62 64 ];
+        %tmp.64 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.65 46 65 77 ];
+        %tmp.65 = getv function %tmp.64 :loadResource;
+        symbol [ Rez %tmp.67 46 78 81 ];
+        %tmp.67 = getv ? :Rez;
+        symbol [ Strings %tmp.68 46 82 89 ];
+        %tmp.68 = getv %tmp.67 :Strings;
+        symbol [ labelHeading %tmp.69 46 90 102 ];
+        %tmp.69 = getv %tmp.68 :labelHeading;
+        %tmp.70 = invoke %tmp.64 %tmp.65(%tmp.69);
+        %tmp.71 = as %tmp.70 String;
+        symbol [ String %tmp.71 46 107 113 ];
+        %tmp.59 = newc %tmp.62 (%tmp.63, %tmp.71);
+        symbol [ PickerDelegateGenericOnOff %tmp.75 46 120 146 ];
+        %tmp.75 = getv ? :PickerDelegateGenericOnOff;
+        %tmp.76 = "userSensorHeading";
+        %tmp.72 = newc %tmp.75 (%tmp.76);
+        symbol [ Ui %tmp.77 46 169 171 ];
+        %tmp.77 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.78 46 172 187 ];
+        %tmp.78 = getv %tmp.77 :SLIDE_IMMEDIATE;
+        invoke %tmp.57 %tmp.58(%tmp.59, %tmp.72, %tmp.78);
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_44_43_47_4_stop:
+        goto @C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_44_9_83_4_if_end;
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_44_9_83_4_if_false:
+[ "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc" 48 9 ]
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_48_9_83_4_if_stmt:
+        %tmp.79 = lgetv %item;
+        symbol [ item %tmp.79 48 13 17 ];
+        %tmp.81 = const :menuSettingsPressure;
+        symbol [ menuSettingsPressure %tmp.81 48 22 42 const ];
+        %tmp.82 = eq %tmp.79 %tmp.81;
+        bf %tmp.82 @C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_48_9_83_4_if_false;
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_48_9_83_4_if_true:
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_48_44_51_4_start:
+[ "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc" 50 6 ]
+        symbol [ Ui %tmp.83 50 6 8 ];
+        %tmp.83 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.84 50 9 17 ];
+        %tmp.84 = getv function %tmp.83 :pushView;
+        symbol [ PickerGenericOnOff %tmp.88 50 22 40 ];
+        %tmp.88 = getv ? :PickerGenericOnOff;
+        %tmp.89 = "userSensorPressure";
+        symbol [ Ui %tmp.90 50 63 65 ];
+        %tmp.90 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.91 50 66 78 ];
+        %tmp.91 = getv function %tmp.90 :loadResource;
+        symbol [ Rez %tmp.93 50 79 82 ];
+        %tmp.93 = getv ? :Rez;
+        symbol [ Strings %tmp.94 50 83 90 ];
+        %tmp.94 = getv %tmp.93 :Strings;
+        symbol [ labelPressure %tmp.95 50 91 104 ];
+        %tmp.95 = getv %tmp.94 :labelPressure;
+        %tmp.96 = invoke %tmp.90 %tmp.91(%tmp.95);
+        %tmp.97 = as %tmp.96 String;
+        symbol [ String %tmp.97 50 109 115 ];
+        %tmp.85 = newc %tmp.88 (%tmp.89, %tmp.97);
+        symbol [ PickerDelegateGenericOnOff %tmp.101 50 122 148 ];
+        %tmp.101 = getv ? :PickerDelegateGenericOnOff;
+        %tmp.102 = "userSensorPressure";
+        %tmp.98 = newc %tmp.101 (%tmp.102);
+        symbol [ Ui %tmp.103 50 172 174 ];
+        %tmp.103 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.104 50 175 190 ];
+        %tmp.104 = getv %tmp.103 :SLIDE_IMMEDIATE;
+        invoke %tmp.83 %tmp.84(%tmp.85, %tmp.98, %tmp.104);
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_48_44_51_4_stop:
+        goto @C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_48_9_83_4_if_end;
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_48_9_83_4_if_false:
+[ "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc" 52 9 ]
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_52_9_83_4_if_stmt:
+        %tmp.105 = lgetv %item;
+        symbol [ item %tmp.105 52 13 17 ];
+        %tmp.107 = const :menuSettingsAcceleration;
+        symbol [ menuSettingsAcceleration %tmp.107 52 22 46 const ];
+        %tmp.108 = eq %tmp.105 %tmp.107;
+        bf %tmp.108 @C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_52_9_83_4_if_false;
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_52_9_83_4_if_true:
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_52_48_55_4_start:
+[ "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc" 54 6 ]
+        symbol [ Ui %tmp.109 54 6 8 ];
+        %tmp.109 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.110 54 9 17 ];
+        %tmp.110 = getv function %tmp.109 :pushView;
+        symbol [ PickerGenericOnOff %tmp.114 54 22 40 ];
+        %tmp.114 = getv ? :PickerGenericOnOff;
+        %tmp.115 = "userSensorAcceleration";
+        symbol [ Ui %tmp.116 54 67 69 ];
+        %tmp.116 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.117 54 70 82 ];
+        %tmp.117 = getv function %tmp.116 :loadResource;
+        symbol [ Rez %tmp.119 54 83 86 ];
+        %tmp.119 = getv ? :Rez;
+        symbol [ Strings %tmp.120 54 87 94 ];
+        %tmp.120 = getv %tmp.119 :Strings;
+        symbol [ labelAcceleration %tmp.121 54 95 112 ];
+        %tmp.121 = getv %tmp.120 :labelAcceleration;
+        %tmp.122 = invoke %tmp.116 %tmp.117(%tmp.121);
+        %tmp.123 = as %tmp.122 String;
+        symbol [ String %tmp.123 54 117 123 ];
+        %tmp.111 = newc %tmp.114 (%tmp.115, %tmp.123);
+        symbol [ PickerDelegateGenericOnOff %tmp.127 54 130 156 ];
+        %tmp.127 = getv ? :PickerDelegateGenericOnOff;
+        %tmp.128 = "userSensorAcceleration";
+        %tmp.124 = newc %tmp.127 (%tmp.128);
+        symbol [ Ui %tmp.129 54 184 186 ];
+        %tmp.129 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.130 54 187 202 ];
+        %tmp.130 = getv %tmp.129 :SLIDE_IMMEDIATE;
+        invoke %tmp.109 %tmp.110(%tmp.111, %tmp.124, %tmp.130);
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_52_48_55_4_stop:
+        goto @C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_52_9_83_4_if_end;
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_52_9_83_4_if_false:
+[ "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc" 56 9 ]
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_56_9_83_4_if_stmt:
+        %tmp.131 = lgetv %item;
+        symbol [ item %tmp.131 56 13 17 ];
+        %tmp.133 = const :menuSettingsAcceleration_HD;
+        symbol [ menuSettingsAcceleration_HD %tmp.133 56 22 49 const ];
+        %tmp.134 = eq %tmp.131 %tmp.133;
+        bf %tmp.134 @C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_56_9_83_4_if_false;
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_56_9_83_4_if_true:
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_56_51_59_4_start:
+[ "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc" 58 6 ]
+        symbol [ Ui %tmp.135 58 6 8 ];
+        %tmp.135 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.136 58 9 17 ];
+        %tmp.136 = getv function %tmp.135 :pushView;
+        symbol [ PickerGenericOnOff %tmp.140 58 22 40 ];
+        %tmp.140 = getv ? :PickerGenericOnOff;
+        %tmp.141 = "userSensorAcceleration_HD";
+        symbol [ Ui %tmp.142 58 70 72 ];
+        %tmp.142 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.143 58 73 85 ];
+        %tmp.143 = getv function %tmp.142 :loadResource;
+        symbol [ Rez %tmp.145 58 86 89 ];
+        %tmp.145 = getv ? :Rez;
+        symbol [ Strings %tmp.146 58 90 97 ];
+        %tmp.146 = getv %tmp.145 :Strings;
+        symbol [ labelAcceleration_HD %tmp.147 58 98 118 ];
+        %tmp.147 = getv %tmp.146 :labelAcceleration_HD;
+        %tmp.148 = invoke %tmp.142 %tmp.143(%tmp.147);
+        %tmp.149 = as %tmp.148 String;
+        symbol [ String %tmp.149 58 123 129 ];
+        %tmp.137 = newc %tmp.140 (%tmp.141, %tmp.149);
+        symbol [ PickerDelegateGenericOnOff %tmp.153 58 136 162 ];
+        %tmp.153 = getv ? :PickerDelegateGenericOnOff;
+        %tmp.154 = "userSensorAcceleration_HD";
+        %tmp.150 = newc %tmp.153 (%tmp.154);
+        symbol [ Ui %tmp.155 58 193 195 ];
+        %tmp.155 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.156 58 196 211 ];
+        %tmp.156 = getv %tmp.155 :SLIDE_IMMEDIATE;
+        invoke %tmp.135 %tmp.136(%tmp.137, %tmp.150, %tmp.156);
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_56_51_59_4_stop:
+        goto @C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_56_9_83_4_if_end;
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_56_9_83_4_if_false:
+[ "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc" 60 9 ]
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_60_9_83_4_if_stmt:
+        %tmp.157 = lgetv %item;
+        symbol [ item %tmp.157 60 13 17 ];
+        %tmp.159 = const :menuSettingsMagnetometer;
+        symbol [ menuSettingsMagnetometer %tmp.159 60 22 46 const ];
+        %tmp.160 = eq %tmp.157 %tmp.159;
+        bf %tmp.160 @C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_60_9_83_4_if_false;
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_60_9_83_4_if_true:
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_60_48_63_4_start:
+[ "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc" 62 6 ]
+        symbol [ Ui %tmp.161 62 6 8 ];
+        %tmp.161 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.162 62 9 17 ];
+        %tmp.162 = getv function %tmp.161 :pushView;
+        symbol [ PickerGenericOnOff %tmp.166 62 22 40 ];
+        %tmp.166 = getv ? :PickerGenericOnOff;
+        %tmp.167 = "userSensorMagnetometer";
+        symbol [ Ui %tmp.168 62 67 69 ];
+        %tmp.168 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.169 62 70 82 ];
+        %tmp.169 = getv function %tmp.168 :loadResource;
+        symbol [ Rez %tmp.171 62 83 86 ];
+        %tmp.171 = getv ? :Rez;
+        symbol [ Strings %tmp.172 62 87 94 ];
+        %tmp.172 = getv %tmp.171 :Strings;
+        symbol [ labelMagnetometer %tmp.173 62 95 112 ];
+        %tmp.173 = getv %tmp.172 :labelMagnetometer;
+        %tmp.174 = invoke %tmp.168 %tmp.169(%tmp.173);
+        %tmp.175 = as %tmp.174 String;
+        symbol [ String %tmp.175 62 117 123 ];
+        %tmp.163 = newc %tmp.166 (%tmp.167, %tmp.175);
+        symbol [ PickerDelegateGenericOnOff %tmp.179 62 130 156 ];
+        %tmp.179 = getv ? :PickerDelegateGenericOnOff;
+        %tmp.180 = "userSensorMagnetometer";
+        %tmp.176 = newc %tmp.179 (%tmp.180);
+        symbol [ Ui %tmp.181 62 184 186 ];
+        %tmp.181 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.182 62 187 202 ];
+        %tmp.182 = getv %tmp.181 :SLIDE_IMMEDIATE;
+        invoke %tmp.161 %tmp.162(%tmp.163, %tmp.176, %tmp.182);
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_60_48_63_4_stop:
+        goto @C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_60_9_83_4_if_end;
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_60_9_83_4_if_false:
+[ "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc" 64 9 ]
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_64_9_83_4_if_stmt:
+        %tmp.183 = lgetv %item;
+        symbol [ item %tmp.183 64 13 17 ];
+        %tmp.185 = const :menuSettingsHeartrate;
+        symbol [ menuSettingsHeartrate %tmp.185 64 22 43 const ];
+        %tmp.186 = eq %tmp.183 %tmp.185;
+        bf %tmp.186 @C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_64_9_83_4_if_false;
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_64_9_83_4_if_true:
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_64_45_67_4_start:
+[ "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc" 66 6 ]
+        symbol [ Ui %tmp.187 66 6 8 ];
+        %tmp.187 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.188 66 9 17 ];
+        %tmp.188 = getv function %tmp.187 :pushView;
+        symbol [ PickerGenericOnOff %tmp.192 66 22 40 ];
+        %tmp.192 = getv ? :PickerGenericOnOff;
+        %tmp.193 = "userSensorHeartrate";
+        symbol [ Ui %tmp.194 66 64 66 ];
+        %tmp.194 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.195 66 67 79 ];
+        %tmp.195 = getv function %tmp.194 :loadResource;
+        symbol [ Rez %tmp.197 66 80 83 ];
+        %tmp.197 = getv ? :Rez;
+        symbol [ Strings %tmp.198 66 84 91 ];
+        %tmp.198 = getv %tmp.197 :Strings;
+        symbol [ labelHeartrate %tmp.199 66 92 106 ];
+        %tmp.199 = getv %tmp.198 :labelHeartrate;
+        %tmp.200 = invoke %tmp.194 %tmp.195(%tmp.199);
+        %tmp.201 = as %tmp.200 String;
+        symbol [ String %tmp.201 66 111 117 ];
+        %tmp.189 = newc %tmp.192 (%tmp.193, %tmp.201);
+        symbol [ PickerDelegateGenericOnOff %tmp.205 66 124 150 ];
+        %tmp.205 = getv ? :PickerDelegateGenericOnOff;
+        %tmp.206 = "userSensorHeartrate";
+        %tmp.202 = newc %tmp.205 (%tmp.206);
+        symbol [ Ui %tmp.207 66 175 177 ];
+        %tmp.207 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.208 66 178 193 ];
+        %tmp.208 = getv %tmp.207 :SLIDE_IMMEDIATE;
+        invoke %tmp.187 %tmp.188(%tmp.189, %tmp.202, %tmp.208);
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_64_45_67_4_stop:
+        goto @C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_64_9_83_4_if_end;
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_64_9_83_4_if_false:
+[ "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc" 68 9 ]
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_68_9_83_4_if_stmt:
+        %tmp.209 = lgetv %item;
+        symbol [ item %tmp.209 68 13 17 ];
+        %tmp.211 = const :menuSettingsCadence;
+        symbol [ menuSettingsCadence %tmp.211 68 22 41 const ];
+        %tmp.212 = eq %tmp.209 %tmp.211;
+        bf %tmp.212 @C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_68_9_83_4_if_false;
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_68_9_83_4_if_true:
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_68_43_71_4_start:
+[ "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc" 70 6 ]
+        symbol [ Ui %tmp.213 70 6 8 ];
+        %tmp.213 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.214 70 9 17 ];
+        %tmp.214 = getv function %tmp.213 :pushView;
+        symbol [ PickerGenericOnOff %tmp.218 70 22 40 ];
+        %tmp.218 = getv ? :PickerGenericOnOff;
+        %tmp.219 = "userSensorCadence";
+        symbol [ Ui %tmp.220 70 62 64 ];
+        %tmp.220 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.221 70 65 77 ];
+        %tmp.221 = getv function %tmp.220 :loadResource;
+        symbol [ Rez %tmp.223 70 78 81 ];
+        %tmp.223 = getv ? :Rez;
+        symbol [ Strings %tmp.224 70 82 89 ];
+        %tmp.224 = getv %tmp.223 :Strings;
+        symbol [ labelCadence %tmp.225 70 90 102 ];
+        %tmp.225 = getv %tmp.224 :labelCadence;
+        %tmp.226 = invoke %tmp.220 %tmp.221(%tmp.225);
+        %tmp.227 = as %tmp.226 String;
+        symbol [ String %tmp.227 70 107 113 ];
+        %tmp.215 = newc %tmp.218 (%tmp.219, %tmp.227);
+        symbol [ PickerDelegateGenericOnOff %tmp.231 70 120 146 ];
+        %tmp.231 = getv ? :PickerDelegateGenericOnOff;
+        %tmp.232 = "userSensorCadence";
+        %tmp.228 = newc %tmp.231 (%tmp.232);
+        symbol [ Ui %tmp.233 70 169 171 ];
+        %tmp.233 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.234 70 172 187 ];
+        %tmp.234 = getv %tmp.233 :SLIDE_IMMEDIATE;
+        invoke %tmp.213 %tmp.214(%tmp.215, %tmp.228, %tmp.234);
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_68_43_71_4_stop:
+        goto @C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_68_9_83_4_if_end;
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_68_9_83_4_if_false:
+[ "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc" 72 9 ]
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_72_9_83_4_if_stmt:
+        %tmp.235 = lgetv %item;
+        symbol [ item %tmp.235 72 13 17 ];
+        %tmp.237 = const :menuSettingsPower;
+        symbol [ menuSettingsPower %tmp.237 72 22 39 const ];
+        %tmp.238 = eq %tmp.235 %tmp.237;
+        bf %tmp.238 @C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_72_9_83_4_if_false;
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_72_9_83_4_if_true:
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_72_41_75_4_start:
+[ "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc" 74 6 ]
+        symbol [ Ui %tmp.239 74 6 8 ];
+        %tmp.239 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.240 74 9 17 ];
+        %tmp.240 = getv function %tmp.239 :pushView;
+        symbol [ PickerGenericOnOff %tmp.244 74 22 40 ];
+        %tmp.244 = getv ? :PickerGenericOnOff;
+        %tmp.245 = "userSensorPower";
+        symbol [ Ui %tmp.246 74 60 62 ];
+        %tmp.246 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.247 74 63 75 ];
+        %tmp.247 = getv function %tmp.246 :loadResource;
+        symbol [ Rez %tmp.249 74 76 79 ];
+        %tmp.249 = getv ? :Rez;
+        symbol [ Strings %tmp.250 74 80 87 ];
+        %tmp.250 = getv %tmp.249 :Strings;
+        symbol [ labelPower %tmp.251 74 88 98 ];
+        %tmp.251 = getv %tmp.250 :labelPower;
+        %tmp.252 = invoke %tmp.246 %tmp.247(%tmp.251);
+        %tmp.253 = as %tmp.252 String;
+        symbol [ String %tmp.253 74 103 109 ];
+        %tmp.241 = newc %tmp.244 (%tmp.245, %tmp.253);
+        symbol [ PickerDelegateGenericOnOff %tmp.257 74 116 142 ];
+        %tmp.257 = getv ? :PickerDelegateGenericOnOff;
+        %tmp.258 = "userSensorPower";
+        %tmp.254 = newc %tmp.257 (%tmp.258);
+        symbol [ Ui %tmp.259 74 163 165 ];
+        %tmp.259 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.260 74 166 181 ];
+        %tmp.260 = getv %tmp.259 :SLIDE_IMMEDIATE;
+        invoke %tmp.239 %tmp.240(%tmp.241, %tmp.254, %tmp.260);
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_72_41_75_4_stop:
+        goto @C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_72_9_83_4_if_end;
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_72_9_83_4_if_false:
+[ "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc" 76 9 ]
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_76_9_83_4_if_stmt:
+        %tmp.261 = lgetv %item;
+        symbol [ item %tmp.261 76 13 17 ];
+        %tmp.263 = const :menuSettingsTemperature;
+        symbol [ menuSettingsTemperature %tmp.263 76 22 45 const ];
+        %tmp.264 = eq %tmp.261 %tmp.263;
+        bf %tmp.264 @C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_76_9_83_4_if_false;
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_76_9_83_4_if_true:
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_76_47_79_4_start:
+[ "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc" 78 6 ]
+        symbol [ Ui %tmp.265 78 6 8 ];
+        %tmp.265 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.266 78 9 17 ];
+        %tmp.266 = getv function %tmp.265 :pushView;
+        symbol [ PickerGenericOnOff %tmp.270 78 22 40 ];
+        %tmp.270 = getv ? :PickerGenericOnOff;
+        %tmp.271 = "userSensorTemperature";
+        symbol [ Ui %tmp.272 78 66 68 ];
+        %tmp.272 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.273 78 69 81 ];
+        %tmp.273 = getv function %tmp.272 :loadResource;
+        symbol [ Rez %tmp.275 78 82 85 ];
+        %tmp.275 = getv ? :Rez;
+        symbol [ Strings %tmp.276 78 86 93 ];
+        %tmp.276 = getv %tmp.275 :Strings;
+        symbol [ labelTemperature %tmp.277 78 94 110 ];
+        %tmp.277 = getv %tmp.276 :labelTemperature;
+        %tmp.278 = invoke %tmp.272 %tmp.273(%tmp.277);
+        %tmp.279 = as %tmp.278 String;
+        symbol [ String %tmp.279 78 115 121 ];
+        %tmp.267 = newc %tmp.270 (%tmp.271, %tmp.279);
+        symbol [ PickerDelegateGenericOnOff %tmp.283 78 128 154 ];
+        %tmp.283 = getv ? :PickerDelegateGenericOnOff;
+        %tmp.284 = "userSensorTemperature";
+        %tmp.280 = newc %tmp.283 (%tmp.284);
+        symbol [ Ui %tmp.285 78 181 183 ];
+        %tmp.285 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.286 78 184 199 ];
+        %tmp.286 = getv %tmp.285 :SLIDE_IMMEDIATE;
+        invoke %tmp.265 %tmp.266(%tmp.267, %tmp.280, %tmp.286);
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_76_47_79_4_stop:
+        goto @C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_76_9_83_4_if_end;
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_76_9_83_4_if_false:
+[ "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc" 81 9 ]
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_81_9_83_4_if_stmt:
+        %tmp.287 = lgetv %item;
+        symbol [ item %tmp.287 81 13 17 ];
+        %tmp.289 = const :menuSettingsGyroscope;
+        symbol [ menuSettingsGyroscope %tmp.289 81 22 43 const ];
+        %tmp.290 = eq %tmp.287 %tmp.289;
+        bf %tmp.290 @C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_81_9_83_4_if_end;
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_81_9_83_4_if_true:
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_81_45_83_4_start:
+[ "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc" 82 6 ]
+        symbol [ Ui %tmp.291 82 6 8 ];
+        %tmp.291 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.292 82 9 17 ];
+        %tmp.292 = getv function %tmp.291 :pushView;
+        symbol [ PickerGenericOnOff %tmp.296 82 22 40 ];
+        %tmp.296 = getv ? :PickerGenericOnOff;
+        %tmp.297 = "userSensorGyroscope";
+        symbol [ Ui %tmp.298 82 64 66 ];
+        %tmp.298 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.299 82 67 79 ];
+        %tmp.299 = getv function %tmp.298 :loadResource;
+        symbol [ Rez %tmp.301 82 80 83 ];
+        %tmp.301 = getv ? :Rez;
+        symbol [ Strings %tmp.302 82 84 91 ];
+        %tmp.302 = getv %tmp.301 :Strings;
+        symbol [ labelGyroscope %tmp.303 82 92 106 ];
+        %tmp.303 = getv %tmp.302 :labelGyroscope;
+        %tmp.304 = invoke %tmp.298 %tmp.299(%tmp.303);
+        %tmp.305 = as %tmp.304 String;
+        symbol [ String %tmp.305 82 111 117 ];
+        %tmp.293 = newc %tmp.296 (%tmp.297, %tmp.305);
+        symbol [ PickerDelegateGenericOnOff %tmp.309 82 124 150 ];
+        %tmp.309 = getv ? :PickerDelegateGenericOnOff;
+        %tmp.310 = "userSensorGyroscope";
+        %tmp.306 = newc %tmp.309 (%tmp.310);
+        symbol [ Ui %tmp.311 82 175 177 ];
+        %tmp.311 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_IMMEDIATE %tmp.312 82 178 193 ];
+        %tmp.312 = getv %tmp.311 :SLIDE_IMMEDIATE;
+        invoke %tmp.291 %tmp.292(%tmp.293, %tmp.306, %tmp.312);
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_81_45_83_4_stop:
+        goto @C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_81_9_83_4_if_end;
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_81_9_83_4_if_end:
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_76_9_83_4_if_end:
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_72_9_83_4_if_end:
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_68_9_83_4_if_end:
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_64_9_83_4_if_end:
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_60_9_83_4_if_end:
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_56_9_83_4_if_end:
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_52_9_83_4_if_end:
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_48_9_83_4_if_end:
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_44_9_83_4_if_end:
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_40_9_83_4_if_end:
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_36_4_83_4_if_end:
+C_Users_Luca_Documents_Garmin_UBEP_Garmin_rawlogger_source_menus_MenuSettingsSensor_mc_35_28_84_2_stop:
+    }
+}
+[ @file = "C:\Users\Luca\Documents\Garmin\UBEP_Garmin_rawlogger\source\menus\MenuSettingsSensor.mc"; @line = 19; ]
+<init> {
+}
